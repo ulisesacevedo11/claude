@@ -1,19 +1,21 @@
 # Máquinas e Instalaciones Eléctricas — Respuestas al 2do parcial
 
-Consolidado de **8 modelos** (parcial y recuperatorios: 12-11-25, 10-12-25, 11-12-24, 13-12-23, 06-03-24, 13-12-22, 07-12-22) de la carpeta `2do cuatrimestre/modelos`.
+Consolidado de los **7 modelos distintos** (parcial y recuperatorios: 12-11-25, 10-12-25, 11-12-24, 13-12-23, 06-03-24, 13-12-22, 07-12-22) de la carpeta `2do cuatrimestre/modelos`.
+
+Son 8 archivos pero 7 modelos: el del 07-12-22 está dos veces, con firma digital y sin ella. En total suman **29 preguntas**: **19 del 2do cuatrimestre**, resueltas acá en **17 respuestas** —varias preguntas se repiten entre modelos y alguna se divide en partes—, y **10 de transformadores**, descartadas.
 
 Las preguntas están **agrupadas por tema** siguiendo las unidades de la carpeta `2do cuatrimestre`:
 
 | Unidad | Tema | ¿Aparece en los modelos? |
 |---|---|---|
-| 7 | Máquina asincrónica (trifásica) | Sí — tema dominante |
-| 8 | Motor asincrónico monofásico | Sí — en 5 de 8 modelos |
+| 7 | Máquina asincrónica (trifásica) | Sí — 9 preguntas, en los 7 modelos |
+| 8 | Motor asincrónico monofásico | Sí — 4 preguntas, en 4 de 7 modelos |
 | 9 | Motor paso a paso | No apareció nunca |
-| 10 | Máquina de corriente continua | Sí — en 4 de 8 modelos |
+| 10 | Máquina de corriente continua | Sí — 4 preguntas, en 4 de 7 modelos |
 | 11 | Máquina sincrónica | No apareció nunca |
-| 12 | Calidad de energía | Sí — en 2 de 8 modelos |
+| 12 | Calidad de energía | Sí — 2 preguntas, en 2 de 7 modelos |
 
-**Descartado:** todas las preguntas de **transformadores** (ensayos de vacío y cortocircuito, cálculo de rendimiento, rendimiento máximo, diagrama fasorial en vacío, pérdidas vs. vida útil). Corresponden a la **Unidad 5 — Transformadores**, que está en la carpeta de **1er cuatrimestre**. Eran 7 preguntas, prácticamente una por modelo (ojo: el profesor las sigue incluyendo en los recuperatorios del 2do parcial, aunque el tema sea del 1er cuatrimestre).
+**Descartado:** todas las preguntas de **transformadores** (ensayos de vacío y cortocircuito, cálculo de rendimiento, rendimiento máximo, diagrama fasorial en vacío, pérdidas vs. vida útil). Corresponden a la **Unidad 5 — Transformadores**, que está en la carpeta de **1er cuatrimestre**. Son 10 preguntas y hay transformadores en los 7 modelos sin excepción (ojo: el profesor las sigue incluyendo en los recuperatorios del 2do parcial, aunque el tema sea del 1er cuatrimestre).
 
 ---
 
@@ -318,7 +320,7 @@ El mando se arma con un temporizador KT que define el instante del paso 2–3, c
 ## TEMA B — Motor asincrónico monofásico (Unidad 8)
 
 ### B.1 — Funcionamiento, partes constitutivas, variantes de arranque e inversión de giro
-*(Recuperatorios 10-12-25 preg. 4; 11-12-24 preg. 4; 13-12-23 preg. 4; 06-03-24 preg. 3 — es la segunda pregunta más repetida)*
+*(Recuperatorios 10-12-25 preg. 4; 11-12-24 preg. 4; 13-12-23 preg. 4; 06-03-24 preg. 3 — el segundo tema más frecuente)*
 
 **Partes constitutivas:**
 - **Estator:** chapas de acero al silicio ranuradas, con **dos devanados** desfasados 90° eléctricos en el espacio:
@@ -663,7 +665,7 @@ El origen son las **cargas no lineales**: rectificadores y fuentes conmutadas, v
 
 ## Apéndice — Preguntas descartadas (Unidad 5, Transformadores — 1er cuatrimestre)
 
-Se dejaron afuera por no corresponder al 2do cuatrimestre, pero conviene saber que **el profesor las sigue incluyendo** en los recuperatorios del 2do parcial (en 6 de los 8 modelos). Son:
+Se dejaron afuera por no corresponder al 2do cuatrimestre, pero conviene saber que **el profesor las sigue incluyendo** en los recuperatorios del 2do parcial: hay transformadores en los 7 modelos, sin excepción. Son:
 
 | Modelo | Pregunta descartada |
 |---|---|
@@ -675,4 +677,4 @@ Se dejaron afuera por no corresponder al 2do cuatrimestre, pero conviene saber q
 | 13-12-22 (#1 y #2) | Cálculo (500 kVA, 1 kW / 1,5 kW) y ensayos + pérdidas en el diagrama fasorial en vacío |
 | 07-12-22 (#1 y #2) | Cálculo (500 kVA, 1 kW / 6,5 kW: η a ½ carga FP 1, η al 100 % FP 0,75 ind., η máximo) y ensayos + vida útil |
 
-**Dos temas del programa del 2do cuatrimestre que NO aparecieron en ningún modelo:** **Unidad 9 — Motor paso a paso** y **Unidad 11 — Máquina sincrónica**. Dado que el 2do parcial del 12-11-25 ya incluyó Calidad de Energía (Unidad 12), conviene no descartarlos de la preparación.
+**Dos temas del programa del 2do cuatrimestre que NO aparecen en ningún modelo:** **Unidad 9 — Motor paso a paso** y **Unidad 11 — Máquina sincrónica**. Dado que el 2do parcial del 12-11-25 ya incluyó Calidad de Energía (Unidad 12), conviene no descartarlos de la preparación.
