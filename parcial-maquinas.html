@@ -149,15 +149,16 @@ footer p{max-width:70ch;margin:0 0 8px}
 <header class="mast">
   <p class="eyebrow">Máquinas e Instalaciones Eléctricas · Unidades 7 a 12</p>
   <h1>Segundo Parcial de Máquinas</h1>
-  <p class="lede">Las preguntas del segundo cuatrimestre que aparecen en los siete modelos de parcial y recuperatorio, agrupadas por unidad y respondidas. Las de transformadores quedaron afuera: son del primer cuatrimestre.</p>
+  <p class="lede">Las seis unidades del segundo cuatrimestre: las preguntas que aparecen en los siete modelos de parcial y recuperatorio, respondidas y agrupadas por unidad, más las dos unidades que ningún modelo tomó nunca. Las de transformadores quedaron afuera: son del primer cuatrimestre.</p>
   <div class="facts">
     <div class="fact"><b>7</b><span>modelos distintos</span></div>
     <div class="fact"><b>29</b><span>preguntas en total</span></div>
     <div class="fact"><b>19</b><span>del 2.º cuatrimestre</span></div>
     <div class="fact"><b>10</b><span>de transformadores</span></div>
     <div class="fact"><b>17</b><span>respuestas</span></div>
+    <div class="fact"><b>6</b><span>unidades cubiertas</span></div>
   </div>
-  <p class="note">Son 8 archivos pero 7 modelos: el del 07-12-22 está dos veces, con firma digital y sin ella. Y son 19 preguntas resueltas en 17 respuestas porque varias se repiten entre modelos —la de jaula profunda aparece tres veces— y alguna se divide en partes.</p>
+  <p class="note">Son 8 archivos pero 7 modelos: el del 07-12-22 está dos veces, con firma digital y sin ella. Y son 19 preguntas resueltas en 17 respuestas porque varias se repiten entre modelos —la de jaula profunda aparece tres veces— y alguna se divide en partes.<br>Las unidades <b>9, motor paso a paso</b>, y <b>11, máquina sincrónica</b>, no aparecen en ningún modelo: van desarrolladas desde el material de la cátedra, sin pregunta de examen que las ancle.</p>
 </header>
 
 <nav class="toc">
@@ -175,15 +176,25 @@ footer p{max-width:70ch;margin:0 0 8px}
     <li><a href="#b1"><span class="k">B1</span><span>Doble campo giratorio</span></a></li>
     <li><a href="#b2"><span class="k">B2</span><span>Variantes de arranque</span></a></li>
     <li><a href="#b3"><span class="k">B3</span><span>Inversión de giro</span></a></li>
-    <li class="grp"><a href="#c"><span class="k">C</span><span>Máquina de corriente continua</span></a></li>
-    <li><a href="#c1"><span class="k">C1</span><span>Esquema y rotor bloqueado</span></a></li>
-    <li><a href="#c2"><span class="k">C2</span><span>Dónde están las pérdidas</span></a></li>
-    <li><a href="#c3"><span class="k">C3</span><span>Reversibilidad</span></a></li>
-    <li><a href="#c4"><span class="k">C4</span><span>Reacción de armadura</span></a></li>
-    <li class="grp"><a href="#d"><span class="k">D</span><span>Calidad de energía</span></a></li>
-    <li><a href="#d1"><span class="k">D1</span><span>Factor de forma y de cresta</span></a></li>
-    <li><a href="#d2"><span class="k">D2</span><span>Corriente de neutro</span></a></li>
-    <li><a href="#d3"><span class="k">D3</span><span>Análisis de armónicas</span></a></li>
+    <li class="grp"><a href="#c"><span class="k">C</span><span>Motor paso a paso</span></a></li>
+    <li><a href="#c1"><span class="k">C1</span><span>Tipos y ángulo de paso</span></a></li>
+    <li><a href="#c2"><span class="k">C2</span><span>Secuencias de avance</span></a></li>
+    <li><a href="#c3"><span class="k">C3</span><span>Cuplas y pérdida de pasos</span></a></li>
+    <li class="grp"><a href="#d"><span class="k">D</span><span>Máquina de corriente continua</span></a></li>
+    <li><a href="#d1"><span class="k">D1</span><span>Esquema y rotor bloqueado</span></a></li>
+    <li><a href="#d2"><span class="k">D2</span><span>Dónde están las pérdidas</span></a></li>
+    <li><a href="#d3"><span class="k">D3</span><span>Reversibilidad</span></a></li>
+    <li><a href="#d4"><span class="k">D4</span><span>Reacción de armadura</span></a></li>
+    <li class="grp"><a href="#e"><span class="k">E</span><span>Máquina sincrónica</span></a></li>
+    <li><a href="#e1"><span class="k">E1</span><span>Partes y amortiguador</span></a></li>
+    <li><a href="#e2"><span class="k">E2</span><span>Ángulo de potencia</span></a></li>
+    <li><a href="#e3"><span class="k">E3</span><span>Potencia y estabilidad</span></a></li>
+    <li><a href="#e4"><span class="k">E4</span><span>Curvas V y compensador</span></a></li>
+    <li><a href="#e5"><span class="k">E5</span><span>Arranque</span></a></li>
+    <li class="grp"><a href="#f"><span class="k">F</span><span>Calidad de energía</span></a></li>
+    <li><a href="#f1"><span class="k">F1</span><span>Factor de forma y de cresta</span></a></li>
+    <li><a href="#f2"><span class="k">F2</span><span>Corriente de neutro</span></a></li>
+    <li><a href="#f3"><span class="k">F3</span><span>Análisis de armónicas</span></a></li>
     <li class="grp off"><a href="#x"><span class="k">X</span><span>Transformadores</span></a></li>
   </ol>
 </nav>
@@ -865,15 +876,140 @@ Invertir las dos fases de la <strong>línea</strong> (L y N). Eso invierte <em>l
 </section>
 
 <section class="unit" id="c">
+  <p class="utag">Unidad 9</p>
+  <h2 class="unit-t">Motor paso a paso</h2>
+  <p class="unit-sub">Sin preguntas en ningún modelo — pero está en el programa del cuatrimestre.</p>
+  <p class="src">No aparece en los siete modelos. Lo desarrollamos siguiendo la presentación de la cátedra, <b>Motor Paso a Paso</b>, de donde salen las definiciones de par de retención y de detención, la curva cupla-velocidad y el criterio de las zonas.</p>
+
+<h3 id="c1">C1 · Qué es, tipos y ángulo de paso</h3>
+
+<div class="key"><span class="lab">Definición de la cátedra</span>
+<p>Un motor paso a paso (<em>step motor</em>) es un <strong>actuador, o transductor electromagnético incremental, que convierte pulsos eléctricos digitales en desplazamientos angulares de un eje</strong>. Se controla con una fuente de potencia de corriente continua y un circuito lógico, el <strong>driver</strong>.</p></div>
+
+<p>Lo que lo distingue de cualquier otro motor es que <strong>el desplazamiento es discreto y contable</strong>: cada pulso produce un paso de ángulo fijo. De ahí sus tres características: control exacto de velocidad, distancia y sentido de giro; movimiento preciso, constante y repetible; y una precisión que <strong>no se acumula</strong> — el error es independiente del ángulo total girado y de cuántas veces se repita la posición final. Eso permite posicionar <strong>en lazo abierto</strong>, sin encoder ni realimentación, que es su gran ventaja económica y a la vez su gran riesgo: si pierde pasos, nadie se entera.</p>
+
+<h4>Los tres tipos</h4>
+<div class="scroll"><table>
+<thead><tr><th>Tipo</th><th>Rotor</th><th>Comportamiento</th></tr></thead>
+<tbody>
+<tr><td><b>Imán permanente</b> (PM)</td><td>Número <b>par</b> de polos, de aleación de alta retentividad magnética (<b>Alnico</b>), que forma un imán permanente de varios polos</td><td>Tiene <b>par de detención</b> con las bobinas desenergizadas, porque el imán se atrae con los polos del estator. Ángulos de paso grandes: 7,5° a 30°. Barato; es el motor de 48 pasos de los periféricos.</td></tr>
+<tr><td><b>Reluctancia variable</b> (VR)</td><td>Hierro dulce dentado, <b>sin imán</b>: magnéticamente pasivo. Busca siempre la posición de mínima reluctancia</td><td><b>Sin par de detención</b>: desenergizado gira libre. Por la naturaleza pasiva del rotor <b>admite razones de paso mucho más elevadas</b> que un PM del mismo ángulo de paso, porque su inercia es menor. A cambio, poco par.</td></tr>
+<tr><td><b>Híbrido</b> (HB)</td><td>Imán axial entre dos coronas dentadas desfasadas medio paso dentario</td><td>Combina las dos ideas: el par y el detente del imán con la resolución del dentado. <b>El más usado</b>: con 50 pares de polos y 2 fases da <b>1,8° por paso, 200 pasos por vuelta</b> (o 0,9° y 400 pasos).</td></tr>
+</tbody></table></div>
+
+<div class="fml"><b>α = 360° / (2 · N𝖾 · p)</b>
+<span class="n">N𝖾 = número de fases · p = número de pares de polos del rotor. Con N𝖾 = 2 y p = 3 da α = 30°, el caso de la filmina (12 pasos por vuelta). Con N𝖾 = 2 y p = 50, el híbrido industrial: α = 1,8° y 200 pasos por vuelta.</span></div>
+
+<figure>
+  <div class="fig-h"><span class="num">Fig. 12</span><span class="ttl">Secuencia de avance: a qué posición va el rotor en cada paso</span></div>
+  <div class="fig-b wide"><svg viewBox="0 0 620 246" role="img" aria-label="Cuatro posiciones sucesivas del rotor de un motor paso a paso de cuatro polos, según qué bobinas del estator estén energizadas">
+    <g transform="translate(85,104)"><circle r="54" class="bx"/><rect x="-12" y="-49" width="24" height="18" rx="2" style="fill:var(--cu);fill-opacity:0.28;stroke:var(--cu);stroke-width:1.8"/><text class="tc" x="0" y="-60.8" text-anchor="middle">A</text><rect x="31" y="-12" width="18" height="24" rx="2" style="fill:var(--band);stroke:var(--ink);stroke-width:1.4"/><text class="tm" x="64.8" y="4" text-anchor="middle">B</text><rect x="-12" y="31" width="24" height="18" rx="2" style="fill:var(--band);stroke:var(--ink);stroke-width:1.4"/><text class="tm" x="0" y="68.8" text-anchor="middle">A′</text><rect x="-49" y="-12" width="18" height="24" rx="2" style="fill:var(--band);stroke:var(--ink);stroke-width:1.4"/><text class="tm" x="-64.8" y="4" text-anchor="middle">B′</text><path d="M0,0 L0.0,-26.0" style="fill:none;stroke:var(--cu);stroke-width:7;stroke-linecap:round"/><path d="M0,0 L-0.0,26.0" style="fill:none;stroke:var(--ink);stroke-width:7;stroke-linecap:round"/><circle r="4.5" style="fill:var(--paper);stroke:var(--ink);stroke-width:1.4"/><text class="tb" x="0" y="80" text-anchor="middle">paso 1</text><text class="tm" x="0" y="96" text-anchor="middle">A</text><text class="tm" x="0" y="110" text-anchor="middle">0°</text></g><g transform="translate(235,104)"><circle r="54" class="bx"/><rect x="-12" y="-49" width="24" height="18" rx="2" style="fill:var(--cu);fill-opacity:0.28;stroke:var(--cu);stroke-width:1.8"/><text class="tc" x="0" y="-60.8" text-anchor="middle">A</text><rect x="31" y="-12" width="18" height="24" rx="2" style="fill:var(--cu);fill-opacity:0.28;stroke:var(--cu);stroke-width:1.8"/><text class="tc" x="64.8" y="4" text-anchor="middle">B</text><rect x="-12" y="31" width="24" height="18" rx="2" style="fill:var(--band);stroke:var(--ink);stroke-width:1.4"/><text class="tm" x="0" y="68.8" text-anchor="middle">A′</text><rect x="-49" y="-12" width="18" height="24" rx="2" style="fill:var(--band);stroke:var(--ink);stroke-width:1.4"/><text class="tm" x="-64.8" y="4" text-anchor="middle">B′</text><path d="M0,0 L18.4,-18.4" style="fill:none;stroke:var(--cu);stroke-width:7;stroke-linecap:round"/><path d="M0,0 L-18.4,18.4" style="fill:none;stroke:var(--ink);stroke-width:7;stroke-linecap:round"/><circle r="4.5" style="fill:var(--paper);stroke:var(--ink);stroke-width:1.4"/><text class="tb" x="0" y="80" text-anchor="middle">paso 2</text><text class="tm" x="0" y="96" text-anchor="middle">A+B</text><text class="tm" x="0" y="110" text-anchor="middle">45°</text></g><g transform="translate(385,104)"><circle r="54" class="bx"/><rect x="-12" y="-49" width="24" height="18" rx="2" style="fill:var(--band);stroke:var(--ink);stroke-width:1.4"/><text class="tm" x="0" y="-60.8" text-anchor="middle">A</text><rect x="31" y="-12" width="18" height="24" rx="2" style="fill:var(--cu);fill-opacity:0.28;stroke:var(--cu);stroke-width:1.8"/><text class="tc" x="64.8" y="4" text-anchor="middle">B</text><rect x="-12" y="31" width="24" height="18" rx="2" style="fill:var(--band);stroke:var(--ink);stroke-width:1.4"/><text class="tm" x="0" y="68.8" text-anchor="middle">A′</text><rect x="-49" y="-12" width="18" height="24" rx="2" style="fill:var(--band);stroke:var(--ink);stroke-width:1.4"/><text class="tm" x="-64.8" y="4" text-anchor="middle">B′</text><path d="M0,0 L26.0,-0.0" style="fill:none;stroke:var(--cu);stroke-width:7;stroke-linecap:round"/><path d="M0,0 L-26.0,0.0" style="fill:none;stroke:var(--ink);stroke-width:7;stroke-linecap:round"/><circle r="4.5" style="fill:var(--paper);stroke:var(--ink);stroke-width:1.4"/><text class="tb" x="0" y="80" text-anchor="middle">paso 3</text><text class="tm" x="0" y="96" text-anchor="middle">B</text><text class="tm" x="0" y="110" text-anchor="middle">90°</text></g><g transform="translate(535,104)"><circle r="54" class="bx"/><rect x="-12" y="-49" width="24" height="18" rx="2" style="fill:var(--band);stroke:var(--ink);stroke-width:1.4"/><text class="tm" x="0" y="-60.8" text-anchor="middle">A</text><rect x="31" y="-12" width="18" height="24" rx="2" style="fill:var(--cu);fill-opacity:0.28;stroke:var(--cu);stroke-width:1.8"/><text class="tc" x="64.8" y="4" text-anchor="middle">B</text><rect x="-12" y="31" width="24" height="18" rx="2" style="fill:var(--cu);fill-opacity:0.28;stroke:var(--cu);stroke-width:1.8"/><text class="tc" x="0" y="68.8" text-anchor="middle">A′</text><rect x="-49" y="-12" width="18" height="24" rx="2" style="fill:var(--band);stroke:var(--ink);stroke-width:1.4"/><text class="tm" x="-64.8" y="4" text-anchor="middle">B′</text><path d="M0,0 L18.4,18.4" style="fill:none;stroke:var(--cu);stroke-width:7;stroke-linecap:round"/><path d="M0,0 L-18.4,-18.4" style="fill:none;stroke:var(--ink);stroke-width:7;stroke-linecap:round"/><circle r="4.5" style="fill:var(--paper);stroke:var(--ink);stroke-width:1.4"/><text class="tb" x="0" y="80" text-anchor="middle">paso 4</text><text class="tm" x="0" y="96" text-anchor="middle">A′+B</text><text class="tm" x="0" y="110" text-anchor="middle">135°</text></g>
+    <path class="wa" d="M152,222 H180" marker-end="url(#aha)"/>
+    <path class="wa" d="M302,222 H330" marker-end="url(#aha)"/>
+    <path class="wa" d="M452,222 H480" marker-end="url(#aha)"/>
+  </svg></div>
+  <figcaption>El rotor se alinea siempre con el campo resultante del estator. Con <b>una sola fase energizada</b> apunta a ese polo; con <b>dos fases</b>, a la bisectriz — y ahí está todo el truco del medio paso. La mitad en cobre de la aguja es el polo norte del rotor; los polos en cobre del estator son los energizados. Tomando <b>sólo los pasos 1 y 3</b> la secuencia es de paso completo, de 90° en este esquema de cuatro polos; <b>alternando una y dos fases</b>, de medio paso, de 45°.</figcaption>
+</figure>
+
+<h3 id="c2">C2 · Secuencias de avance y tipo de accionamiento</h3>
+
+<figure>
+  <div class="fig-h"><span class="num">Fig. 13</span><span class="ttl">Corriente en las dos fases, en los cuatro modos de excitación</span></div>
+  <div class="fig-b wide"><svg viewBox="0 0 620 352" role="img" aria-label="Formas de onda de la corriente en las fases A y B para los modos de paso completo con una fase, paso completo con dos fases, medio paso y micropasos">
+    <g class="wl"><path d="M108.0,40 V330"/><path d="M169.0,40 V330"/><path d="M230.0,40 V330"/><path d="M291.0,40 V330"/><path d="M352.0,40 V330"/><path d="M413.0,40 V330"/><path d="M474.0,40 V330"/><path d="M535.0,40 V330"/><path d="M596.0,40 V330"/><path d="M108,52 H596"/><path d="M108,80 H596"/><path d="M108,130 H596"/><path d="M108,158 H596"/><path d="M108,208 H596"/><path d="M108,236 H596"/><path d="M108,286 H596"/><path d="M108,314 H596"/></g>
+    <g class="tm" text-anchor="end">
+      <text x="100" y="56">A</text><text x="100" y="84">B</text>
+      <text x="100" y="134">A</text><text x="100" y="162">B</text>
+      <text x="100" y="212">A</text><text x="100" y="240">B</text>
+      <text x="100" y="290">A</text><text x="100" y="318">B</text>
+    </g>
+    <g class="tb"><text x="8" y="30">paso completo · 1 fase</text><text x="8" y="108">paso completo · 2 fases</text><text x="8" y="186">medio paso</text><text x="8" y="264">micropasos</text></g>
+    <path class="wa" d="M108.0,41.0 L169.0,41.0 L169.0,52.0 L230.0,52.0 L230.0,63.0 L291.0,63.0 L291.0,52.0 L352.0,52.0 L352.0,41.0 L413.0,41.0 L413.0,52.0 L474.0,52.0 L474.0,63.0 L535.0,63.0 L535.0,52.0 L596.0,52.0"/><path class="wc" d="M108.0,80.0 L169.0,80.0 L169.0,69.0 L230.0,69.0 L230.0,80.0 L291.0,80.0 L291.0,91.0 L352.0,91.0 L352.0,80.0 L413.0,80.0 L413.0,69.0 L474.0,69.0 L474.0,80.0 L535.0,80.0 L535.0,91.0 L596.0,91.0"/>
+    <path class="wa" d="M108.0,119.0 L169.0,119.0 L169.0,119.0 L230.0,119.0 L230.0,141.0 L291.0,141.0 L291.0,141.0 L352.0,141.0 L352.0,119.0 L413.0,119.0 L413.0,119.0 L474.0,119.0 L474.0,141.0 L535.0,141.0 L535.0,141.0 L596.0,141.0"/><path class="wc" d="M108.0,147.0 L169.0,147.0 L169.0,169.0 L230.0,169.0 L230.0,169.0 L291.0,169.0 L291.0,147.0 L352.0,147.0 L352.0,147.0 L413.0,147.0 L413.0,169.0 L474.0,169.0 L474.0,169.0 L535.0,169.0 L535.0,147.0 L596.0,147.0"/>
+    <path class="wa" d="M108.0,197.0 L169.0,197.0 L169.0,197.0 L230.0,197.0 L230.0,208.0 L291.0,208.0 L291.0,219.0 L352.0,219.0 L352.0,219.0 L413.0,219.0 L413.0,219.0 L474.0,219.0 L474.0,208.0 L535.0,208.0 L535.0,197.0 L596.0,197.0"/><path class="wc" d="M108.0,236.0 L169.0,236.0 L169.0,225.0 L230.0,225.0 L230.0,225.0 L291.0,225.0 L291.0,225.0 L352.0,225.0 L352.0,236.0 L413.0,236.0 L413.0,247.0 L474.0,247.0 L474.0,247.0 L535.0,247.0 L535.0,247.0 L596.0,247.0"/>
+    <path class="wa" d="M108.0,275.0 111.0,275.0 114.1,275.0 117.2,275.1 120.2,275.1 123.2,275.2 126.3,275.3 129.3,275.4 132.4,275.5 135.4,275.7 138.5,275.8 141.6,276.0 144.6,276.2 147.7,276.4 150.7,276.6 153.8,276.9 156.8,277.1 159.8,277.4 162.9,277.6 165.9,277.9 169.0,278.2 172.1,278.5 175.1,278.9 178.1,279.2 181.2,279.5 184.2,279.9 187.3,280.3 190.4,280.6 193.4,281.0 196.4,281.4 199.5,281.8 202.6,282.2 205.6,282.6 208.6,283.0 211.7,283.4 214.8,283.9 217.8,284.3 220.9,284.7 223.9,285.1 226.9,285.6 230.0,286.0 233.0,286.4 236.1,286.9 239.2,287.3 242.2,287.7 245.2,288.1 248.3,288.6 251.3,289.0 254.4,289.4 257.5,289.8 260.5,290.2 263.5,290.6 266.6,291.0 269.6,291.4 272.7,291.7 275.8,292.1 278.8,292.5 281.9,292.8 284.9,293.1 288.0,293.5 291.0,293.8 294.0,294.1 297.1,294.4 300.1,294.6 303.2,294.9 306.2,295.1 309.3,295.4 312.4,295.6 315.4,295.8 318.5,296.0 321.5,296.2 324.5,296.3 327.6,296.5 330.6,296.6 333.7,296.7 336.8,296.8 339.8,296.9 342.9,296.9 345.9,297.0 349.0,297.0 352.0,297.0 355.0,297.0 358.1,297.0 361.2,296.9 364.2,296.9 367.2,296.8 370.3,296.7 373.3,296.6 376.4,296.5 379.4,296.3 382.5,296.2 385.6,296.0 388.6,295.8 391.7,295.6 394.7,295.4 397.8,295.1 400.8,294.9 403.8,294.6 406.9,294.4 409.9,294.1 413.0,293.8 416.1,293.5 419.1,293.1 422.2,292.8 425.2,292.5 428.2,292.1 431.3,291.7 434.3,291.4 437.4,291.0 440.4,290.6 443.5,290.2 446.6,289.8 449.6,289.4 452.7,289.0 455.7,288.6 458.8,288.1 461.8,287.7 464.8,287.3 467.9,286.9 470.9,286.4 474.0,286.0 477.1,285.6 480.1,285.1 483.2,284.7 486.2,284.3 489.2,283.9 492.3,283.4 495.3,283.0 498.4,282.6 501.4,282.2 504.5,281.8 507.6,281.4 510.6,281.0 513.7,280.6 516.7,280.3 519.8,279.9 522.8,279.5 525.8,279.2 528.9,278.9 532.0,278.5 535.0,278.2 538.0,277.9 541.1,277.6 544.2,277.4 547.2,277.1 550.2,276.9 553.3,276.6 556.3,276.4 559.4,276.2 562.5,276.0 565.5,275.8 568.5,275.7 571.6,275.5 574.7,275.4 577.7,275.3 580.8,275.2 583.8,275.1 586.8,275.1 589.9,275.0 593.0,275.0 596.0,275.0"/><path class="wc" d="M108.0,314.0 111.0,313.6 114.1,313.1 117.2,312.7 120.2,312.3 123.2,311.9 126.3,311.4 129.3,311.0 132.4,310.6 135.4,310.2 138.5,309.8 141.6,309.4 144.6,309.0 147.7,308.6 150.7,308.3 153.8,307.9 156.8,307.5 159.8,307.2 162.9,306.9 165.9,306.5 169.0,306.2 172.1,305.9 175.1,305.6 178.1,305.4 181.2,305.1 184.2,304.9 187.3,304.6 190.4,304.4 193.4,304.2 196.4,304.0 199.5,303.8 202.6,303.7 205.6,303.5 208.6,303.4 211.7,303.3 214.8,303.2 217.8,303.1 220.9,303.1 223.9,303.0 226.9,303.0 230.0,303.0 233.0,303.0 236.1,303.0 239.2,303.1 242.2,303.1 245.2,303.2 248.3,303.3 251.3,303.4 254.4,303.5 257.5,303.7 260.5,303.8 263.5,304.0 266.6,304.2 269.6,304.4 272.7,304.6 275.8,304.9 278.8,305.1 281.9,305.4 284.9,305.6 288.0,305.9 291.0,306.2 294.0,306.5 297.1,306.9 300.1,307.2 303.2,307.5 306.2,307.9 309.3,308.3 312.4,308.6 315.4,309.0 318.5,309.4 321.5,309.8 324.5,310.2 327.6,310.6 330.6,311.0 333.7,311.4 336.8,311.9 339.8,312.3 342.9,312.7 345.9,313.1 349.0,313.6 352.0,314.0 355.0,314.4 358.1,314.9 361.2,315.3 364.2,315.7 367.2,316.1 370.3,316.6 373.3,317.0 376.4,317.4 379.4,317.8 382.5,318.2 385.6,318.6 388.6,319.0 391.7,319.4 394.7,319.7 397.8,320.1 400.8,320.5 403.8,320.8 406.9,321.1 409.9,321.5 413.0,321.8 416.1,322.1 419.1,322.4 422.2,322.6 425.2,322.9 428.2,323.1 431.3,323.4 434.3,323.6 437.4,323.8 440.4,324.0 443.5,324.2 446.6,324.3 449.6,324.5 452.7,324.6 455.7,324.7 458.8,324.8 461.8,324.9 464.8,324.9 467.9,325.0 470.9,325.0 474.0,325.0 477.1,325.0 480.1,325.0 483.2,324.9 486.2,324.9 489.2,324.8 492.3,324.7 495.3,324.6 498.4,324.5 501.4,324.3 504.5,324.2 507.6,324.0 510.6,323.8 513.7,323.6 516.7,323.4 519.8,323.1 522.8,322.9 525.8,322.6 528.9,322.4 532.0,322.1 535.0,321.8 538.0,321.5 541.1,321.1 544.2,320.8 547.2,320.5 550.2,320.1 553.3,319.7 556.3,319.4 559.4,319.0 562.5,318.6 565.5,318.2 568.5,317.8 571.6,317.4 574.7,317.0 577.7,316.6 580.8,316.1 583.8,315.7 586.8,315.3 589.9,314.9 593.0,314.4 596.0,314.0"/>
+    <g class="tm" text-anchor="middle"><text x="138.5" y="342">1</text><text x="199.5" y="342">2</text><text x="260.5" y="342">3</text><text x="321.5" y="342">4</text><text x="382.5" y="342">5</text><text x="443.5" y="342">6</text><text x="504.5" y="342">7</text><text x="565.5" y="342">8</text></g>
+    <text class="tm" x="352" y="348" text-anchor="middle">pasos</text>
+  </svg></div>
+  <figcaption>Los cuatro modos mueven el mismo motor: lo único que cambia es qué corriente manda el driver a cada fase. En <b>medio paso</b> se alternan los estados de una y de dos fases, lo que duplica la resolución; en <b>micropasos</b> las corrientes son dos senoides en cuadratura y el rotor sigue el campo de forma continua.</figcaption>
+</figure>
+
+<div class="scroll"><table>
+<thead><tr><th>Modo</th><th>Secuencia</th><th>Par</th><th>Observaciones</th></tr></thead>
+<tbody>
+<tr><td><b>Paso completo, una fase</b> (<em>wave drive</em>)</td><td class="n">A+ · B+ · A− · B−</td><td>el menor</td><td>Sólo una bobina energizada por vez: la mitad del consumo y <b>alrededor del 70 % del par</b> del modo de dos fases. Es el que más sufre la <b>sobreoscilación</b>.</td></tr>
+<tr><td><b>Paso completo, dos fases</b></td><td class="n">A+B+ · A+B− · A−B− · A−B+</td><td>referencia (100 %)</td><td>El modo normal de trabajo. El campo resultante es √2 veces mayor y queda a 45° de cada polo. Mismo ángulo de paso que el anterior, pero desplazado medio paso.</td></tr>
+<tr><td><b>Medio paso</b> (<em>half step</em>)</td><td class="n">alterna 1 y 2 fases, 8 estados</td><td>alterna entre los dos</td><td><b>Duplica la resolución</b> (1,8° → 0,9°) sin cambiar el motor. Contra: el par no es igual en todos los pasos, porque alterna entre uno y dos devanados energizados.</td></tr>
+<tr><td><b>Micropasos</b></td><td class="n">corriente senoidal por PWM</td><td>menor por micropaso</td><td>Divide cada paso en 8, 16 o 256. Movimiento <b>suave y silencioso</b>, y es la mejor defensa contra la resonancia. El par de mantenimiento en cada micropaso es pequeño, así que la precisión real depende de la carga.</td></tr>
+</tbody></table></div>
+
+<h4>Unipolar y bipolar</h4>
+<ul>
+<li><strong>Unipolar</strong> — 5, 6 u 8 hilos, con <strong>toma central</strong> en cada bobina. Para invertir el campo basta con energizar una u otra mitad, de modo que la corriente circula siempre en el mismo sentido por el transistor: alcanza <strong>un transistor por media bobina</strong>, el driver es simple y barato. Contra: en cada instante trabaja sólo la mitad del cobre, así que el par es menor.</li>
+<li><strong>Bipolar</strong> — 4 hilos, sin toma central. Para invertir el campo hay que invertir la corriente en la bobina completa, lo que exige un <strong>puente H</strong> por fase (cuatro transistores). A cambio usa <strong>todo el cobre</strong> en todo momento: alrededor de un <strong>40 % más de par</strong> con el mismo motor. Es lo estándar hoy.</li>
+</ul>
+
+<h3 id="c3">C3 · Cuplas, curva cupla-velocidad y pérdida de pasos</h3>
+
+<div class="key"><span class="lab">Los dos pares, como los define la cátedra</span>
+<p><strong>Par de retención</strong> (<em>holding torque</em>): el valor del par que puede aplicar al eje la carga mecánica, <strong>sin que el motor pierda su posición</strong> y salga de una posición estable. Es con las bobinas <em>energizadas</em>.</p>
+<p><strong>Par de detención</strong> (<em>detent</em>): aun cuando todos los devanados del estator permanezcan <strong>desenergizados</strong>, todavía existe algo de fuerza de atracción entre los polos del imán permanente del rotor y los polos del estator con los que se alinearon; el par necesario para vencerla es el par de detención. <strong>Sólo existe en los PM y los híbridos</strong>: un motor de reluctancia variable, desenergizado, gira libre.</p></div>
+
+<figure>
+  <div class="fig-h"><span class="num">Fig. 14</span><span class="ttl">Característica cupla-velocidad: zona de arranque y campo de giro</span></div>
+  <div class="fig-b wide"><svg viewBox="0 0 620 306" role="img" aria-label="Curvas de par pull-in y pull-out en función de la frecuencia de pasos, con la zona de arranque debajo de la primera y el campo de giro entre ambas">
+    <path d="M70,100 C150,118 240,160 310,200 C345,222 370,240 380,250 L70,250 Z" fill="var(--accent)" opacity="0.15"/>
+    <path d="M70,60 C180,70 300,110 420,170 C480,205 530,235 560,250 L380,250 C370,240 345,222 310,200 C240,160 150,118 70,100 Z" fill="var(--cu)" opacity="0.12"/>
+    <path class="w" d="M70,268 V40" marker-end="url(#ah)"/>
+    <path class="w" d="M60,250 H600" marker-end="url(#ah)"/>
+    <text class="t" x="62" y="34" text-anchor="end">T</text>
+    <text class="tm" x="596" y="272" text-anchor="end">pasos por segundo</text>
+    <path class="wc" d="M70,60 C180,70 300,110 420,170 C480,205 530,235 560,250"/>
+    <path class="wa" d="M70,100 C150,118 240,160 310,200 C345,222 370,240 380,250"/>
+    <circle cx="70" cy="60" r="5" class="dot"/>
+    <text class="tc" x="80" y="52">par de retención</text>
+    <text class="tc" x="400" y="150">cupla pull-out</text>
+    <text class="ta" x="150" y="150">cupla pull-in</text>
+    <text class="ta" x="180" y="232" text-anchor="middle">zona de arranque</text>
+    <text class="tm" x="180" y="246" text-anchor="middle">arranca, para e invierte</text>
+    <text class="tc" x="430" y="228" text-anchor="middle">campo de giro</text>
+    <text class="tm" x="430" y="242" text-anchor="middle">gira, pero no arranca ni para</text>
+    <path class="wd" d="M380,250 V276"/><path class="wd" d="M560,250 V276"/>
+    <g class="tm" text-anchor="middle"><text x="368" y="290">velocidad pull-in</text><text x="560" y="290" text-anchor="end">velocidad pull-out</text></g>
+    <path class="wd" style="stroke:var(--ink)" d="M300,214 C340,206 380,188 420,176" marker-end="url(#ah)"/>
+    <text class="t" x="296" y="210" text-anchor="end">rampa</text>
+  </svg></div>
+  <figcaption>Las dos curvas caen con la frecuencia porque la corriente no llega a establecerse: la velocidad de crecimiento de la corriente en los devanados depende de la <b>constante de tiempo L/R</b>. Para trabajar en el campo de giro hay que <b>arrancar dentro de la zona de arranque y acelerar por rampa</b>, y frenar por rampa antes de parar.</figcaption>
+</figure>
+
+<h4>Los cuatro puntos de la curva</h4>
+<ul>
+<li><strong>Velocidad pull-in:</strong> la máxima velocidad de conmutación a la que una carga friccional <strong>puede empezar a moverse</strong> sin pérdida de pasos.</li>
+<li><strong>Velocidad pull-out:</strong> la máxima velocidad de conmutación a la que el motor con carga friccional <strong>puede seguir girando</strong> sin pérdida de pasos.</li>
+<li><strong>Par pull-in:</strong> el máximo par aplicable al eje cuando el motor <em>empieza</em> a girar a la velocidad pull-in. Es el par de entrada en sincronismo.</li>
+<li><strong>Par pull-out:</strong> el máximo par aplicable cuando ya <em>gira</em> a la velocidad pull-out. Es el par de salida de sincronismo.</li>
+</ul>
+<p><strong>Zona de arranque:</strong> aquella en la que la posición de la carga <strong>sigue fielmente los impulsos</strong> del sistema de control sin perder pasos; el motor puede arrancar, parar e invertir el giro a esa frecuencia. <strong>Campo de giro</strong> (también llamado «zona muerta» o de alta velocidad): la velocidad de la carga sigue el ritmo de las pulsaciones sin perder saltos, <strong>pero no puede arrancar, parar ni invertir</strong> el sentido de giro. Por eso toda aplicación rápida necesita <strong>ramping</strong>: el número mínimo de pasos que hay que dar al acelerar desde el máximo bidireccional hasta el máximo unidireccional.</p>
+
+<h4>Los tres problemas prácticos</h4>
+<ul>
+<li><strong>Pérdida de pasos.</strong> Si se excede el par pull-out, o si la rampa es demasiado brusca, el rotor se atrasa y pierde pasos. Como el control es en lazo abierto, <strong>el error no se detecta ni se corrige</strong>: la pieza queda mal posicionada y el sistema no lo sabe. Es la razón por la que se sobredimensiona el motor y se verifican los finales de carrera.</li>
+<li><strong>Sobreoscilación y resonancia.</strong> Trabajando a paso simple, el rotor <strong>tiende a la sobreoscilación y oscila sobre su posición final</strong>: es un sistema de segundo orden poco amortiguado. A ciertas frecuencias bajas —típicamente entre 100 y 200 pasos por segundo— esa oscilación entra en resonancia con la frecuencia de pasos y el motor puede llegar a detenerse o a perder pasos en pleno régimen. Se combate con micropasos, con amortiguadores mecánicos o simplemente pasando rápido por esa banda.</li>
+<li><strong>Caída del par con la frecuencia.</strong> Por la constante de tiempo <span class="v">L/R</span>, a frecuencia alta la corriente no alcanza su valor nominal dentro del paso. Por eso los drivers modernos son <strong>choppers de corriente constante</strong> alimentados con una tensión de bus mucho mayor que la nominal del motor —24 o 48 V en un motor de 2 V— para forzar el di/dt al principio de cada paso y recortar la corriente por PWM. Y por eso el motor <strong>consume corriente nominal aun estando parado</strong>, y se calienta en reposo.</li>
+</ul>
+
+</section>
+
+<section class="unit" id="d">
   <p class="utag">Unidad 10</p>
   <h2 class="unit-t">Máquina de corriente continua</h2>
   <p class="unit-sub">Cuatro preguntas, en 4 de los 7 modelos.</p>
 
-<h3 id="c1">C1 · Esquema mecánico-eléctrico como motor, y qué pasa con el rotor bloqueado</h3>
+<h3 id="d1">D1 · Esquema mecánico-eléctrico como motor, y qué pasa con el rotor bloqueado</h3>
 <p class="src">Parcial <b>12-11-25</b> preg. 3 y recuperatorio <b>11-12-24</b> preg. 3 — «explique el esquema mecánico eléctrico de una máquina de corriente continua excitada por armadura, trabajando como motor. Qué ocurre si el rotor está bloqueado. Dónde se representan las pérdidas totales.»</p>
 
 <figure>
-  <div class="fig-h"><span class="num">Fig. 12</span><span class="ttl">Circuito de campo y circuito de armadura</span></div>
+  <div class="fig-h"><span class="num">Fig. 15</span><span class="ttl">Circuito de campo y circuito de armadura</span></div>
   <div class="fig-b wide"><svg viewBox="0 0 620 230" role="img" aria-label="A la izquierda el circuito de excitación con su resistencia e inductancia; a la derecha el circuito de armadura con la resistencia, la inductancia y la fuerza contraelectromotriz">
     <text class="tb" x="20" y="24">CIRCUITO DE CAMPO</text>
     <text class="tb" x="340" y="24">CIRCUITO DE ARMADURA</text>
@@ -929,7 +1065,7 @@ Invertir las dos fases de la <strong>línea</strong> (L y N). Eso invierte <em>l
 <li>Por eso una máquina de CC <strong>no se arranca nunca a tensión plena</strong>: resistencia de arranque en serie, escalonada y eliminada a medida que crece E, o arranque a tensión reducida con chopper, Ward-Leonard o rectificador controlado, más protección de rotor bloqueado. Es el mismo estado que el <strong>ensayo de rotor bloqueado</strong>, que por eso se hace a tensión muy reducida.</li>
 </ul></div>
 
-<h3 id="c2">C2 · Dónde se representan las pérdidas</h3>
+<h3 id="d2">D2 · Dónde se representan las pérdidas</h3>
 <p>Hay que distinguir las que <strong>sí</strong> aparecen como elementos del circuito equivalente de las que <strong>no</strong>.</p>
 
 <div class="scroll"><table>
@@ -946,7 +1082,7 @@ Invertir las dos fases de la <strong>línea</strong> (L y N). Eso invierte <em>l
 <p>Las cuatro últimas no tienen elemento circuital porque no son de naturaleza eléctrica resistiva: se representan en el <strong>balance de potencias</strong>, como la diferencia entre la potencia electromagnética y la potencia en el eje.</p>
 
 <figure>
-  <div class="fig-h"><span class="num">Fig. 13</span><span class="ttl">Balance de potencias del motor de CC: qué está en el circuito y qué no</span></div>
+  <div class="fig-h"><span class="num">Fig. 16</span><span class="ttl">Balance de potencias del motor de CC: qué está en el circuito y qué no</span></div>
   <div class="fig-b wide"><svg viewBox="0 0 700 250" role="img" aria-label="Flujo de potencia del motor de corriente continua, separando las pérdidas eléctricas que figuran en el circuito de las del hierro y mecánicas que no">
     <polygon class="fillb" points="40,40 700,40 700,92 480,92 480,102 400,102 400,112 300,112 300,124 220,124 220,134 140,134 140,146 40,146"/>
     <polygon fill="none" stroke="var(--ink)" stroke-width="1.5" points="40,40 700,40 700,92 480,92 480,102 400,102 400,112 300,112 300,124 220,124 220,134 140,134 140,146 40,146"/>
@@ -972,12 +1108,12 @@ Invertir las dos fases de la <strong>línea</strong> (L y N). Eso invierte <em>l
   <figcaption>Las tres derivaciones de trazo pleno son las que tienen un elemento en el circuito equivalente. Las tres de trazo punteado existen igual, pero sólo aparecen en el diagrama de Sankey, como <b>la separación entre P𝖾𝗆 y P𝗎</b>.</figcaption>
 </figure>
 
-<h3 id="c3">C3 · Qué significa que la máquina sea reversible</h3>
+<h3 id="d3">D3 · Qué significa que la máquina sea reversible</h3>
 <p class="src">Recuperatorio <b>11-12-24</b> preg. 3, segunda parte.</p>
 <p>Que <strong>la misma máquina, sin ninguna modificación constructiva</strong>, puede funcionar como <strong>motor</strong> (eléctrica → mecánica) o como <strong>generador o dinamo</strong> (mecánica → eléctrica). En la máquina de CC es particularmente directa porque <strong>el mismo colector</strong> que rectifica para generar, conmuta para motorizar.</p>
 
 <figure>
-  <div class="fig-h"><span class="num">Fig. 14</span><span class="ttl">Los dos modos, según la relación entre E y V𝖺</span></div>
+  <div class="fig-h"><span class="num">Fig. 17</span><span class="ttl">Los dos modos, según la relación entre E y V𝖺</span></div>
   <div class="fig-b wide"><svg viewBox="0 0 620 180" role="img" aria-label="Comparación entre el modo motor, con E menor que la tensión de armadura y corriente entrante, y el modo generador, con E mayor y corriente invertida">
     <g>
       <rect x="20" y="30" width="270" height="124" fill="var(--paper)" stroke="var(--line)" stroke-width="1"/>
@@ -1011,7 +1147,7 @@ Invertir las dos fases de la <strong>línea</strong> (L y N). Eso invierte <em>l
 <li>Si además se invierte V𝖺 o Φ se obtienen los otros dos cuadrantes (frenado a contracorriente y marcha inversa): la máquina de CC con excitación independiente es una máquina de <strong>cuatro cuadrantes</strong> natural.</li>
 </ul>
 
-<h3 id="c4">C4 · Partes constitutivas y reacción de armadura</h3>
+<h3 id="d4">D4 · Partes constitutivas y reacción de armadura</h3>
 <p class="src">Recuperatorios <b>10-12-25</b> preg. 3 y <b>07-12-22</b> preg. 4 — «explique las partes constitutivas de una máquina de corriente continua. Qué es el efecto de debilitamiento de los polos magnéticos por la reacción de armadura, qué problemas trae y cómo se soluciona.»</p>
 
 <h4>Partes constitutivas</h4>
@@ -1019,7 +1155,7 @@ Invertir las dos fases de la <strong>línea</strong> (L y N). Eso invierte <em>l
 <p><strong>Rotor (armadura o inducido):</strong> <strong>núcleo de chapas</strong> de acero al silicio aisladas y ranuradas, laminado para limitar las corrientes de Foucault; <strong>devanado de armadura</strong> en configuración imbricada —para alta corriente, 2p caminos en paralelo— u ondulada —para alta tensión, 2 caminos—; <strong>colector o conmutador</strong>, cilindro de delgas de cobre aisladas con mica, montado sobre el eje y aislado de él, que es la pieza característica y el punto débil de la máquina; <strong>eje, rodamientos, ventilador y bandas de sujeción</strong>.</p>
 
 <figure>
-  <div class="fig-h"><span class="num">Fig. 15</span><span class="ttl">Reacción de armadura: distorsión, corrimiento del neutro y debilitamiento neto</span></div>
+  <div class="fig-h"><span class="num">Fig. 18</span><span class="ttl">Reacción de armadura: distorsión, corrimiento del neutro y debilitamiento neto</span></div>
   <div class="fig-b wide"><svg viewBox="0 0 620 318" role="img" aria-label="Tres paneles: el flujo del polo solo, el flujo de la armadura sola y la resultante, que queda distorsionada, con la línea neutra corrida y el flujo total reducido por saturación">
   <g transform="translate(6,0)">
     <rect x="14" y="40" width="152" height="26" class="fillb"/><rect x="14" y="40" width="152" height="26" fill="none" stroke="var(--ink)" stroke-width="1.5"/>
@@ -1097,12 +1233,224 @@ Invertir las dos fases de la <strong>línea</strong> (L y N). Eso invierte <em>l
 
 </section>
 
-<section class="unit" id="d">
+<section class="unit" id="e">
+  <p class="utag">Unidad 11</p>
+  <h2 class="unit-t">Máquina sincrónica</h2>
+  <p class="unit-sub">Tampoco aparece en los modelos — y es la máquina con la que se genera prácticamente toda la energía eléctrica.</p>
+  <p class="src">Desarrollada siguiendo el material de la cátedra: la presentación <b>Máquina Sincrónica</b> y los apuntes <b>Motor Sincrónico</b> del Ing. José Luis González, de donde salen el método de las fuerzas electromotrices, las curvas V y el arranque asincrónico.</p>
+
+<h3 id="e1">E1 · Partes constitutivas y el devanado amortiguador</h3>
+
+<p><strong>Estator o inducido:</strong> idéntico al de la máquina asincrónica — chapas ranuradas con un devanado trifásico distribuido, desfasado 120°. Es donde se genera (alternador) o se aplica (motor) el sistema trifásico.</p>
+<p><strong>Rotor o inductor:</strong> lleva el <strong>devanado de excitación alimentado en corriente continua</strong>, que crea un campo magnético fijo respecto del rotor. Dos construcciones:</p>
+<ul>
+<li><strong>Rotor liso o cilíndrico:</strong> devanado distribuido en ranuras sobre un cilindro macizo, 2 o 4 polos. Es el de los <strong>turboalternadores</strong> de las centrales térmicas y nucleares, que giran a 3000 rpm (2 polos, 50 Hz). Resiste la fuerza centrífuga y tiene entrehierro uniforme.</li>
+<li><strong>Polos salientes:</strong> muchos polos con zapata, 4 a 100 o más. Es el de los <strong>hidrogeneradores</strong> y de los motores sincrónicos de baja velocidad. El entrehierro <strong>no es uniforme</strong>, lo que introduce la anisotropía que veremos en E3.</li>
+</ul>
+<p><strong>Excitación.</strong> Clásicamente, una <strong>excitatriz</strong> —un generador de CC montado sobre el mismo eje— o una fuente externa a través de <strong>anillos rozantes y escobillas</strong>. Hoy se usa el <strong>sistema sin escobillas</strong>: un alternador invertido montado en el eje (campo de CC fijo, armadura giratoria) cuya salida se rectifica con un puente de diodos o tiristores que gira con el rotor. Así se elimina la conmutación, el chisporroteo y el mantenimiento de escobillas y anillos.</p>
+
+<figure>
+  <div class="fig-h"><span class="num">Fig. 19</span><span class="ttl">Los dos rotores, y dónde va el devanado amortiguador</span></div>
+  <div class="fig-b wide"><svg viewBox="0 0 700 262" role="img" aria-label="A la izquierda un rotor liso de dos polos con devanado distribuido en ranuras; a la derecha un rotor de cuatro polos salientes con las barras de la jaula amortiguadora en las caras polares">
+    <g transform="translate(160,110)">
+      <circle r="78" class="fillb"/><circle r="78" style="fill:none;stroke:var(--ink);stroke-width:1.8"/>
+      <rect x="-69.1" y="-20.2" width="9" height="13" rx="1.5" transform="rotate(-78.0 -64.6 -13.7)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="60.1" y="7.2" width="9" height="13" rx="1.5" transform="rotate(102.0 64.6 13.7)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="-65.5" y="-31.7" width="9" height="13" rx="1.5" transform="rotate(-67.6 -61.0 -25.2)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="56.5" y="18.7" width="9" height="13" rx="1.5" transform="rotate(112.4 61.0 25.2)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="-60.0" y="-42.3" width="9" height="13" rx="1.5" transform="rotate(-57.2 -55.5 -35.8)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="51.0" y="29.3" width="9" height="13" rx="1.5" transform="rotate(122.8 55.5 35.8)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="-52.6" y="-51.7" width="9" height="13" rx="1.5" transform="rotate(-46.8 -48.1 -45.2)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="43.6" y="38.7" width="9" height="13" rx="1.5" transform="rotate(133.2 48.1 45.2)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="-43.7" y="-59.6" width="9" height="13" rx="1.5" transform="rotate(-36.4 -39.2 -53.1)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="34.7" y="46.6" width="9" height="13" rx="1.5" transform="rotate(143.6 39.2 53.1)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="-33.4" y="-65.8" width="9" height="13" rx="1.5" transform="rotate(-26.0 -28.9 -59.3)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="24.4" y="52.8" width="9" height="13" rx="1.5" transform="rotate(154.0 28.9 59.3)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="-22.2" y="-70.1" width="9" height="13" rx="1.5" transform="rotate(-15.6 -17.7 -63.6)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="13.2" y="57.1" width="9" height="13" rx="1.5" transform="rotate(164.4 17.7 63.6)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="-10.5" y="-72.2" width="9" height="13" rx="1.5" transform="rotate(-5.2 -6.0 -65.7)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="1.5" y="59.2" width="9" height="13" rx="1.5" transform="rotate(174.8 6.0 65.7)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="1.5" y="-72.2" width="9" height="13" rx="1.5" transform="rotate(5.2 6.0 -65.7)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="-10.5" y="59.2" width="9" height="13" rx="1.5" transform="rotate(185.2 -6.0 65.7)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="13.2" y="-70.1" width="9" height="13" rx="1.5" transform="rotate(15.6 17.7 -63.6)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="-22.2" y="57.1" width="9" height="13" rx="1.5" transform="rotate(195.6 -17.7 63.6)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="24.4" y="-65.8" width="9" height="13" rx="1.5" transform="rotate(26.0 28.9 -59.3)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="-33.4" y="52.8" width="9" height="13" rx="1.5" transform="rotate(206.0 -28.9 59.3)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="34.7" y="-59.6" width="9" height="13" rx="1.5" transform="rotate(36.4 39.2 -53.1)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="-43.7" y="46.6" width="9" height="13" rx="1.5" transform="rotate(216.4 -39.2 53.1)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="43.6" y="-51.7" width="9" height="13" rx="1.5" transform="rotate(46.8 48.1 -45.2)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="-52.6" y="38.7" width="9" height="13" rx="1.5" transform="rotate(226.8 -48.1 45.2)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="51.0" y="-42.3" width="9" height="13" rx="1.5" transform="rotate(57.2 55.5 -35.8)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="-60.0" y="29.3" width="9" height="13" rx="1.5" transform="rotate(237.2 -55.5 35.8)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="56.5" y="-31.7" width="9" height="13" rx="1.5" transform="rotate(67.6 61.0 -25.2)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="-65.5" y="18.7" width="9" height="13" rx="1.5" transform="rotate(247.6 -61.0 25.2)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="60.1" y="-20.2" width="9" height="13" rx="1.5" transform="rotate(78.0 64.6 -13.7)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/><rect x="-69.1" y="7.2" width="9" height="13" rx="1.5" transform="rotate(258.0 -64.6 13.7)" style="fill:var(--paper);stroke:var(--cu);stroke-width:1.2"/>
+      <path class="wd" d="M0,-92 V92"/>
+      <text class="tm" x="0" y="-84" text-anchor="middle">eje polar</text>
+      <text class="tc" x="0" y="-26" text-anchor="middle">N</text><text class="tc" x="0" y="34" text-anchor="middle">S</text>
+      <text class="tb" x="0" y="112" text-anchor="middle">rotor liso</text>
+      <text class="tm" x="0" y="130" text-anchor="middle">2 polos · 3000 rpm</text>
+      <text class="tm" x="0" y="144" text-anchor="middle">turboalternador</text>
+    </g>
+    <g transform="translate(460,110)">
+      <circle r="78" style="fill:none;stroke:var(--line);stroke-width:1.2;stroke-dasharray:4 4"/>
+      <circle r="26" class="fillb"/><circle r="26" style="fill:none;stroke:var(--ink);stroke-width:1.8"/>
+      <g transform="rotate(0)"><path d="M-13,-26 L-13,-54 L-30,-54 L-30,-70 L30,-70 L30,-54 L13,-54 L13,-26 Z" style="fill:var(--band);stroke:var(--ink);stroke-width:1.6"/><circle cx="-20" cy="-64" r="3.2" style="fill:var(--cu);stroke:none"/><circle cx="-10" cy="-64" r="3.2" style="fill:var(--cu);stroke:none"/><circle cx="0" cy="-64" r="3.2" style="fill:var(--cu);stroke:none"/><circle cx="10" cy="-64" r="3.2" style="fill:var(--cu);stroke:none"/><circle cx="20" cy="-64" r="3.2" style="fill:var(--cu);stroke:none"/><text class="tc" x="0" y="-38" text-anchor="middle" transform="rotate(0 0 -38)">N</text></g><g transform="rotate(90)"><path d="M-13,-26 L-13,-54 L-30,-54 L-30,-70 L30,-70 L30,-54 L13,-54 L13,-26 Z" style="fill:var(--band);stroke:var(--ink);stroke-width:1.6"/><circle cx="-20" cy="-64" r="3.2" style="fill:var(--cu);stroke:none"/><circle cx="-10" cy="-64" r="3.2" style="fill:var(--cu);stroke:none"/><circle cx="0" cy="-64" r="3.2" style="fill:var(--cu);stroke:none"/><circle cx="10" cy="-64" r="3.2" style="fill:var(--cu);stroke:none"/><circle cx="20" cy="-64" r="3.2" style="fill:var(--cu);stroke:none"/><text class="tc" x="0" y="-38" text-anchor="middle" transform="rotate(-90 0 -38)">S</text></g><g transform="rotate(180)"><path d="M-13,-26 L-13,-54 L-30,-54 L-30,-70 L30,-70 L30,-54 L13,-54 L13,-26 Z" style="fill:var(--band);stroke:var(--ink);stroke-width:1.6"/><circle cx="-20" cy="-64" r="3.2" style="fill:var(--cu);stroke:none"/><circle cx="-10" cy="-64" r="3.2" style="fill:var(--cu);stroke:none"/><circle cx="0" cy="-64" r="3.2" style="fill:var(--cu);stroke:none"/><circle cx="10" cy="-64" r="3.2" style="fill:var(--cu);stroke:none"/><circle cx="20" cy="-64" r="3.2" style="fill:var(--cu);stroke:none"/><text class="tc" x="0" y="-38" text-anchor="middle" transform="rotate(-180 0 -38)">N</text></g><g transform="rotate(270)"><path d="M-13,-26 L-13,-54 L-30,-54 L-30,-70 L30,-70 L30,-54 L13,-54 L13,-26 Z" style="fill:var(--band);stroke:var(--ink);stroke-width:1.6"/><circle cx="-20" cy="-64" r="3.2" style="fill:var(--cu);stroke:none"/><circle cx="-10" cy="-64" r="3.2" style="fill:var(--cu);stroke:none"/><circle cx="0" cy="-64" r="3.2" style="fill:var(--cu);stroke:none"/><circle cx="10" cy="-64" r="3.2" style="fill:var(--cu);stroke:none"/><circle cx="20" cy="-64" r="3.2" style="fill:var(--cu);stroke:none"/><text class="tc" x="0" y="-38" text-anchor="middle" transform="rotate(-270 0 -38)">S</text></g>
+      <text class="tb" x="0" y="112" text-anchor="middle">polos salientes</text>
+      <text class="tm" x="0" y="130" text-anchor="middle">4 a 100 polos · baja velocidad</text>
+      <text class="tm" x="0" y="144" text-anchor="middle">hidrogenerador</text>
+    </g>
+    <path class="wc" d="M556,96 H520" marker-end="url(#ahc)"/>
+    <text class="tc" x="560" y="92">barras de la</text><text class="tc" x="560" y="106">jaula amortiguadora</text>
+  </svg></div>
+  <figcaption>El <b>devanado amortiguador</b> son barras de cobre o bronce alojadas en ranuras de las caras polares y cortocircuitadas en los extremos por anillos frontales: <b>una jaula de ardilla</b> metida dentro de una máquina sincrónica. El entrehierro del rotor liso es uniforme; el de polos salientes, no — de ahí la anisotropía y el par de reluctancia de E3.</figcaption>
+</figure>
+
+<div class="key"><span class="lab">Las cinco funciones del devanado amortiguador</span>
+<ol style="margin:0">
+<li><strong>Amortiguación de oscilaciones mecánicas</strong> — frena el penduleo del rotor alrededor de su posición de sincronismo.</li>
+<li><strong>Funcionamiento en régimen desequilibrado</strong> — absorbe las corrientes de secuencia inversa que crearía una carga asimétrica.</li>
+<li><strong>Limitación de campos armónicos</strong> — cortocircuita los armónicos de campo en el entrehierro.</li>
+<li><strong>Mejora del comportamiento en cortocircuito</strong> — aporta la componente subtransitoria y sostiene la corriente de falla.</li>
+<li><strong>Arranque asíncrono</strong> — es lo que permite que el motor sincrónico arranque solo, como se ve en E5.</li>
+</ol></div>
+
+<h3 id="e2">E2 · Alternador y motor: el ángulo de potencia</h3>
+
+<p>En el entrehierro conviven <strong>dos campos magnéticos</strong> que giran a la misma velocidad sincrónica: el de las corrientes del inducido y el de la rueda polar. El campo del estator tiende a alinearse con el del rotor, y <strong>cuanto mayor sea el ángulo entre los dos campos —hasta cierto límite— mayor será la potencia</strong>. Ese ángulo es el <strong>ángulo de potencia o de carga, δ</strong>, y es la variable que gobierna toda la máquina.</p>
+
+<div class="fml">n𝗌 = 60·f / p   <span style="color:var(--muted)">rigurosamente constante, no depende de la carga</span>
+<b>E₀ = V + I·(R + jX𝗌)</b>   <span style="color:var(--muted)">método de las fuerzas electromotrices</span>
+<span class="n">X𝗌 es la reactancia sincrónica: dispersión más reacción de inducido. Como X𝗌 ≫ R, en el análisis se desprecia R salvo en el cálculo de pérdidas.</span></div>
+
+<figure>
+  <div class="fig-h"><span class="num">Fig. 20</span><span class="ttl">Circuito equivalente por fase y diagrama fasorial en los tres estados</span></div>
+  <div class="fig-b wide"><svg viewBox="0 0 620 430" role="img" aria-label="Arriba el circuito equivalente por fase con la fem, la resistencia y la reactancia sincrónica; abajo tres diagramas fasoriales: alternador con delta positivo, vacio con delta cero y motor con delta negativo">
+    <g>
+      <text class="tb" x="8" y="24">circuito equivalente por fase</text>
+      <circle cx="46" cy="130" r="20" style="fill:var(--paper);stroke:var(--ink);stroke-width:1.8"/>
+      <text class="t" x="46" y="135" text-anchor="middle">E₀</text>
+      <path class="w" d="M46,110 V84 H78 M112,84 H128 M162,84 H190 V190 H46 V150"/>
+      <rect class="bx" x="78" y="72" width="34" height="24" rx="1.5"/><text class="t" x="95" y="64" text-anchor="middle">R</text>
+      <rect class="bx" x="128" y="72" width="34" height="24" rx="1.5"/><text class="t" x="145" y="64" text-anchor="middle">jX𝗌</text>
+      <circle cx="190" cy="84" r="4.5" class="bx"/><circle cx="190" cy="190" r="4.5" class="bx"/>
+      <path class="wa" d="M204,98 V176" marker-start="url(#aha)" marker-end="url(#aha)"/>
+      <text class="ta" x="210" y="142">V</text>
+      <path class="wc" d="M54,62 H88" marker-end="url(#ahc)"/><text class="tc" x="58" y="54">I</text>
+    </g>
+    <g class="tm">
+      <text x="260" y="76">X𝗌 es la reactancia sincrónica: dispersión más</text>
+      <text x="260" y="92">reacción de inducido. Como X𝗌 ≫ R, la resistencia</text>
+      <text x="260" y="108">se desprecia salvo para el cálculo de pérdidas.</text>
+      <text x="260" y="136">El mismo circuito sirve para los dos modos.</text>
+      <text x="260" y="152">Lo único que cambia es el signo de δ, el ángulo</text>
+      <text x="260" y="168">entre E₀ y V.</text>
+    </g>
+    <path class="wl" d="M8,216 H612"/>
+    <g transform="translate(0,0)"><text class="tb" x="8" y="262">alternador</text><path class="wd" d="M26,340 H160"/><path class="wa" style="stroke-width:3" d="M26,340 L126,340" marker-end="url(#aha)"/><text class="ta" x="112" y="356">V</text><path class="wc" d="M26,340 L67.3,360.2" marker-end="url(#ahc)"/><text class="tc" x="72.3" y="375.2">I</text><path class="w" d="M126,340 L135.0,344.4"/><path class="w" d="M135.0,344.4 L157.8,297.6"/><text class="tm" x="153.4" y="325.0">jX𝗌I</text><path style="fill:none;stroke:var(--ink);stroke-width:2.6" d="M26,340 L157.8,297.6" marker-end="url(#ah)"/><text class="tb" x="164.8" y="292.6">E₀</text><path class="wd" style="stroke:var(--cu)" d="M70,340 A 44,44 0 0,1 67.9,326.5"/><text class="tc" x="76" y="324">δ</text><text class="tm" x="8" y="414">δ &gt; 0  ·  entrega</text></g>
+    <g transform="translate(206,0)"><text class="tb" x="8" y="262">en vacío</text><path class="wd" d="M26,340 H160"/><path class="wa" style="stroke-width:3" d="M26,340 L126,340" marker-end="url(#aha)"/><text class="ta" x="76" y="362" text-anchor="middle">V = E₀</text><circle cx="126" cy="340" r="4.5" class="dot"/><text class="tc" x="134" y="330">I = 0</text><text class="tm" x="8" y="414">δ = 0  ·  I = 0</text></g>
+    <g transform="translate(412,0)"><text class="tb" x="8" y="262">motor</text><path class="wd" d="M26,340 H160"/><path class="wa" style="stroke-width:3" d="M26,340 L126,340" marker-end="url(#aha)"/><text class="ta" x="112" y="332">V</text><path class="wc" d="M26,340 L69.2,324.3" marker-end="url(#ahc)"/><text class="tc" x="74.2" y="318.3">I</text><path class="w" d="M126,340 L116.6,343.4"/><path class="w" d="M116.6,343.4 L134.4,392.3"/><text class="tm" x="132.5" y="371.9">jX𝗌I</text><path style="fill:none;stroke:var(--ink);stroke-width:2.6" d="M26,340 L134.4,392.3" marker-end="url(#ah)"/><text class="tb" x="141.4" y="407.3">E₀</text><path class="wd" style="stroke:var(--cu)" d="M70,340 A 44,44 0 0,0 65.6,359.1"/><text class="tc" x="76" y="366">δ</text><text class="tm" x="8" y="414">δ &lt; 0  ·  consume</text></g>
+  </svg></div>
+  <figcaption>Los tres estados de la misma máquina. Si <b>E₀ adelanta</b> a V entrega potencia; si <b>la atrasa</b>, la consume; y con E₀ y V coincidentes está en paralelo con la red y en vacío, con I = 0, que es la condición de sincronización.</figcaption>
+</figure>
+
+<ul>
+<li><strong>Alternador, δ &gt; 0.</strong> La fem E₀ generada por la fmm principal <strong>adelanta</strong> al fasor tensión V: los polos inductores adelantan a los polos virtuales de la armadura. La turbina empuja al rotor y la máquina entrega energía a la red.</li>
+<li><strong>En vacío, δ = 0.</strong> Si se hacen coincidir V y E₀, la potencia transferida se anula: la máquina queda <strong>en paralelo con la red sin entregar ni consumir</strong>, con I = 0. Es la condición de sincronización.</li>
+<li><strong>Motor, δ &lt; 0.</strong> E₀ se <strong>atrasa</strong> respecto de V: la rueda polar gira atrasada respecto de los polos virtuales del sistema de corrientes de armadura. Ahora <strong>los polos virtuales arrastran a los polos inductores</strong> y la transferencia de energía va del estator al rotor. Los fasores I·R e I·X𝗌 invierten su sentido y E₀ toma el carácter de una <strong>fuerza contraelectromotriz</strong>, igual que en la máquina de CC.</li>
+</ul>
+<p>Un motor sincrónico es <strong>igual en todos los aspectos a un generador sincrónico</strong>, salvo en que la dirección del flujo de potencia está invertida. No hay diferencia constructiva.</p>
+
+<h3 id="e3">E3 · Potencia, cupla y límite de estabilidad</h3>
+
+<div class="fml"><b>P = (m · V · E₀ / X𝗌) · sen δ</b>   <span style="color:var(--muted)">rotor liso, m fases</span>
+P = (m·V·E₀/X𝗍)·sen δ + (m·V²/2)·(1/X𝗍 − 1/X𝗅)·sen 2δ   <span style="color:var(--muted)">polos salientes</span>
+<span class="n">En el rotor liso X𝗅 = X𝗍 y el segundo término desaparece. En polos salientes la anisotropía del entrehierro crea direcciones de distinta reluctancia, y ese segundo término es el <b>par de reluctancia</b>.</span></div>
+
+<figure>
+  <div class="fig-h"><span class="num">Fig. 21</span><span class="ttl">Potencia en función del ángulo de carga</span></div>
+  <div class="fig-b wide"><svg viewBox="0 0 620 296" role="img" aria-label="Curva de potencia contra ángulo de carga para rotor liso, con máximo en noventa grados, y para polos salientes, con máximo antes y mayor potencia">
+    <path class="w" d="M70,258 V40" marker-end="url(#ah)"/>
+    <path class="w" d="M60,240 H600" marker-end="url(#ah)"/>
+    <text class="t" x="62" y="34" text-anchor="end">P</text><text class="tm" x="604" y="228" text-anchor="end">δ</text>
+    <g class="tm" text-anchor="middle">
+      <path class="wl" d="M70,240 V246 M198,240 V246 M325,240 V246 M453,240 V246 M580,240 V246"/>
+      <text x="70" y="260">0°</text><text x="198" y="260">45°</text><text x="325" y="260">90°</text><text x="453" y="260">135°</text><text x="580" y="260">180°</text>
+    </g>
+    <path class="wd" style="stroke:var(--muted)" d="M70.0,240.00 72.8,238.22 75.7,236.44 78.5,234.67 81.3,232.90 84.2,231.14 87.0,229.40 89.8,227.66 92.7,225.94 95.5,224.24 98.3,222.56 101.2,220.90 104.0,219.26 106.8,217.64 109.7,216.06 112.5,214.50 115.3,212.97 118.2,211.48 121.0,210.02 123.8,208.60 126.7,207.22 129.5,205.87 132.3,204.57 135.2,203.31 138.0,202.10 140.8,200.93 143.7,199.81 146.5,198.74 149.3,197.72 152.2,196.75 155.0,195.83 157.8,194.97 160.7,194.16 163.5,193.41 166.3,192.71 169.2,192.08 172.0,191.50 174.8,190.98 177.7,190.51 180.5,190.11 183.3,189.77 186.2,189.50 189.0,189.28 191.8,189.12 194.7,189.03 197.5,189.00 200.3,189.03 203.2,189.12 206.0,189.28 208.8,189.50 211.7,189.77 214.5,190.11 217.3,190.51 220.2,190.98 223.0,191.50 225.8,192.08 228.7,192.71 231.5,193.41 234.3,194.16 237.2,194.97 240.0,195.83 242.8,196.75 245.7,197.72 248.5,198.74 251.3,199.81 254.2,200.93 257.0,202.10 259.8,203.31 262.7,204.57 265.5,205.87 268.3,207.22 271.2,208.60 274.0,210.02 276.8,211.48 279.7,212.97 282.5,214.50 285.3,216.06 288.2,217.64 291.0,219.26 293.8,220.90 296.7,222.56 299.5,224.24 302.3,225.94 305.2,227.66 308.0,229.40 310.8,231.14 313.7,232.90 316.5,234.67 319.3,236.44 322.2,238.22 325.0,240.00 327.8,241.78 330.7,243.56 333.5,245.33 336.3,247.10 339.2,248.86 342.0,250.60 344.8,252.34 347.7,254.06 350.5,255.76 353.3,257.44 356.2,259.10 359.0,260.74 361.8,262.36 364.7,263.94 367.5,265.50 370.3,267.03 373.2,268.52 376.0,269.98 378.8,271.40 381.7,272.78 384.5,274.13 387.3,275.43 390.2,276.69 393.0,277.90 395.8,279.07 398.7,280.19 401.5,281.26 404.3,282.28 407.2,283.25 410.0,284.17 412.8,285.03 415.7,285.84 418.5,286.59 421.3,287.29 424.2,287.92 427.0,288.50 429.8,289.02 432.7,289.49 435.5,289.89 438.3,290.23 441.2,290.50 444.0,290.72 446.8,290.88 449.7,290.97 452.5,291.00 455.3,290.97 458.2,290.88 461.0,290.72 463.8,290.50 466.7,290.23 469.5,289.89 472.3,289.49 475.2,289.02 478.0,288.50 480.8,287.92 483.7,287.29 486.5,286.59 489.3,285.84 492.2,285.03 495.0,284.17 497.8,283.25 500.7,282.28 503.5,281.26 506.3,280.19 509.2,279.07 512.0,277.90 514.8,276.69 517.7,275.43 520.5,274.13 523.3,272.78 526.2,271.40 529.0,269.98 531.8,268.52 534.7,267.03 537.5,265.50 540.3,263.94 543.2,262.36 546.0,260.74 548.8,259.10 551.7,257.44 554.5,255.76 557.3,254.06 560.2,252.34 563.0,250.60 565.8,248.86 568.7,247.10 571.5,245.33 574.3,243.56 577.2,241.78 580.0,240.00"/>
+    <path class="wa" d="M70.0,240.00 72.8,237.03 75.7,234.07 78.5,231.10 81.3,228.14 84.2,225.18 87.0,222.23 89.8,219.28 92.7,216.34 95.5,213.41 98.3,210.48 101.2,207.56 104.0,204.66 106.8,201.76 109.7,198.87 112.5,196.00 115.3,193.14 118.2,190.30 121.0,187.47 123.8,184.65 126.7,181.86 129.5,179.08 132.3,176.32 135.2,173.58 138.0,170.85 140.8,168.15 143.7,165.48 146.5,162.82 149.3,160.19 152.2,157.58 155.0,155.00 157.8,152.44 160.7,149.91 163.5,147.41 166.3,144.94 169.2,142.49 172.0,140.08 174.8,137.69 177.7,135.34 180.5,133.02 183.3,130.73 186.2,128.47 189.0,126.25 191.8,124.06 194.7,121.91 197.5,119.79 200.3,117.71 203.2,115.67 206.0,113.67 208.8,111.70 211.7,109.77 214.5,107.89 217.3,106.04 220.2,104.23 223.0,102.47 225.8,100.74 228.7,99.06 231.5,97.43 234.3,95.83 237.2,94.28 240.0,92.78 242.8,91.31 245.7,89.90 248.5,88.53 251.3,87.21 254.2,85.93 257.0,84.70 259.8,83.51 262.7,82.38 265.5,81.29 268.3,80.25 271.2,79.26 274.0,78.32 276.8,77.43 279.7,76.59 282.5,75.79 285.3,75.05 288.2,74.36 291.0,73.71 293.8,73.12 296.7,72.58 299.5,72.09 302.3,71.65 305.2,71.27 308.0,70.93 310.8,70.65 313.7,70.41 316.5,70.23 319.3,70.10 322.2,70.03 325.0,70.00 327.8,70.03 330.7,70.10 333.5,70.23 336.3,70.41 339.2,70.65 342.0,70.93 344.8,71.27 347.7,71.65 350.5,72.09 353.3,72.58 356.2,73.12 359.0,73.71 361.8,74.36 364.7,75.05 367.5,75.79 370.3,76.59 373.2,77.43 376.0,78.32 378.8,79.26 381.7,80.25 384.5,81.29 387.3,82.38 390.2,83.51 393.0,84.70 395.8,85.93 398.7,87.21 401.5,88.53 404.3,89.90 407.2,91.31 410.0,92.78 412.8,94.28 415.7,95.83 418.5,97.43 421.3,99.06 424.2,100.74 427.0,102.47 429.8,104.23 432.7,106.04 435.5,107.89 438.3,109.77 441.2,111.70 444.0,113.67 446.8,115.67 449.7,117.71 452.5,119.79 455.3,121.91 458.2,124.06 461.0,126.25 463.8,128.47 466.7,130.73 469.5,133.02 472.3,135.34 475.2,137.69 478.0,140.08 480.8,142.49 483.7,144.94 486.5,147.41 489.3,149.91 492.2,152.44 495.0,155.00 497.8,157.58 500.7,160.19 503.5,162.82 506.3,165.48 509.2,168.15 512.0,170.85 514.8,173.58 517.7,176.32 520.5,179.08 523.3,181.86 526.2,184.65 529.0,187.47 531.8,190.30 534.7,193.14 537.5,196.00 540.3,198.87 543.2,201.76 546.0,204.66 548.8,207.56 551.7,210.48 554.5,213.41 557.3,216.34 560.2,219.28 563.0,222.23 565.8,225.18 568.7,228.14 571.5,231.10 574.3,234.07 577.2,237.03 580.0,240.00"/>
+    <path class="wc" d="M70.0,240.00 72.8,235.25 75.7,230.51 78.5,225.77 81.3,221.04 84.2,216.33 87.0,211.63 89.8,206.94 92.7,202.28 95.5,197.65 98.3,193.04 101.2,188.46 104.0,183.91 106.8,179.40 109.7,174.93 112.5,170.50 115.3,166.12 118.2,161.78 121.0,157.49 123.8,153.25 126.7,149.07 129.5,144.95 132.3,140.89 135.2,136.89 138.0,132.95 140.8,129.09 143.7,125.29 146.5,121.56 149.3,117.91 152.2,114.33 155.0,110.83 157.8,107.41 160.7,104.08 163.5,100.82 166.3,97.65 169.2,94.57 172.0,91.57 174.8,88.67 177.7,85.85 180.5,83.13 183.3,80.50 186.2,77.97 189.0,75.53 191.8,73.18 194.7,70.94 197.5,68.79 200.3,66.74 203.2,64.79 206.0,62.94 208.8,61.20 211.7,59.55 214.5,58.00 217.3,56.55 220.2,55.21 223.0,53.96 225.8,52.82 228.7,51.78 231.5,50.84 234.3,49.99 237.2,49.25 240.0,48.61 242.8,48.06 245.7,47.62 248.5,47.27 251.3,47.02 254.2,46.86 257.0,46.80 259.8,46.83 262.7,46.95 265.5,47.17 268.3,47.47 271.2,47.86 274.0,48.34 276.8,48.91 279.7,49.56 282.5,50.29 285.3,51.11 288.2,52.00 291.0,52.97 293.8,54.02 296.7,55.14 299.5,56.33 302.3,57.60 305.2,58.93 308.0,60.33 310.8,61.79 313.7,63.32 316.5,64.90 319.3,66.55 322.2,68.25 325.0,70.00 327.8,71.81 330.7,73.66 333.5,75.56 336.3,77.51 339.2,79.50 342.0,81.53 344.8,83.61 347.7,85.71 350.5,87.85 353.3,90.03 356.2,92.23 359.0,94.46 361.8,96.71 364.7,98.99 367.5,101.29 370.3,103.61 373.2,105.95 376.0,108.30 378.8,110.66 381.7,113.03 384.5,115.42 387.3,117.81 390.2,120.20 393.0,122.60 395.8,125.00 398.7,127.39 401.5,129.79 404.3,132.18 407.2,134.57 410.0,136.94 412.8,139.31 415.7,141.67 418.5,144.02 421.3,146.35 424.2,148.67 427.0,150.97 429.8,153.26 432.7,155.52 435.5,157.77 438.3,160.00 441.2,162.20 444.0,164.39 446.8,166.55 449.7,168.68 452.5,170.79 455.3,172.88 458.2,174.94 461.0,176.97 463.8,178.97 466.7,180.95 469.5,182.90 472.3,184.82 475.2,186.72 478.0,188.58 480.8,190.42 483.7,192.22 486.5,194.00 489.3,195.75 492.2,197.47 495.0,199.17 497.8,200.83 500.7,202.47 503.5,204.08 506.3,205.67 509.2,207.22 512.0,208.76 514.8,210.26 517.7,211.74 520.5,213.20 523.3,214.64 526.2,216.05 529.0,217.44 531.8,218.82 534.7,220.17 537.5,221.50 540.3,222.82 543.2,224.12 546.0,225.40 548.8,226.67 551.7,227.92 554.5,229.17 557.3,230.40 560.2,231.62 563.0,232.83 565.8,234.04 568.7,235.24 571.5,236.43 574.3,237.62 577.2,238.81 580.0,240.00"/>
+    <path class="wd" d="M325,70 V240"/>
+    <path class="wd" d="M257.6,46.8 V240"/>
+    <circle cx="325" cy="70" r="5" class="dota"/>
+    <circle cx="257.6" cy="46.8" r="5" class="dot"/>
+    <text class="ta" x="332" y="62">δ = 90°  ·  P𝗆á𝗑 del rotor liso</text>
+    <text class="tc" x="272" y="30">polos salientes: máximo en δ ≈ 66°</text>
+    <text class="tm" x="120" y="228">término de reluctancia · máximo en 45°</text>
+    <path class="wa" d="M96,276 H318" marker-end="url(#aha)"/>
+    <text class="ta" x="90" y="280" text-anchor="end">estable</text>
+    <text class="tm" x="336" y="280">inestable: se desengancha</text>
+  </svg></div>
+  <figcaption>La zona estable es <b>0 &lt; δ &lt; 90°</b>: ahí, si crece la potencia demandada, la máquina responde aumentando el ángulo de acoplamiento magnético. Pasado ese límite, un aumento de carga <b>reduce</b> la potencia que la máquina puede desarrollar: pierde el sincronismo y se detiene.</figcaption>
+</figure>
+
+<ul>
+<li>La máquina de <strong>rotor liso</strong> desarrolla su máxima potencia en <strong>δ = 90°</strong>. Alcanzado ese ángulo límite, el motor <strong>se desengancha</strong>: pierde sincronismo y se detiene.</li>
+<li>La de <strong>polos salientes</strong> alcanza el máximo <strong>antes de los 90°</strong> —en el ejemplo, cerca de 66°— y con <strong>más potencia y más par</strong> que la de rotor liso con la misma armadura, gracias al término de reluctancia, que por sí solo es máximo en 45°.</li>
+<li>Ese término explica que un motor de polos salientes <strong>pueda desarrollar cierta potencia aun sin excitación</strong>, con E₀ = 0. Es el principio de los <strong>motores de reluctancia</strong>: funcionan sin fuente de corriente continua, pero tienen poca potencia y demandan de la red una corriente muy reactiva.</li>
+<li>En funcionamiento normal E₀ no es muy distinta de V, de modo que <strong>la potencia y la cupla son proporcionales al cuadrado de la tensión de alimentación</strong> — igual que en el asincrónico.</li>
+</ul>
+
+<h3 id="e4">E4 · Corrección del factor de potencia y curvas V</h3>
+
+<p>Esta es la propiedad más valiosa de la máquina, y la que más se pregunta. Con <strong>tensión constante en bornes</strong> hay dos variables independientes: <strong>la carga</strong> y <strong>la excitación del campo</strong>. Las dependientes son la corriente que toma el motor y el ángulo φ entre V e I.</p>
+<p>Un cambio de la corriente de excitación modifica E₀, <strong>pero no la potencia</strong>: el par depende de la carga, que no cambia, y la velocidad es rígidamente sincrónica. Entonces E₀ se mueve sobre la <strong>recta de potencia constante</strong>, y lo único que varía es el <strong>factor de potencia</strong> — y con él, el consumo de potencia reactiva.</p>
+
+<figure>
+  <div class="fig-h"><span class="num">Fig. 22</span><span class="ttl">Curvas V de Mordey: corriente del inducido en función de la excitación</span></div>
+  <div class="fig-b wide"><svg viewBox="0 0 620 312" role="img" aria-label="Familia de curvas en V de la corriente de inducido contra la corriente de excitación, para cuatro niveles de potencia, con el lugar de factor de potencia unitario y el límite de estabilidad">
+    <path class="w" d="M80,270 V36" marker-end="url(#ah)"/>
+    <path class="w" d="M70,250 H600" marker-end="url(#ah)"/>
+    <text class="t" x="72" y="32" text-anchor="end">I</text>
+    <text class="tm" x="596" y="272" text-anchor="end">excitación  I𝖾𝗑𝖼</text>
+    <text class="tm" x="92" y="56">corriente del inducido</text>
+    <path class="wd" style="stroke:var(--cu)" d="M80.0,135.00 82.3,134.99 84.6,134.97 86.9,134.94 89.2,134.89 91.5,134.83 93.9,134.75 96.2,134.66 98.5,134.56 100.8,134.44 103.1,134.31 105.4,134.16 107.7,134.00 110.0,133.83 112.3,133.64 114.7,133.45 117.0,133.23 119.3,133.01 121.6,132.77 123.9,132.52 126.2,132.25 128.5,131.97 130.8,131.68 133.1,131.38 135.4,131.06 137.8,130.73 140.1,130.39 142.4,130.04 144.7,129.67 147.0,129.29 149.3,128.90 151.6,128.50 153.9,128.08 156.2,127.66 158.5,127.22 160.9,126.77 163.2,126.31 165.5,125.84 167.8,125.36 170.1,124.86 172.4,124.36 174.7,123.85 177.0,123.32 179.3,122.78 181.6,122.24 184.0,121.68 186.3,121.12 188.6,120.54 190.9,119.95 193.2,119.36 195.5,118.75 197.8,118.14 200.1,117.52 202.4,116.88 204.7,116.24 207.1,115.59 209.4,114.93 211.7,114.26 214.0,113.59 216.3,112.90 218.6,112.21 220.9,111.51 223.2,110.80 225.5,110.08 227.8,109.36 230.2,108.63 232.5,107.89 234.8,107.14 237.1,106.39 239.4,105.63 241.7,104.86 244.0,104.08 246.3,103.30 248.6,102.51 250.9,101.72 253.2,100.92 255.6,100.11 257.9,99.29 260.2,98.47 262.5,97.65 264.8,96.81 267.1,95.97 269.4,95.13 271.7,94.28 274.0,93.42 276.4,92.56 278.7,91.70 281.0,90.82 283.3,89.95 285.6,89.06 287.9,88.18 290.2,87.28 292.5,86.39 294.8,85.48 297.1,84.58 299.5,83.67 301.8,82.75 304.1,81.83 306.4,80.90 308.7,79.97 311.0,79.04"/>
+    <path class="wd" style="stroke:var(--accent)" d="M290.0,250.00 290.0,248.74 290.1,247.47 290.1,246.21 290.2,244.94 290.3,243.68 290.5,242.41 290.6,241.15 290.8,239.88 291.0,238.62 291.3,237.35 291.5,236.09 291.8,234.82 292.1,233.56 292.5,232.29 292.8,231.03 293.2,229.76 293.6,228.50 294.1,227.23 294.5,225.97 295.0,224.70 295.5,223.44 296.1,222.17 296.6,220.91 297.2,219.64 297.8,218.38 298.4,217.11 299.1,215.84 299.7,214.58 300.4,213.31 301.1,212.05 301.9,210.78 302.6,209.52 303.4,208.25 304.2,206.99 305.0,205.72 305.9,204.46 306.7,203.19 307.6,201.93 308.5,200.66 309.4,199.40 310.4,198.13 311.3,196.87 312.3,195.60 313.3,194.34 314.3,193.07 315.4,191.81 316.4,190.55 317.5,189.28 318.6,188.01 319.7,186.75 320.8,185.49 321.9,184.22 323.1,182.95 324.3,181.69 325.4,180.42 326.6,179.16 327.9,177.89 329.1,176.63 330.3,175.37 331.6,174.10 332.9,172.83 334.2,171.57 335.5,170.31 336.8,169.04 338.2,167.78 339.5,166.51 340.9,165.25 342.2,163.98 343.6,162.72 345.0,161.45 346.5,160.19 347.9,158.92 349.3,157.65 350.8,156.39 352.2,155.12 353.7,153.86 355.2,152.59 356.7,151.33 358.2,150.06 359.7,148.80 361.3,147.53 362.8,146.27 364.4,145.00 365.9,143.74 367.5,142.47 369.1,141.21 370.7,139.94 372.3,138.68 373.9,137.41 375.5,136.15 377.1,134.88 378.8,133.62 380.4,132.35 382.1,131.09 383.7,129.82 385.4,128.56 387.1,127.30 388.8,126.03 390.5,124.77 392.2,123.50"/>
+    <path class="wa" style="stroke-width:2.6" d="M80.0,135.00 82.2,136.23 84.5,137.46 86.7,138.69 89.0,139.91 91.2,141.14 93.5,142.37 95.7,143.60 97.9,144.83 100.2,146.06 102.4,147.28 104.7,148.51 106.9,149.74 109.2,150.97 111.4,152.20 113.6,153.43 115.9,154.65 118.1,155.88 120.4,157.11 122.6,158.34 124.9,159.57 127.1,160.80 129.3,162.02 131.6,163.25 133.8,164.48 136.1,165.71 138.3,166.94 140.6,168.17 142.8,169.40 145.1,170.62 147.3,171.85 149.5,173.08 151.8,174.31 154.0,175.54 156.3,176.77 158.5,177.99 160.8,179.22 163.0,180.45 165.2,181.68 167.5,182.91 169.7,184.14 172.0,185.36 174.2,186.59 176.5,187.82 178.7,189.05 180.9,190.28 183.2,191.51 185.4,192.74 187.7,193.96 189.9,195.19 192.2,196.42 194.4,197.65 196.6,198.88 198.9,200.11 201.1,201.33 203.4,202.56 205.6,203.79 207.9,205.02 210.1,206.25 212.3,207.48 214.6,208.70 216.8,209.93 219.1,211.16 221.3,212.39 223.6,213.62 225.8,214.85 228.0,216.07 230.3,217.30 232.5,218.53 234.8,219.76 237.0,220.99 239.3,222.22 241.5,223.45 243.8,224.67 246.0,225.90 248.2,227.13 250.5,228.36 252.7,229.59 255.0,230.82 257.2,232.04 259.5,233.27 261.7,234.50 263.9,235.73 266.2,236.96 268.4,238.19 270.7,239.41 272.9,240.64 275.2,241.87 277.4,243.10 279.6,244.33 281.9,245.56 284.1,246.79 286.4,248.01 288.6,249.24 290.9,249.53 293.1,248.30 295.3,247.07 297.6,245.84 299.8,244.62 302.1,243.39 304.3,242.16 306.6,240.93 308.8,239.70 311.0,238.47 313.3,237.25 315.5,236.02 317.8,234.79 320.0,233.56 322.3,232.33 324.5,231.10 326.8,229.88 329.0,228.65 331.2,227.42 333.5,226.19 335.7,224.96 338.0,223.73 340.2,222.50 342.5,221.28 344.7,220.05 346.9,218.82 349.2,217.59 351.4,216.36 353.7,215.13 355.9,213.91 358.2,212.68 360.4,211.45 362.6,210.22 364.9,208.99 367.1,207.76 369.4,206.54 371.6,205.31 373.9,204.08 376.1,202.85 378.3,201.62 380.6,200.39 382.8,199.16 385.1,197.94 387.3,196.71 389.6,195.48 391.8,194.25 394.0,193.02 396.3,191.79 398.5,190.57 400.8,189.34 403.0,188.11 405.3,186.88 407.5,185.65 409.7,184.42 412.0,183.20 414.2,181.97 416.5,180.74 418.7,179.51 421.0,178.28 423.2,177.05 425.5,175.82 427.7,174.60 429.9,173.37 432.2,172.14 434.4,170.91 436.7,169.68 438.9,168.45 441.2,167.23 443.4,166.00 445.6,164.77 447.9,163.54 450.1,162.31 452.4,161.08 454.6,159.86 456.9,158.63 459.1,157.40 461.3,156.17 463.6,154.94 465.8,153.71 468.1,152.49 470.3,151.26 472.6,150.03 474.8,148.80 477.0,147.57 479.3,146.34 481.5,145.11 483.8,143.89 486.0,142.66 488.3,141.43 490.5,140.20 492.7,138.97 495.0,137.74 497.2,136.52 499.5,135.29 501.7,134.06 504.0,132.83 506.2,131.60 508.4,130.37 510.7,129.15 512.9,127.92 515.2,126.69 517.4,125.46 519.7,124.23 521.9,123.00 524.2,121.77 526.4,120.55 528.6,119.32 530.9,118.09 533.1,116.86 535.4,115.63 537.6,114.40 539.9,113.18 542.1,111.95 544.3,110.72 546.6,109.49 548.8,108.26 551.1,107.03 553.3,105.81 555.6,104.58 557.8,103.35 560.0,102.12 562.3,100.89 564.5,99.66 566.8,98.44 569.0,97.21 571.3,95.98 573.5,94.75"/><path class="wa" style="stroke-width:1.7" d="M143.0,129.94 145.0,138.21 146.9,141.71 148.9,144.44 150.8,146.79 152.8,148.89 154.7,150.83 156.7,152.64 158.7,154.35 160.6,155.98 162.6,157.55 164.5,159.06 166.5,160.53 168.4,161.95 170.4,163.34 172.4,164.69 174.3,166.02 176.3,167.32 178.2,168.59 180.2,169.85 182.1,171.08 184.1,172.30 186.1,173.50 188.0,174.68 190.0,175.84 191.9,176.99 193.9,178.13 195.8,179.25 197.8,180.36 199.7,181.45 201.7,182.53 203.7,183.61 205.6,184.66 207.6,185.71 209.5,186.74 211.5,187.76 213.4,188.77 215.4,189.77 217.4,190.76 219.3,191.73 221.3,192.70 223.2,193.65 225.2,194.58 227.1,195.51 229.1,196.42 231.1,197.32 233.0,198.20 235.0,199.07 236.9,199.93 238.9,200.77 240.8,201.59 242.8,202.40 244.8,203.19 246.7,203.97 248.7,204.72 250.6,205.46 252.6,206.18 254.5,206.88 256.5,207.56 258.5,208.22 260.4,208.85 262.4,209.46 264.3,210.05 266.3,210.61 268.2,211.15 270.2,211.66 272.1,212.14 274.1,212.59 276.1,213.02 278.0,213.41 280.0,213.77 281.9,214.10 283.9,214.39 285.8,214.65 287.8,214.88 289.8,215.07 291.7,215.23 293.7,215.35 295.6,215.44 297.6,215.49 299.5,215.50 301.5,215.48 303.5,215.42 305.4,215.32 307.4,215.19 309.3,215.02 311.3,214.82 313.2,214.59 315.2,214.32 317.2,214.02 319.1,213.69 321.1,213.33 323.0,212.94 325.0,212.52 326.9,212.07 328.9,211.60 330.9,211.10 332.8,210.58 334.8,210.03 336.7,209.46 338.7,208.87 340.6,208.26 342.6,207.63 344.6,206.98 346.5,206.31 348.5,205.62 350.4,204.92 352.4,204.20 354.3,203.47 356.3,202.73 358.3,201.97 360.2,201.20 362.2,200.41 364.1,199.62 366.1,198.81 368.0,197.99 370.0,197.17 371.9,196.33 373.9,195.49 375.9,194.63 377.8,193.77 379.8,192.90 381.7,192.03 383.7,191.14 385.6,190.25 387.6,189.35 389.6,188.45 391.5,187.54 393.5,186.63 395.4,185.71 397.4,184.78 399.3,183.85 401.3,182.91 403.3,181.98 405.2,181.03 407.2,180.08 409.1,179.13 411.1,178.18 413.0,177.22 415.0,176.25 417.0,175.29 418.9,174.32 420.9,173.35 422.8,172.37 424.8,171.39 426.7,170.41 428.7,169.43 430.7,168.44 432.6,167.46 434.6,166.47 436.5,165.47 438.5,164.48 440.4,163.48 442.4,162.48 444.4,161.48 446.3,160.48 448.3,159.47 450.2,158.47 452.2,157.46 454.1,156.45 456.1,155.44 458.0,154.42 460.0,153.41 462.0,152.39 463.9,151.38 465.9,150.36 467.8,149.34 469.8,148.32 471.7,147.30 473.7,146.27 475.7,145.25 477.6,144.22 479.6,143.20 481.5,142.17 483.5,141.14 485.4,140.11 487.4,139.08 489.4,138.05 491.3,137.02 493.3,135.99 495.2,134.95 497.2,133.92 499.1,132.88 501.1,131.85 503.1,130.81 505.0,129.77 507.0,128.73 508.9,127.69 510.9,126.65 512.8,125.61 514.8,124.57 516.8,123.53 518.7,122.49 520.7,121.45 522.6,120.40 524.6,119.36 526.5,118.31 528.5,117.27 530.5,116.22 532.4,115.18 534.4,114.13 536.3,113.09 538.3,112.04 540.2,110.99 542.2,109.94 544.1,108.89 546.1,107.84 548.1,106.80 550.0,105.75 552.0,104.70 553.9,103.64 555.9,102.59 557.8,101.54 559.8,100.49 561.8,99.44 563.7,98.39 565.7,97.33 567.6,96.28 569.6,95.23 571.5,94.17 573.5,93.12"/><path class="wc" style="stroke-width:1.7" d="M206.0,115.89 207.7,125.42 209.3,129.32 211.0,132.31 212.7,134.81 214.4,137.02 216.0,139.01 217.7,140.84 219.4,142.53 221.0,144.13 222.7,145.63 224.4,147.05 226.0,148.41 227.7,149.71 229.4,150.96 231.1,152.16 232.7,153.31 234.4,154.42 236.1,155.50 237.7,156.54 239.4,157.55 241.1,158.53 242.7,159.48 244.4,160.40 246.1,161.30 247.8,162.17 249.4,163.01 251.1,163.83 252.8,164.63 254.4,165.41 256.1,166.16 257.8,166.90 259.5,167.61 261.1,168.30 262.8,168.97 264.5,169.63 266.1,170.26 267.8,170.87 269.5,171.47 271.1,172.04 272.8,172.60 274.5,173.14 276.2,173.66 277.8,174.16 279.5,174.64 281.2,175.11 282.8,175.55 284.5,175.98 286.2,176.39 287.9,176.79 289.5,177.16 291.2,177.52 292.9,177.86 294.5,178.18 296.2,178.49 297.9,178.78 299.5,179.04 301.2,179.30 302.9,179.53 304.6,179.75 306.2,179.95 307.9,180.13 309.6,180.29 311.2,180.44 312.9,180.57 314.6,180.68 316.2,180.78 317.9,180.85 319.6,180.92 321.3,180.96 322.9,180.99 324.6,181.00 326.3,180.99 327.9,180.97 329.6,180.93 331.3,180.88 333.0,180.81 334.6,180.72 336.3,180.62 338.0,180.51 339.6,180.37 341.3,180.23 343.0,180.06 344.6,179.89 346.3,179.69 348.0,179.49 349.7,179.27 351.3,179.03 353.0,178.78 354.7,178.52 356.3,178.25 358.0,177.96 359.7,177.66 361.4,177.34 363.0,177.02 364.7,176.68 366.4,176.33 368.0,175.96 369.7,175.59 371.4,175.20 373.0,174.81 374.7,174.40 376.4,173.98 378.1,173.55 379.7,173.11 381.4,172.66 383.1,172.20 384.7,171.73 386.4,171.25 388.1,170.76 389.8,170.27 391.4,169.76 393.1,169.24 394.8,168.72 396.4,168.19 398.1,167.65 399.8,167.10 401.4,166.55 403.1,165.98 404.8,165.41 406.5,164.84 408.1,164.25 409.8,163.66 411.5,163.06 413.1,162.46 414.8,161.84 416.5,161.23 418.1,160.60 419.8,159.97 421.5,159.34 423.2,158.70 424.8,158.05 426.5,157.40 428.2,156.74 429.8,156.08 431.5,155.41 433.2,154.74 434.9,154.06 436.5,153.38 438.2,152.69 439.9,152.00 441.5,151.30 443.2,150.60 444.9,149.90 446.5,149.19 448.2,148.48 449.9,147.76 451.6,147.04 453.2,146.32 454.9,145.59 456.6,144.86 458.2,144.13 459.9,143.39 461.6,142.65 463.3,141.90 464.9,141.16 466.6,140.41 468.3,139.65 469.9,138.90 471.6,138.14 473.3,137.38 474.9,136.61 476.6,135.85 478.3,135.08 480.0,134.30 481.6,133.53 483.3,132.75 485.0,131.97 486.6,131.19 488.3,130.40 490.0,129.62 491.6,128.83 493.3,128.04 495.0,127.24 496.7,126.45 498.3,125.65 500.0,124.85 501.7,124.05 503.3,123.25 505.0,122.45 506.7,121.64 508.4,120.83 510.0,120.02 511.7,119.21 513.4,118.40 515.0,117.58 516.7,116.76 518.4,115.95 520.0,115.13 521.7,114.31 523.4,113.48 525.1,112.66 526.7,111.83 528.4,111.01 530.1,110.18 531.7,109.35 533.4,108.52 535.1,107.69 536.8,106.85 538.4,106.02 540.1,105.18 541.8,104.35 543.4,103.51 545.1,102.67 546.8,101.83 548.4,100.99 550.1,100.15 551.8,99.30 553.5,98.46 555.1,97.61 556.8,96.77 558.5,95.92 560.1,95.07 561.8,94.22 563.5,93.37 565.1,92.52 566.8,91.67 568.5,90.81 570.2,89.96 571.8,89.11 573.5,88.25"/><path class="wc" style="stroke-width:2.6" d="M269.0,95.28 270.4,104.37 271.8,108.00 273.2,110.73 274.5,113.00 275.9,114.96 277.3,116.71 278.7,118.30 280.1,119.76 281.5,121.11 282.8,122.38 284.2,123.56 285.6,124.68 287.0,125.73 288.4,126.74 289.8,127.69 291.1,128.60 292.5,129.47 293.9,130.30 295.3,131.09 296.7,131.86 298.1,132.59 299.4,133.29 300.8,133.97 302.2,134.62 303.6,135.24 305.0,135.84 306.4,136.42 307.8,136.98 309.1,137.51 310.5,138.03 311.9,138.52 313.3,139.00 314.7,139.46 316.1,139.90 317.4,140.32 318.8,140.73 320.2,141.12 321.6,141.49 323.0,141.85 324.4,142.19 325.7,142.52 327.1,142.83 328.5,143.13 329.9,143.41 331.3,143.68 332.7,143.94 334.1,144.18 335.4,144.41 336.8,144.63 338.2,144.83 339.6,145.02 341.0,145.20 342.4,145.37 343.7,145.52 345.1,145.66 346.5,145.79 347.9,145.91 349.3,146.02 350.7,146.12 352.0,146.20 353.4,146.28 354.8,146.34 356.2,146.39 357.6,146.43 359.0,146.47 360.3,146.49 361.7,146.50 363.1,146.50 364.5,146.49 365.9,146.47 367.3,146.44 368.7,146.40 370.0,146.36 371.4,146.30 372.8,146.23 374.2,146.15 375.6,146.07 377.0,145.98 378.3,145.87 379.7,145.76 381.1,145.64 382.5,145.51 383.9,145.37 385.3,145.23 386.6,145.07 388.0,144.91 389.4,144.74 390.8,144.56 392.2,144.38 393.6,144.18 395.0,143.98 396.3,143.77 397.7,143.56 399.1,143.33 400.5,143.10 401.9,142.86 403.3,142.62 404.6,142.37 406.0,142.11 407.4,141.84 408.8,141.57 410.2,141.29 411.6,141.00 412.9,140.71 414.3,140.41 415.7,140.11 417.1,139.79 418.5,139.48 419.9,139.15 421.2,138.82 422.6,138.49 424.0,138.15 425.4,137.80 426.8,137.45 428.2,137.09 429.6,136.73 430.9,136.36 432.3,135.98 433.7,135.60 435.1,135.22 436.5,134.83 437.9,134.44 439.2,134.04 440.6,133.63 442.0,133.22 443.4,132.81 444.8,132.39 446.2,131.97 447.5,131.54 448.9,131.11 450.3,130.67 451.7,130.23 453.1,129.78 454.5,129.34 455.9,128.88 457.2,128.42 458.6,127.96 460.0,127.50 461.4,127.03 462.8,126.55 464.2,126.08 465.5,125.60 466.9,125.11 468.3,124.63 469.7,124.13 471.1,123.64 472.5,123.14 473.8,122.64 475.2,122.13 476.6,121.62 478.0,121.11 479.4,120.60 480.8,120.08 482.2,119.56 483.5,119.04 484.9,118.51 486.3,117.98 487.7,117.45 489.1,116.91 490.5,116.37 491.8,115.83 493.2,115.28 494.6,114.74 496.0,114.19 497.4,113.64 498.8,113.08 500.1,112.52 501.5,111.96 502.9,111.40 504.3,110.84 505.7,110.27 507.1,109.70 508.4,109.13 509.8,108.55 511.2,107.98 512.6,107.40 514.0,106.82 515.4,106.24 516.8,105.65 518.1,105.06 519.5,104.47 520.9,103.88 522.3,103.29 523.7,102.70 525.1,102.10 526.4,101.50 527.8,100.90 529.2,100.30 530.6,99.69 532.0,99.08 533.4,98.48 534.7,97.87 536.1,97.26 537.5,96.64 538.9,96.03 540.3,95.41 541.7,94.79 543.0,94.17 544.4,93.55 545.8,92.93 547.2,92.30 548.6,91.68 550.0,91.05 551.4,90.42 552.7,89.79 554.1,89.16 555.5,88.52 556.9,87.89 558.3,87.25 559.7,86.62 561.0,85.98 562.4,85.34 563.8,84.70 565.2,84.05 566.6,83.41 568.0,82.76 569.3,82.12 570.7,81.47 572.1,80.82 573.5,80.17"/>
+    <circle cx="290.0" cy="250.0" r="4.5" class="dota"/><circle cx="299.2" cy="215.5" r="4.5" class="dota"/><circle cx="324.9" cy="181.0" r="4.5" class="dota"/><circle cx="362.5" cy="146.5" r="4.5" class="dota"/><text class="ta" x="300" y="240">en vacío · compensador</text>
+    <text class="ta" x="398" y="116">cos φ = 1</text>
+    <text class="tc" x="104" y="96">límite de estabilidad</text>
+    <text class="tb" x="170" y="288" text-anchor="middle">SUBEXCITADO</text>
+    <text class="tm" x="170" y="304" text-anchor="middle">I en atraso · consume reactivo</text>
+    <text class="tb" x="470" y="288" text-anchor="middle">SOBREEXCITADO</text>
+    <text class="tm" x="470" y="304" text-anchor="middle">I en adelanto · entrega reactivo</text>
+  </svg></div>
+  <figcaption>Se llaman <b>curvas V</b> por la forma de la parte inferior de los bucles — en conjunto, la forma oval les vale también el nombre de <b>curvas O</b>, aunque la parte superior del óvalo <b>no tiene aplicación práctica por razones de estabilidad</b>. Los cuatro bucles son, de abajo hacia arriba, la máquina <b>en vacío</b> —que es el compensador sincrónico—, a <b>⅓</b>, a <b>⅔</b> y a <b>potencia nominal</b>; los puntos marcan el vértice de cada uno, donde cos φ = 1 y la corriente es mínima. A la derecha del límite de estabilidad la máquina funciona; a la izquierda no, porque al crecer la carga la corriente disminuye y se desengancha.</figcaption>
+</figure>
+
+<div class="scroll"><table>
+<thead><tr><th>Excitación</th><th>Fasor</th><th>Reacción de inducido</th><th>Efecto en la red</th></tr></thead>
+<tbody>
+<tr><td><b>Subexcitado</b> (E₀ baja)</td><td>I en <b>atraso</b></td><td>La corriente en retraso <b>magnetiza</b> y refuerza el campo inductor principal: F𝖱 &gt; F𝖯</td><td><b>Consume</b> reactivo. Se comporta como una <b>reactancia inductiva</b>: empeora el cos φ de la instalación.</td></tr>
+<tr><td><b>Excitación normal</b></td><td>I <b>en fase</b> con V</td><td>Equilibrio</td><td><b>cos φ = 1</b> y la corriente del inducido es <b>mínima</b>. Es el vértice de cada curva V.</td></tr>
+<tr><td><b>Sobreexcitado</b> (E₀ alta)</td><td>I en <b>adelanto</b></td><td>La corriente en adelanto <b>desmagnetiza</b>: F𝖱 &lt; F𝖯, por eso hace falta más excitación</td><td><b>Entrega</b> reactivo. Se comporta como un <b>capacitor</b>: corrige el cos φ de toda la instalación.</td></tr>
+</tbody></table></div>
+
+<div class="key"><span class="lab">El compensador sincrónico</span>
+<p>Un motor sincrónico <strong>sobreexcitado</strong> toma de la red una corriente en adelanto, <strong>neutralizando en todo, en parte, o incluso sobrecompensando el efecto de las cargas inductivas</strong> del sistema. Usado así se lo llama <strong>compensador sincrónico</strong>, y permite mantener el factor de potencia de una red de transmisión o distribución en el valor que se desee, dentro de la capacidad del motor para absorber o entregar reactivo.</p>
+<p>Puede arrastrar una carga mecánica al mismo tiempo, pero <strong>en la medida en que se lo use como compensador hay que reducir su capacidad de carga en el árbol</strong>: los dos usos se reparten la misma corriente de armadura. Llevado al extremo —en vacío, sólo para compensar— es la curva más baja de la figura.</p></div>
+
+<p><strong>Las dos propiedades de las curvas V</strong> que pide el apunte:</p>
+<ol>
+<li><strong>Condición de factor de potencia unitario.</strong> Sobre cada bucle hay dos puntos notables, uno de corriente mínima y otro de corriente máxima. El lugar geométrico de los mínimos es la línea de trazos: ahí la corriente está <strong>en fase</strong> con la tensión. A la izquierda de esa línea la corriente adelanta; a la derecha, atrasa.</li>
+<li><strong>Condición de estabilidad.</strong> Cada curva tiene un punto de excitación mínima: son los extremos izquierdos, donde las circunferencias de excitación resultan tangentes a la de potencia. La línea que los une es el <strong>límite de estabilidad</strong>. A su derecha el motor funciona de forma estable —si crece la potencia demandada, toma más corriente de la red—; a su izquierda, al crecer la potencia demandada <strong>la corriente tiende a disminuir</strong>, con lo cual la máquina pierde sincronismo y se detiene.</li>
+</ol>
+
+<h3 id="e5">E5 · Arranque del motor sincrónico</h3>
+
+<div class="disc"><span class="lab">Por qué no arranca solo</span>
+Con el rotor parado y el estator alimentado, el campo giratorio pasa delante del campo rotórico fijo. Los polos del rotor quedan sometidos a <strong>atracciones y repulsiones en brevísimos períodos de tiempo</strong>, de signo alternado: la cupla media es nula. <strong>El rotor no consigue girar; a lo sumo vibra.</strong> El motor sincrónico <strong>carece inherentemente de arranque automático</strong>.</div>
+
+<p>Si en cambio se lo lleva previamente a la velocidad de sincronismo, al enfrentarse polos de signo opuesto se establece el <strong>enganche magnético</strong> que los obliga a seguir girando juntos. A partir de ahí, al conectar la carga aparece el desplazamiento δ entre el eje de los polos del rotor y el de los polos ficticios del estator, que <strong>crece con la carga</strong> y que, si supera el límite, detiene el motor.</p>
+
+<h4>Los métodos</h4>
+<ol>
+<li><strong>Arranque asíncrono con el devanado amortiguador</strong> — <em>el método principal en la actualidad</em>. La jaula alojada en las caras polares hace arrancar la máquina <strong>exactamente como un motor asincrónico</strong>, con cierto resbalamiento. Al llegar cerca del sincronismo se alimenta el devanado de excitación con continua: se producen <strong>oscilaciones periódicas de la velocidad respecto de su valor medio —el penduleo—</strong> hasta que, después de varias oscilaciones atenuadas, el motor alcanza el sincronismo. Cuanto menor sea la carga en el árbol, menor el resbalamiento y más fácilmente engancha.
+  <div class="disc" style="margin-top:12px"><span class="lab">El detalle que se pregunta</span>
+  Durante el arranque el devanado de excitación <strong>debe estar en cortocircuito o cerrado sobre una resistencia</strong> de valor aproximadamente <strong>diez veces mayor</strong> que la propia resistencia óhmica del devanado. Si quedara <strong>abierto</strong>, por su gran número de espiras aparecería en sus bornes una <strong>tensión inducida muy elevada</strong>, capaz de dañar la aislación.</div>
+</li>
+<li><strong>Arranque por autotransformador y devanado amortiguador</strong> — el mismo arranque asíncrono, pero a tensión reducida mediante un autotransformador, para limitar la corriente de arranque igual que en A7.</li>
+<li><strong>Motor auxiliar de lanzamiento</strong> — el método histórico: un motor de arrastre lleva la máquina a la velocidad sincrónica y luego se retira. Exige <strong>sincronizar la conexión del estator a la red</strong> en el instante preciso, con dispositivos especiales.</li>
+<li><strong>Variador de frecuencia</strong> — se arranca desde frecuencia casi nula con una rampa, de modo que el rotor nunca pierde el sincronismo. Es además lo que da al motor sincrónico su <strong>mejor estabilidad en aplicaciones con variador</strong>, para alta cupla, baja velocidad y amplio rango de regulación.</li>
+</ol>
+
+<h4>Ventajas, límites y aplicaciones</h4>
+<ul>
+<li><strong>Velocidad rigurosamente constante</strong> con carga variable, y <strong>mayor precisión de velocidad y mejor rendimiento</strong> que el asincrónico.</li>
+<li><strong>Factor de potencia ajustable</strong>, que es lo que amortiza la inversión: en aplicaciones grandes el ahorro por corrección del cos φ paga el motor.</li>
+<li>Par máximo de <strong>hasta cinco veces el par nominal</strong>.</li>
+<li>Contra: construcción más compleja y cara —por debajo de unos <strong>10 kW el asincrónico sale más barato</strong>—, necesita excitación de continua, no arranca solo y <strong>se desengancha</strong> ante una sobrecarga brusca.</li>
+<li>Aplicaciones típicas: <strong>todos los alternadores de las centrales eléctricas</strong>; y como motor, trituradoras, molinos y cintas en minería y canteras, ventiladores, bombas y compresores en siderurgia, extrusoras de papel y de plástico, bombas de tratamiento de efluentes, compresores de la industria química y petroquímica, molinos de cemento y bombas de inyección en plataformas petrolíferas.</li>
+</ul>
+
+</section>
+
+<section class="unit" id="f">
   <p class="utag">Unidad 12</p>
   <h2 class="unit-t">Calidad de energía</h2>
   <p class="unit-sub">Dos preguntas, en 2 de los 7 modelos — pero el parcial más reciente ya la incorporó.</p>
 
-<h3 id="d1">D1 · Factor de forma y factor de cresta</h3>
+<h3 id="f1">F1 · Factor de forma y factor de cresta</h3>
 <p class="src">Parcial <b>12-11-25</b> preg. 5 — «cómo se interpreta el factor de forma y de cresta en el análisis de la calidad de energía».</p>
 
 <div class="fml"><b>F𝖿 = valor eficaz / valor medio rectificado</b> = X𝗋𝗆𝗌 / X𝗆𝖾𝖽   →   senoide pura: π/(2√2) = <b>1,11</b>
@@ -1110,7 +1458,7 @@ Invertir las dos fases de la <strong>línea</strong> (L y N). Eso invierte <em>l
 <span class="n">Onda cuadrada F𝖼 = 1,00 · triangular 1,73 · corriente de un rectificador monofásico con filtro capacitivo 2,5 a 3,5 o más.</span></div>
 
 <figure>
-  <div class="fig-h"><span class="num">Fig. 16</span><span class="ttl">Tres ondas del mismo valor eficaz y tres factores de cresta distintos</span></div>
+  <div class="fig-h"><span class="num">Fig. 23</span><span class="ttl">Tres ondas del mismo valor eficaz y tres factores de cresta distintos</span></div>
   <div class="fig-b wide"><svg viewBox="0 0 620 212" role="img" aria-label="Comparación de una senoide, una corriente picuda de fuente conmutada y una tensión de cresta achatada, todas con el mismo valor eficaz">
     <g transform="translate(2,6) scale(0.68)">
       <path class="wl" d="M10,66 H290" vector-effect="non-scaling-stroke"/>
@@ -1147,13 +1495,13 @@ Invertir las dos fases de la <strong>línea</strong> (L y N). Eso invierte <em>l
 <h4>Cómo se interpretan</h4>
 <p>Los dos son <strong>indicadores de distorsión sin necesidad de un análisis armónico completo</strong>: su apartamiento de los valores de la senoide pura mide cuánto se deformó la onda.</p>
 <ul>
-<li><strong>F𝖼 &gt; 1,414 → onda picuda.</strong> La energía está concentrada en picos breves y altos. Es la firma de la corriente que demandan las <strong>cargas no lineales con rectificador y capacitor de filtro</strong>: fuentes conmutadas de PC y servidores, cargadores, LED, balastos electrónicos, variadores. Consecuencias: las <strong>protecciones térmicas y los interruptores</strong>, calibrados en valor eficaz, no «ven» los picos, pero los semiconductores y los contactos sí los sufren, lo que obliga a sobredimensionar; <strong>saturación de transformadores y UPS</strong>, cuyos picos de corriente sobre la impedancia de la fuente <strong>achatan la cresta de la tensión</strong> —el tercer panel de la figura—; mayores pérdidas en los conductores que las que predice la corriente eficaz, por efecto pelicular; y errores del 10 al 40 % en instrumentos que no son <strong>True RMS</strong>.</li>
+<li><strong>F𝖼 &gt; 1,414 → onda picuda.</strong> La energía está concentrada en picos breves y altos. Es la firma de la corriente que demandan las <strong>cargas no lineales con rectificador y capacitor de filtro</strong>: fuentes conmutadas de PC y servidores, cargadores, LED, balastos electrónicos, variadores. Consecuencias: las <strong>protecciones térmicas y los interruptores</strong>, calibrados en valor eficaz, no «ven» los picos, pero los semiconductores y los contactos sí los sufren, lo que obliga a sobredimensionar; <strong>saturación de transformadores y UPS</strong>, cuyos picos de corriente sobre la impedancia de la fuente <strong>achatan la cresta de la tensión</strong> —el tercer panel de la figura 23—; mayores pérdidas en los conductores que las que predice la corriente eficaz, por efecto pelicular; y errores del 10 al 40 % en instrumentos que no son <strong>True RMS</strong>.</li>
 <li><strong>F𝖼 ≈ 1 → onda achatada o cuadrada.</strong> Típico de la tensión en redes muy cargadas con electrónica, o de inversores de onda modificada. Es un problema para los equipos que dependen del pico de tensión para cargar sus capacitores de entrada: responden tomando pulsos más altos todavía, realimentando el problema.</li>
 <li><strong>F𝖿</strong> es más sensible a la <strong>asimetría y a la componente de continua</strong>: un F𝖿 muy alejado de 1,11 revela armónicas pares o una componente de CC —rectificación de media onda, cargas asimétricas— especialmente dañina porque <strong>satura los núcleos</strong> de transformadores y motores.</li>
 </ul>
 <p>Relación con el THD: para una onda sin continua, <span class="v">X𝗋𝗆𝗌 = X₁·√(1+THD²)</span>, de modo que el crecimiento de F𝖼 y el apartamiento de F𝖿 son manifestaciones del mismo contenido armónico. En la práctica, <strong>F𝖼 es el indicador que se usa para dimensionar</strong> —conductores, neutro, transformadores factor K, UPS— y el <strong>THD el que se usa para evaluar el cumplimiento normativo</strong>: IEEE 519, IEC 61000 y, en Argentina, la Resolución ENRE 184/2000 y la norma AEA.</p>
 
-<h3 id="d2">D2 · Por qué hay corriente de neutro importante con cargas no lineales balanceadas</h3>
+<h3 id="f2">F2 · Por qué hay corriente de neutro importante con cargas no lineales balanceadas</h3>
 <p class="src">Parcial <b>12-11-25</b> preg. 5, segunda parte — «justifique la existencia de corriente de neutro relativamente importante, asumiendo que el sistema trifásico está cargado con cargas de tipo no lineales balanceadas».</p>
 
 <p>La pregunta encierra una paradoja aparente: <em>si el sistema está balanceado, ¿no debería ser I𝖭 = 0?</em> Con cargas <strong>lineales</strong>, sí: las tres fundamentales están desfasadas 120° y su suma vectorial es nula. <strong>Con cargas no lineales la cancelación falla para una familia de armónicas.</strong></p>
@@ -1167,7 +1515,7 @@ Invertir las dos fases de la <strong>línea</strong> (L y N). Eso invierte <em>l
 </tbody></table></div>
 
 <figure>
-  <div class="fig-h"><span class="num">Fig. 17</span><span class="ttl">Tres fases balanceadas con 60 % de 3.ª armónica, y la corriente de neutro que resulta</span></div>
+  <div class="fig-h"><span class="num">Fig. 24</span><span class="ttl">Tres fases balanceadas con 60 % de 3.ª armónica, y la corriente de neutro que resulta</span></div>
   <div class="fig-b wide"><svg viewBox="0 0 620 210" role="img" aria-label="A la izquierda las tres corrientes de fase deformadas por la tercera armónica; a la derecha su suma, que no es nula sino una onda de tercera armónica de amplitud triple">
     <g transform="translate(0,16)">
       <path class="wl" d="M12,60 H300"/>
@@ -1214,7 +1562,7 @@ I𝖭 = 3·√(I₃² + I₉² + I₁₅² + …)
 <li><strong>Rectificadores trifásicos de 6, 12 o 18 pulsos</strong> en lugar de muchas fuentes monofásicas: no generan triplens.</li>
 </ol>
 
-<h3 id="d3">D3 · Análisis de las componentes armónicas en una distribución de 50 Hz</h3>
+<h3 id="f3">F3 · Análisis de las componentes armónicas en una distribución de 50 Hz</h3>
 <p class="src">Recuperatorio <b>13-12-22</b> preg. 4 — «realice un análisis de las componentes armónicas en una distribución de energía de 50 Hz. Qué efecto general traen cada una de ellas.»</p>
 
 <p>Una onda periódica distorsionada se descompone por <strong>serie de Fourier</strong> en la fundamental de 50 Hz más una suma de senoides de frecuencia múltiplo entero <span class="v">h·50 Hz</span>. El indicador global es el <strong>THD</strong>, y el origen son las <strong>cargas no lineales</strong>: rectificadores y fuentes conmutadas, variadores y arrancadores electrónicos, hornos de arco y soldadoras, balastos y LED, UPS, y transformadores y motores saturados.</p>
@@ -1222,7 +1570,7 @@ I𝖭 = 3·√(I₃² + I₉² + I₁₅² + …)
 <div class="fml">THD = √(Σ<sub>h≥2</sub> I𝗁²) / I₁ × 100 %</div>
 
 <figure>
-  <div class="fig-h"><span class="num">Fig. 18</span><span class="ttl">Espectro típico de una carga electrónica monofásica, por secuencia</span></div>
+  <div class="fig-h"><span class="num">Fig. 25</span><span class="ttl">Espectro típico de una carga electrónica monofásica, por secuencia</span></div>
   <div class="fig-b wide"><svg viewBox="0 0 620 256" role="img" aria-label="Espectro de armónicas con la fundamental y las de orden impar, coloreadas según sean de secuencia directa, inversa u homopolar">
     <path class="w" d="M44,200 H596"/>
     <path class="w" d="M44,210 V40" marker-end="url(#ah)"/>
@@ -1303,8 +1651,9 @@ El profesor <strong>las sigue incluyendo</strong> en los recuperatorios del 2.º
 <tr><td class="n">07-12-22 · 1 y 2</td><td>Cálculo (500 kVA, 1 kW / 6,5 kW: η a ½ carga con FP 1, η al 100 % con FP 0,75 inductivo, η máximo) y ensayos con vida útil</td></tr>
 </tbody></table></div>
 
-<h3>Dos temas del cuatrimestre que no aparecen en ningún modelo</h3>
-<p>Las carpetas del segundo cuatrimestre incluyen la <strong>Unidad 9, motor paso a paso</strong> y la <strong>Unidad 11, máquina sincrónica</strong>, y ninguna de las dos figura en los siete modelos. Dado que el parcial del 12-11-25 ya incorporó Calidad de Energía —que tampoco estaba en los modelos anteriores—, la cátedra está ampliando el alcance: conviene no descartarlas de la preparación.</p>
+<h3>Los dos temas sin antecedente de examen</h3>
+<p>La <strong>Unidad 9, motor paso a paso</strong> y la <strong>Unidad 11, máquina sincrónica</strong> no figuran en ninguno de los siete modelos. Están desarrolladas igual, en <a href="#c">C</a> y <a href="#e">E</a>, a partir del material de la cátedra: la presentación de paso a paso y los apuntes del Ing. González sobre máquina sincrónica.</p>
+<p>Vale la pena tomarlas en serio: el parcial del 12-11-25 ya incorporó <strong>Calidad de Energía</strong>, que tampoco figuraba en ningún modelo anterior. La cátedra está ampliando el alcance, y estas dos son las candidatas obvias para el próximo.</p>
 
 </section>
 

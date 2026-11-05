@@ -10,9 +10,9 @@ Las preguntas están **agrupadas por tema** siguiendo las unidades de la carpeta
 |---|---|---|
 | 7 | Máquina asincrónica (trifásica) | Sí — 9 preguntas, en los 7 modelos |
 | 8 | Motor asincrónico monofásico | Sí — 4 preguntas, en 4 de 7 modelos |
-| 9 | Motor paso a paso | No apareció nunca |
+| 9 | Motor paso a paso | No aparece — desarrollado igual, tema C |
 | 10 | Máquina de corriente continua | Sí — 4 preguntas, en 4 de 7 modelos |
-| 11 | Máquina sincrónica | No apareció nunca |
+| 11 | Máquina sincrónica | No aparece — desarrollado igual, tema E |
 | 12 | Calidad de energía | Sí — 2 preguntas, en 2 de 7 modelos |
 
 **Descartado:** todas las preguntas de **transformadores** (ensayos de vacío y cortocircuito, cálculo de rendimiento, rendimiento máximo, diagrama fasorial en vacío, pérdidas vs. vida útil). Corresponden a la **Unidad 5 — Transformadores**, que está en la carpeta de **1er cuatrimestre**. Son 10 preguntas y hay transformadores en los 7 modelos sin excepción (ojo: el profesor las sigue incluyendo en los recuperatorios del 2do parcial, aunque el tema sea del 1er cuatrimestre).
@@ -388,9 +388,59 @@ Observaciones prácticas:
 
 ---
 
-## TEMA C — Máquina de corriente continua (Unidad 10)
+## TEMA C — Motor paso a paso (Unidad 9)
 
-### C.1 — Esquema mecánico-eléctrico de la máquina CC trabajando como motor; rotor bloqueado; dónde se representan las pérdidas
+*No aparece en ninguno de los siete modelos. Desarrollado desde la presentación de la cátedra «Motor Paso a Paso», de donde salen las definiciones de par de retención y de detención, la curva cupla-velocidad y el criterio de las zonas.*
+
+### C.1 — Qué es, tipos y ángulo de paso
+
+**Definición de la cátedra:** un motor paso a paso (*step motor*) es un **actuador, o transductor electromagnético incremental, que convierte pulsos eléctricos digitales en desplazamientos angulares de un eje**. Se controla con una fuente de corriente continua y un circuito lógico, el **driver**.
+
+Lo distintivo es que el desplazamiento es **discreto y contable**: cada pulso produce un paso de ángulo fijo. De ahí sus tres características: control exacto de velocidad, distancia y sentido; movimiento preciso, constante y repetible; y precisión que **no se acumula** — el error es independiente del ángulo total girado y de cuántas veces se repita la posición final. Eso permite posicionar **en lazo abierto**, sin encoder, que es su ventaja económica y su riesgo: si pierde pasos, nadie se entera.
+
+| Tipo | Rotor | Comportamiento |
+|---|---|---|
+| **Imán permanente** (PM) | Número par de polos de aleación de alta retentividad (**Alnico**) | Tiene **par de detención** con las bobinas desenergizadas. Ángulos grandes: 7,5° a 30°. Barato. |
+| **Reluctancia variable** (VR) | Hierro dulce dentado, **sin imán**: magnéticamente pasivo, busca la mínima reluctancia | **Sin par de detención**. Por la naturaleza pasiva del rotor **admite razones de paso mucho más elevadas** que un PM del mismo ángulo de paso. Poco par. |
+| **Híbrido** (HB) | Imán axial entre dos coronas dentadas desfasadas medio paso dentario | El más usado: con 50 pares de polos y 2 fases da **1,8°/paso, 200 pasos por vuelta**. |
+
+**Ángulo de paso:** α = 360° / (2 · N𝖾 · p), con N𝖾 = número de fases y p = pares de polos del rotor. Con N𝖾 = 2 y p = 3 → α = 30° (el caso de la filmina, 12 pasos/vuelta); con p = 50 → α = 1,8°.
+
+### C.2 — Secuencias de avance y tipo de accionamiento
+
+| Modo | Secuencia | Par | Observaciones |
+|---|---|---|---|
+| **Paso completo, 1 fase** (*wave*) | A+ · B+ · A− · B− | el menor | Una sola bobina por vez: mitad del consumo, ~70 % del par. Es el que más sufre la sobreoscilación. |
+| **Paso completo, 2 fases** | A+B+ · A+B− · A−B− · A−B+ | referencia | El modo normal. Campo √2 veces mayor, a 45° de cada polo. Mismo ángulo de paso, desplazado medio paso. |
+| **Medio paso** | alterna 1 y 2 fases, 8 estados | alterna | **Duplica la resolución** (1,8° → 0,9°) sin cambiar el motor. El par no es igual en todos los pasos. |
+| **Micropasos** | corriente senoidal por PWM | menor por micropaso | Divide el paso en 8, 16 o 256. Movimiento suave y silencioso; la mejor defensa contra la resonancia. |
+
+**Unipolar:** 5, 6 u 8 hilos con **toma central**; para invertir el campo se energiza una u otra mitad, así que basta **un transistor por media bobina**. Driver simple y barato, pero trabaja la mitad del cobre: menos par.
+**Bipolar:** 4 hilos, sin toma central; hay que invertir la corriente en la bobina completa, lo que exige un **puente H** por fase. Usa todo el cobre: alrededor de **40 % más de par**. Es lo estándar hoy.
+
+### C.3 — Cuplas, curva cupla-velocidad y pérdida de pasos
+
+**Par de retención** (*holding*): el valor del par que puede aplicar al eje la carga mecánica **sin que el motor pierda su posición** y salga de una posición estable, con las bobinas energizadas.
+**Par de detención** (*detent*): aun con todos los devanados **desenergizados** existe algo de atracción entre los polos del imán del rotor y los del estator con los que se alinearon; el par necesario para vencerla es el de detención. **Sólo en PM e híbridos**.
+
+Los cuatro puntos de la curva:
+- **Velocidad pull-in:** la máxima a la que una carga friccional **puede empezar a moverse** sin perder pasos.
+- **Velocidad pull-out:** la máxima a la que el motor con carga friccional **puede seguir girando** sin perder pasos.
+- **Par pull-in:** el máximo aplicable cuando *empieza* a girar a la velocidad pull-in (entrada en sincronismo).
+- **Par pull-out:** el máximo aplicable cuando ya *gira* a la velocidad pull-out (salida de sincronismo).
+
+**Zona de arranque:** la posición de la carga sigue fielmente los impulsos del control; el motor arranca, para e invierte. **Campo de giro** («zona muerta» o de alta velocidad): sigue el ritmo de las pulsaciones sin perder saltos **pero no puede arrancar, parar ni invertir**. Por eso se usa **ramping**: el número mínimo de pasos a dar al acelerar del máximo bidireccional al máximo unidireccional.
+
+Los tres problemas prácticos:
+1. **Pérdida de pasos** al exceder el par pull-out o con rampas bruscas. Como el lazo es abierto, el error no se detecta ni se corrige.
+2. **Sobreoscilación y resonancia.** A paso simple el rotor **tiende a la sobreoscilación y oscila sobre su posición final**; entre 100 y 200 pasos/s esa oscilación puede entrar en resonancia con la frecuencia de pasos. Se combate con micropasos, amortiguadores o pasando rápido por esa banda.
+3. **Caída del par con la frecuencia** por la constante de tiempo **L/R**: a frecuencia alta la corriente no alcanza su valor nominal dentro del paso. De ahí los **drivers chopper de corriente constante** con tensión de bus muy superior a la nominal (24 o 48 V en un motor de 2 V), y de ahí que el motor consuma corriente nominal aun parado y se caliente en reposo.
+
+---
+
+## TEMA D — Máquina de corriente continua (Unidad 10)
+
+### D.1 — Esquema mecánico-eléctrico de la máquina CC trabajando como motor; rotor bloqueado; dónde se representan las pérdidas
 *(Parcial 12-11-25 preg. 3; recuperatorio 11-12-24 preg. 3)*
 
 **Esquema eléctrico:**
@@ -470,7 +520,7 @@ Lo que define el modo es la relación entre **E** y **V_a**:
 
 ---
 
-### C.2 — Partes constitutivas y reacción de armadura
+### D.2 — Partes constitutivas y reacción de armadura
 *(Recuperatorios 10-12-25 preg. 3; 07-12-22 preg. 4)*
 
 **Partes constitutivas:**
@@ -527,9 +577,75 @@ Lo que define el modo es la relación entre **E** y **V_a**:
 
 ---
 
-## TEMA D — Calidad de energía (Unidad 12)
+## TEMA E — Máquina sincrónica (Unidad 11)
 
-### D.1 — Factor de forma, factor de cresta y corriente de neutro
+*Tampoco aparece en los modelos. Desarrollado desde la presentación «Máquina Sincrónica» y los apuntes «Motor Sincrónico» del Ing. José Luis González.*
+
+### E.1 — Partes constitutivas y devanado amortiguador
+
+**Estator o inducido:** idéntico al del asincrónico, devanado trifásico distribuido.
+**Rotor o inductor:** lleva el **devanado de excitación alimentado en continua**. Dos construcciones: **rotor liso o cilíndrico** (2 o 4 polos, turboalternadores de 3000 rpm, entrehierro uniforme) y **polos salientes** (4 a 100 polos, hidrogeneradores y motores lentos, entrehierro no uniforme).
+**Excitación:** excitatriz de CC sobre el eje, o fuente externa por anillos rozantes; hoy, **sistema sin escobillas** con un alternador invertido en el eje y un puente rectificador giratorio.
+
+El **devanado amortiguador** son barras de cobre o bronce en ranuras de las caras polares, cortocircuitadas por anillos: una jaula de ardilla dentro de la máquina sincrónica. Sus **cinco funciones**, según la cátedra:
+1. Amortiguación de oscilaciones mecánicas.
+2. Funcionamiento en régimen desequilibrado.
+3. Limitación de campos armónicos.
+4. Mejora del comportamiento en cortocircuito.
+5. **Arranque asíncrono.**
+
+### E.2 — Alternador y motor: el ángulo de potencia
+
+En el entrehierro conviven dos campos que giran a la misma velocidad sincrónica, y **cuanto mayor sea el ángulo entre ellos —hasta cierto límite— mayor será la potencia**. Ese es el **ángulo de potencia o de carga δ**.
+
+- n𝗌 = 60·f/p, rigurosamente constante.
+- **E₀ = V + I·(R + jX𝗌)** (método de las fuerzas electromotrices). X𝗌 = reactancia sincrónica (dispersión + reacción de inducido); como X𝗌 ≫ R, R se desprecia salvo para pérdidas.
+
+**Alternador (δ > 0):** E₀ adelanta a V; los polos inductores adelantan a los polos virtuales de la armadura; entrega energía.
+**En vacío (δ = 0):** V y E₀ coinciden, la potencia transferida se anula, I = 0. Es la condición de sincronización.
+**Motor (δ < 0):** E₀ atrasa; los polos virtuales arrastran a los inductores; I·R e I·X𝗌 invierten su sentido y E₀ toma el carácter de **fuerza contraelectromotriz**. Un motor sincrónico es **igual en todos los aspectos a un generador**, salvo la dirección del flujo de potencia.
+
+### E.3 — Potencia, cupla y límite de estabilidad
+
+- Rotor liso: **P = (m·V·E₀/X𝗌)·sen δ**, máxima en **δ = 90°**.
+- Polos salientes: P = (m·V·E₀/X𝗍)·sen δ + (m·V²/2)·(1/X𝗍 − 1/X𝗅)·sen 2δ. El segundo término es el **par de reluctancia**, máximo en 45°; el total alcanza su máximo **antes de los 90°** (≈ 66° en el caso graficado) y con **más potencia y par** que el rotor liso.
+- La zona estable es **0 < δ < 90°**: ahí un aumento de carga se compensa aumentando δ. Pasado el límite el motor **se desengancha**: pierde sincronismo y se detiene.
+- El término de reluctancia explica que un motor de polos salientes **desarrolle potencia aun sin excitación** (E₀ = 0): es el principio de los **motores de reluctancia**, de poca potencia y corriente muy reactiva.
+- Como en funcionamiento normal E₀ no difiere mucho de V, **la potencia y la cupla son proporcionales al cuadrado de la tensión**.
+
+### E.4 — Corrección del factor de potencia y curvas V
+
+Con tensión constante hay dos variables independientes: **la carga** y **la excitación**. Un cambio de la excitación modifica E₀ **pero no la potencia** (el par lo fija la carga y la velocidad es rígida): E₀ se mueve sobre la **recta de potencia constante** y lo único que cambia es el factor de potencia, y con él el reactivo.
+
+| Excitación | Fasor | Reacción de inducido | Efecto en la red |
+|---|---|---|---|
+| **Subexcitado** | I en **atraso** | La corriente en retraso **magnetiza**: F𝖱 > F𝖯 | **Consume** reactivo; se comporta como una reactancia inductiva. |
+| **Excitación normal** | I **en fase** | Equilibrio | **cos φ = 1** y corriente mínima: el vértice de cada curva V. |
+| **Sobreexcitado** | I en **adelanto** | La corriente en adelanto **desmagnetiza**: F𝖱 < F𝖯 | **Entrega** reactivo; se comporta como un capacitor. |
+
+**Compensador sincrónico:** un motor sincrónico sobreexcitado toma corriente en adelanto y **neutraliza en todo, en parte o sobrecompensa** el efecto de las cargas inductivas. Puede arrastrar carga mecánica al mismo tiempo, pero **en la medida en que se lo use como compensador hay que reducir su capacidad de carga en el árbol**.
+
+Las **curvas V** (o curvas O) son la corriente del inducido en función de la excitación, una por cada potencia. Sus dos propiedades:
+1. **Factor de potencia unitario:** el lugar geométrico de los mínimos de cada bucle. A su izquierda la corriente adelanta; a su derecha, atrasa.
+2. **Estabilidad:** la línea que une los puntos de excitación mínima es el **límite de estabilidad**. A su derecha, si crece la potencia demandada la máquina toma más corriente (estable); a su izquierda la corriente **disminuye** al crecer la carga, y la máquina se desengancha. Por eso la parte superior del óvalo no tiene aplicación práctica.
+
+### E.5 — Arranque
+
+**No arranca solo.** Con el rotor parado, los polos quedan sometidos a **atracciones y repulsiones en brevísimos períodos**: la cupla media es nula y el rotor no gira, a lo sumo vibra. Si se lo lleva al sincronismo, al enfrentarse polos opuestos se establece el **enganche magnético**.
+
+1. **Arranque asíncrono con el devanado amortiguador** — *el método principal*. La jaula hace arrancar la máquina como un asincrónico; cerca del sincronismo se aplica la excitación y, tras varias **oscilaciones atenuadas (penduleo)**, engancha. Cuanto menor la carga, más fácil entra en sincronismo.
+   **El detalle que se pregunta:** durante el arranque el devanado de excitación **debe estar en cortocircuito o cerrado sobre una resistencia ≈ 10 veces la propia**; si quedara **abierto**, por su gran número de espiras aparecería una **tensión inducida elevada** capaz de dañar la aislación.
+2. **Arranque por autotransformador y devanado amortiguador** — el mismo arranque asíncrono a tensión reducida.
+3. **Motor auxiliar de lanzamiento** — el método histórico; exige sincronizar la conexión a la red en el instante preciso.
+4. **Variador de frecuencia** — rampa desde frecuencia casi nula; da además la mejor estabilidad para alta cupla y baja velocidad.
+
+**Ventajas:** velocidad rigurosamente constante, mejor rendimiento y precisión que el asincrónico, **factor de potencia ajustable** y par máximo de hasta cinco veces el nominal. **Contra:** más caro y complejo (por debajo de ~10 kW conviene el asincrónico), necesita excitación de continua, no arranca solo y se desengancha ante sobrecarga brusca. **Aplicaciones:** todos los alternadores de las centrales; y como motor, molinos y trituradoras, cintas, ventiladores, bombas y compresores de gran potencia, extrusoras, y compensadores sincrónicos.
+
+---
+
+## TEMA F — Calidad de energía (Unidad 12)
+
+### F.1 — Factor de forma, factor de cresta y corriente de neutro
 *(Parcial 12-11-25 preg. 5)*
 
 **Factor de forma:**
@@ -602,7 +718,7 @@ Es decir, **la corriente del neutro puede ser cerca del doble de la de cada fase
 
 ---
 
-### D.2 — Análisis de las componentes armónicas en una distribución de 50 Hz y sus efectos
+### F.2 — Análisis de las componentes armónicas en una distribución de 50 Hz y sus efectos
 *(Recuperatorio 13-12-22 preg. 4)*
 
 **Marco conceptual:** una onda periódica distorsionada se descompone por **serie de Fourier** en la fundamental de 50 Hz más una suma de senoides de frecuencia múltiplo entero **h·50 Hz**. El indicador global es:
@@ -677,4 +793,4 @@ Se dejaron afuera por no corresponder al 2do cuatrimestre, pero conviene saber q
 | 13-12-22 (#1 y #2) | Cálculo (500 kVA, 1 kW / 1,5 kW) y ensayos + pérdidas en el diagrama fasorial en vacío |
 | 07-12-22 (#1 y #2) | Cálculo (500 kVA, 1 kW / 6,5 kW: η a ½ carga FP 1, η al 100 % FP 0,75 ind., η máximo) y ensayos + vida útil |
 
-**Dos temas del programa del 2do cuatrimestre que NO aparecen en ningún modelo:** **Unidad 9 — Motor paso a paso** y **Unidad 11 — Máquina sincrónica**. Dado que el 2do parcial del 12-11-25 ya incluyó Calidad de Energía (Unidad 12), conviene no descartarlos de la preparación.
+**Los dos temas sin antecedente de examen** — **Unidad 9, motor paso a paso** y **Unidad 11, máquina sincrónica** — no figuran en ninguno de los siete modelos, pero están desarrollados igual en los temas C y E. Dado que el 2do parcial del 12-11-25 ya incluyó Calidad de Energía, que tampoco figuraba en ningún modelo anterior, son las candidatas obvias para el próximo.
