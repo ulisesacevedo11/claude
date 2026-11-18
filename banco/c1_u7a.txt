@@ -1,0 +1,133 @@
+#U Unidad VII · Motor Asincrónico Trifásico
+
+#Q 7.1 | ★★★ | Principio de funcionamiento y campo giratorio | 11-12-24 p2 · 06-03-24 p2 · y como parte de 10-12-25 p2, 13-12-23 p3, 07-12-22 p3 | Apunte p. 1-2
+#E Desarrolle el principio de funcionamiento de un motor trifásico asincrónico. ¿Cómo se genera el campo giratorio y de qué depende su velocidad?
+
+#H Campo giratorio y velocidad sincrónica
+En el estator hay **tres bobinas desfasadas 120° en el espacio**, alimentadas por un sistema trifásico cuyas **corrientes están desfasadas 120° en el tiempo**. Cada bobina por separado crea un campo que sólo pulsa sobre un eje fijo, pero la suma de los tres da un **campo giratorio de amplitud constante** (teorema de Ferraris): equivale a un imán girando dentro del estator.
+Un ciclo completo de la red hace que el campo dé una vuelta entera en una máquina de dos polos. De ahí sale la velocidad sincrónica, que depende sólo de la red y de la construcción, **no de la carga**:
+#F ns = 60 · f1 / p        [rpm]   ·   p = pares de polos
+#TH Pares de polos p | Polos totales | ns a 50 Hz | ns a 60 Hz
+#TR 1 | 2 | 3000 rpm | 3600 rpm
+#TR 2 | 4 | 1500 rpm | 1800 rpm
+#TR 3 | 6 | 1000 rpm | 1200 rpm
+#TR 4 | 8 | 750 rpm | 900 rpm
+#TR 6 | 12 | 500 rpm | 600 rpm
+
+#H Los cuatro eslabones del funcionamiento
+#L **El campo giratorio corta los conductores del rotor** e induce en ellos fuerza electromotriz (Faraday). Desde la barra, es un imán que le pasa por delante.
+#L **Como el circuito del rotor está cerrado** sobre los anillos de cortocircuito, circulan corrientes por las barras. Son corrientes grandes, porque la resistencia de una barra es mínima.
+#L **Esas corrientes, dentro del campo magnético, reciben una fuerza** F = B · L · I (Laplace).
+#L **La suma de las fuerzas da el par motor**, en el mismo sentido en que gira el campo, y el rotor arranca a seguirlo.
+
+#H Por qué nunca alcanza al campo
+Si el rotor llegara a la velocidad sincrónica, desde las barras el campo estaría quieto: no habría variación de flujo, no habría fem, ni corriente, ni fuerza, **ni par**. Alcanzar al campo eliminaría la causa misma del movimiento. Por eso el rotor gira siempre algo más lento y la máquina se llama **asincrónica** (o **de inducción**, por el primer eslabón).
+
+#Q 7.2 | ★★★ | Resbalamiento: definición, s = 1 y s = 0 | 10-12-25 p2 · 13-12-23 p3 · 07-12-22 p3 · 11-12-24 p2 · 06-03-24 p2 | Apunte p. 3
+#E Explique el concepto de resbalamiento. ¿Qué ocurre cuando el resbalamiento es 1 y cuando es 0?
+
+El resbalamiento (o deslizamiento) mide cuánto se queda atrás el rotor respecto del campo, como fracción de la velocidad sincrónica. **A plena carga vale entre 3 % y 8 %.**
+#F s = (ns − nr) / ns          s% = s · 100
+#F nr = ns · (1 − s)
+De él dependen la frecuencia y la fem del rotor, que **no son las de la red**:
+#F f2 = s · f1          E2s = s · E2          X2s = s · X2
+
+#H s = 1 · rotor detenido (arranque o rotor bloqueado)
+#L El movimiento relativo es **máximo**: la fem inducida y la frecuencia rotórica son máximas e iguales a las de la red (f2 = f1 = 50 Hz).
+#L La corriente es máxima: **5 a 8 veces la nominal**. La máquina se comporta como un **transformador en cortocircuito**.
+#L Hay par (el par de arranque) pero **la potencia mecánica es nula**, porque P = T · ω y ω = 0.
+#L Toda la potencia que cruza el entrehierro **se disipa en el cobre del rotor**: PCu2 = Pc. Es la condición del ensayo de rotor bloqueado, que por eso se hace a tensión reducida.
+
+#H s = 0 · velocidad de sincronismo
+#L No hay movimiento relativo: E2 = 0, I2 = 0 y **el par es nulo**. Sólo circula la corriente de vacío I0, mayormente magnetizante.
+#L Es un estado **ideal al que el motor no llega solo**: en vacío queda en s ≈ 0,002…0,01, nunca en 0, porque necesita algo de par para vencer el roce.
+#L Si una máquina motriz lo empuja **por encima** de ns, s se hace negativo y la máquina pasa a funcionar como **generador asincrónico** (ver 7.20).
+
+#N **Ejemplo que conviene tener a mano.** Motor de 4 polos a 50 Hz: ns = 1500 rpm. Con s = 4 %, nr = 1440 rpm, y f2 = 0,04 · 50 = **2 Hz**. Por eso la chapa de un motor industrial dice 1440 o 1450 rpm y nunca un número redondo.
+
+#Q 7.3 | ★★★ | Tipos de rotor y su comportamiento electromecánico | 11-12-24 p2 · y en toda pregunta de jaula profunda | Apunte p. 1 y 5
+#E Describa los tipos de rotor del motor asincrónico y su comportamiento electromecánico.
+
+#TH Tipo | Construcción | Comportamiento | Iarr/In · Marr/Mn
+#TR Jaula de ardilla estándar | Barras metálicas en las ranuras, cortocircuitadas en ambos extremos por anillos | Simple, robusta, barata y sin mantenimiento. R2 fija y baja: buen rendimiento y bajo resbalamiento nominal, pero poco par de arranque. No permite regular velocidad desde el rotor. | 4 a 7 · 0,8 a 1,2
+#TR Doble jaula | Jaula exterior de arranque (poca sección, alta R, baja X) y jaula interior de trabajo (gran sección, baja R, alta X) | En el arranque la corriente va por la exterior (alto par, baja corriente) y en marcha por la interior (buen rendimiento). | 3,3 a 5,5 · 1 a 2
+#TR Ranura profunda | Una sola barra alta y angosta: la parte superior hace de jaula exterior y el fondo de jaula interior | Mismo efecto que la doble jaula, constructivamente más simple. Ver 7.4. | 4 a 4,8 · 1,2 a 1,5
+#TR Rotor bobinado (anillos rozantes) | Devanado trifásico en estrella con los extremos llevados afuera por tres anillos y escobillas | Permite **insertar resistencias externas**: lleva la cupla máxima al arranque mismo y mejora el cos φ. Caro, con mantenimiento de escobillas. | Baja · hasta el par máximo
+
+#Q 7.4 | ★★★ | Rotor de jaula profunda y doble jaula | 10-12-25 p2 · 13-12-23 p3 · 07-12-22 p3 | Apunte p. 5
+#E Desarrolle el motor asincrónico con rotor de jaula profunda y sus características más importantes.
+
+#N **Es la pregunta más repetida de todos los modelos: salió tres veces, y siempre acompañada del concepto de resbalamiento con s = 1 y s = 0.**
+
+#H El problema que resuelve
+Se busca **más par de arranque y menos corriente de arranque sin usar rotor bobinado**, es decir, sin anillos ni escobillas. La solución es cambiar la forma de las barras del rotor.
+
+#H Construcción
+Barras **altas y angostas** (relación altura/ancho de 5:1 a 10:1), alojadas en ranuras profundas y radiales, cortocircuitadas por los anillos.
+
+#H El mecanismo: efecto pelicular, gobernado por el resbalamiento
+El flujo de dispersión que enlaza la barra es mayor en el fondo de la ranura, donde hay más hierro alrededor. Entonces **la parte profunda de la barra tiene más reactancia** que la superior. El reparto de corriente entre una y otra depende de la frecuencia rotórica, y ésta depende del resbalamiento (f2 = s · f1):
+#L **En el arranque** (s = 1, f2 = 50 Hz) mandan las reactancias: la corriente se concentra en la parte superior de la barra (efecto pelicular, Kelvin o Foucault). La sección útil se reduce, **R2 efectiva aumenta** 2 a 4 veces y X2 disminuye. Resultado: **más par de arranque y menos corriente**.
+#L **En marcha** (s ≈ 0,03, f2 de 1 a 2 Hz) las reactancias pierden importancia frente a las resistencias: la corriente se reparte por toda la sección, **R2 vuelve a su valor bajo** y con ella las pérdidas. Buen rendimiento y bajo resbalamiento nominal.
+
+#H La idea en una frase
+La jaula profunda se comporta como un **reóstato rotórico automático**, que se inserta solo en el arranque y se elimina solo al acelerar. Consigue buena parte del beneficio del rotor bobinado **sin anillos, sin escobillas y sin mantenimiento**.
+
+#H Limitaciones
+Mayor reactancia de dispersión total, de modo que el **factor de potencia es algo peor** y la cupla máxima algo menor que una jaula simple equivalente; y el rotor necesita más diámetro, lo que aumenta la inercia.
+
+#Q 7.5 | ★★ | Curva par-velocidad, puntos singulares y punto de trabajo | 06-03-24 p2 (con el gráfico pedido explícitamente) | Apunte p. 3-4
+#E Dibuje la curva par versus resbalamiento, identifique sus puntos singulares y la condición de equilibrio de funcionamiento con una carga.
+
+#H Puntos singulares
+#L **Par de arranque (Car)**, en s = 1 y velocidad nula.
+#L **Par mínimo (Cmín)**, el "hueco" de la curva. Es una trampa: si la curva de la carga corta ahí, el motor se engancha a baja velocidad y no termina de acelerar.
+#L **Par máximo o de desenganche (Ck)**, el techo real de la máquina.
+#L **Par nulo** en la velocidad sincrónica.
+
+#H Las dos zonas
+#L **Zona inestable**, desde s = 1 hasta Ck. Si aumenta la carga, el motor se frena, sube s y **el par baja**: se derrumba hasta pararse. No se puede trabajar ahí, pero **sí se puede atravesar** mientras se acelera.
+#L **Zona estable**, desde Ck hasta s = 0. Es la de trabajo normal: si aumenta la carga, el motor se frena, sube s y **el par sube** hasta un nuevo equilibrio. Se defiende solo.
+
+#H Por qué existe un máximo
+Al aumentar el resbalamiento compiten dos efectos opuestos: la tensión inducida crece (E2 = s·E2₀, sube la corriente) pero **la frecuencia rotórica también crece**, y con ella la reactancia, que **retrasa la corriente** respecto del instante en que sería útil. Cerca de s = 0 gana el primero; cerca de s = 1, el segundo. En el medio está Ck.
+#F s_Ck = R'2 / √(R1² + Xcc²) ≈ R'2 / Xcc
+#L **Ck no depende de R2**: sólo depende de ella el resbalamiento al que ocurre. Por eso insertar resistencia rotórica corre el máximo hacia el arranque sin cambiar su valor.
+#L **El par es proporcional al cuadrado de la tensión**: una caída del 10 % de tensión cuesta un 19 % de par.
+
+#H Condición de arranque y punto de trabajo
+El motor acelera mientras sobre par. A la diferencia se la llama **par acelerador**:
+#F Ca = Cm − Cr
+La condición de arranque es que **Cm supere a Cr en todo momento**, no sólo al inicio. El punto de trabajo F es donde Cm = Cr: ahí Ca = 0 y el motor deja de acelerar. Si en algún punto del camino Cr queda por encima, el motor se queda ahí; y si Cr supera Ck, se **desengancha** y se detiene.
+
+#Q 7.6 | ○ | Clasificación NEMA | No tomada | Apunte p. 6
+#E Explique la clasificación NEMA de los motores asincrónicos y qué define cada clase.
+Los motores de más de 1 HP se clasifican según el **diseño de su jaula**, que es lo que fija el par y la corriente de arranque.
+#TH Clase | Par de arranque (Carr/Cn) | Corriente de arranque | Regulación de velocidad | Denominación
+#TR A | 1,5 a 1,75 | 5 a 7 | 2 a 4 % | Normal
+#TR B | 1,4 a 1,6 | 4,5 a 5 | 3 a 5 % | De propósito general
+#TR C | 2 a 2,5 | 3,5 a 5 | 4 a 5 % | De doble jaula, alto par
+#TR D | 2,5 a 3 | 3 a 8 | 5 a 8 y 8 a 13 % | De alto par y alta resistencia
+#TR F | 1,25 | 2 a 4 | mayor de 5 % | De doble jaula, bajo par y baja corriente de arranque
+
+#Q 7.7 | ★★★ | Circuito equivalente aproximado y el término R'2(1−s)/s | 12-11-25 p1 · 13-11-24 | Apunte p. 6-7
+#E Esquematice el circuito equivalente referido al primario aproximado y comente el término R'2(1−s)/s considerando resbalamiento 0 y resbalamiento 1.
+
+#H Deducción
+El motor es un transformador cuyo secundario gira. Con el rotor en movimiento, E2s = s·E2 y X2s = s·X2, de modo que:
+#F I2 = s·E2 / √[R2² + (s·X2)²]
+Dividiendo numerador y denominador por s:
+#F I2 = E2 / √[(R2/s)² + X2²]
+Es decir, **se puede tratar al rotor como si estuviera detenido**, a la frecuencia de la red, con una resistencia variable R2/s. Referido al primario (R'2 = a²·R2, X'2 = a²·X2), esa resistencia se separa en dos:
+#F R'2 / s  =  R'2  +  R'2 · (1 − s) / s
+En el circuito **aproximado** se desprecia la caída de la corriente de vacío en R1 + jX1 y la rama de magnetización (G0 // B0) se pasa a los bornes de entrada, con lo que:
+#F I'2 = V1 / [ (R1 + R'2/s) + j(X1 + X'2) ]
+
+#H Qué representa cada parte
+#L **R'2** es la resistencia real del rotor: ahí se disipan las pérdidas en el cobre rotórico.
+#L **R'2(1−s)/s** es una **resistencia ficticia de carga**: no es un elemento físico, sino el artificio que permite representar una máquina rotante con un circuito estático. **La potencia que "se disipa" en ella no es calor: es la potencia mecánica interna que el motor entrega al eje.** Su valor depende sólo del estado cinemático del rotor.
+
+#H Los dos extremos
+#L **s = 0 (sincronismo):** R'2(1−s)/s → ∞. La rama del rotor queda **a circuito abierto**: I'2 = 0, no hay par ni potencia mecánica y sólo circula I0. Es el **ensayo de vacío**.
+#L **s = 1 (rotor bloqueado):** R'2(1−s)/s = 0. La resistencia de carga queda **en cortocircuito**: Pm = 0, la corriente sólo está limitada por R1 + R'2 y X1 + X'2 (es máxima) y **toda la potencia del entrehierro se pierde en el cobre del rotor**. Es el **ensayo de rotor bloqueado**.
+#L **0 < s < 1 (motor):** resistencia finita y positiva. A mayor carga, mayor s, menor resistencia ficticia, y por lo tanto más corriente y más par.

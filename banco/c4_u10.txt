@@ -1,0 +1,151 @@
+#U Unidad X · Máquina de Corriente Continua
+
+#Q 10.1 | ★★ | Partes constitutivas | 10-12-25 p3 · 07-12-22 p4 | Apunte p. 35-36
+#E Explique las partes constitutivas de una máquina de corriente continua.
+#H Estator · inductor o campo
+#L **Culata o yugo:** sostiene mecánicamente la máquina y **cierra el circuito magnético**.
+#L **Polos principales** con sus **expansiones o zapatas polares**, y las **bobinas inductoras** que crean el flujo principal.
+#L **Polos auxiliares o de conmutación**, más angostos, entre los principales.
+#L **Devanado de compensación** (en máquinas grandes), alojado en ranuras de las expansiones polares.
+#L **Portaescobillas y escobillas** de carbón o grafito, con resortes de presión, sobre un anillo orientable.
+#H Rotor · inducido o armadura
+#L **Núcleo laminado** con ranuras donde va el **devanado inducido**: es donde se induce la fem o se produce el par. Laminado para limitar las corrientes de Foucault.
+#L **Colector de delgas (conmutador):** segmentos de cobre **aislados entre sí con mica**, unidos a las bobinas del inducido. Funciona como **rectificador mecánico**. Es la pieza característica y el punto débil de la máquina.
+#L Eje, cojinetes y ventilador.
+#H Entrehierro
+El espacio de aire entre estator y rotor.
+
+#Q 10.2 | ○ | Realimentación natural | No tomada (concepto de apertura de la unidad) | Apunte p. 35
+#E ¿Qué es la realimentación natural de la máquina de corriente continua?
+Al girar, el rotor genera una **fuerza contraelectromotriz proporcional a la velocidad** que se opone a la tensión aplicada. Si aumenta la carga, el motor se frena, **baja la fcem, aumenta la corriente de armadura** y con ella el par, hasta recuperar el equilibrio. Esta autorregulación es intrínseca a la máquina —no la hace ningún control externo— y es lo que hace que **su control sea más simple que el de otros motores**.
+
+#Q 10.3 | ○ | Principio de funcionamiento y conmutación | No tomada | Apunte p. 37-38
+#E Explique el principio de funcionamiento como motor y como generador, y la función del colector.
+#L **Como motor:** se aplica tensión continua al inducido a través de las escobillas; la corriente en los conductores, dentro del campo del estator, produce fuerzas (**Lorentz**) que dan el par. Al girar se induce una fcem que se opone a la tensión aplicada.
+#L **Como generador:** una máquina motriz hace girar el inducido; por **Faraday** se induce en cada espira una fem **alterna**, que el colector y las escobillas **rectifican mecánicamente**, entregando tensión continua pulsante.
+#H Conmutación
+El colector **invierte las conexiones de cada espira justo cuando su tensión cambia de polaridad**, de modo que la tensión en las escobillas mantiene **siempre la misma polaridad**. Visto desde el motor: garantiza que **la corriente bajo cada polo tenga siempre el mismo sentido**, y por lo tanto que todas las fuerzas sumen en el mismo sentido de giro. Con más espiras y más delgas, el **rizado** se vuelve despreciable.
+
+#Q 10.4 | ★★ | Reacción de armadura: debilitamiento de los polos, problemas y soluciones | 10-12-25 p3 · 07-12-22 p4 · 13-11-24 | Apunte p. 39
+#E ¿Qué es el efecto de debilitamiento de los polos magnéticos por la reacción de armadura? ¿Qué problemas trae y cómo se soluciona?
+#H Qué es
+**Bajo carga**, la corriente del inducido crea su propio campo, **transversal** (a 90° del campo principal, sobre la línea neutra geométrica). Al superponerse al campo de los polos lo **distorsiona**: en una mitad de cada polo el flujo **aumenta** y en la otra **disminuye**. Y como la mitad reforzada **se satura**, lo que se pierde en un lado no se recupera del todo en el otro: **el flujo total por polo disminuye**. Eso es el debilitamiento de los polos. En vacío, con Ia ≈ 0, el fenómeno no existe.
+#H Problemas que produce
+#L **Desplazamiento de la línea neutra** un ángulo α: **en el sentido de giro en el generador** y **en contra del giro en el motor**. Las escobillas, fijas en la neutra de vacío, quedan conmutando bobinas que **todavía tienen fem**, y aparecen **chispas en el colector**: quemado y acanalado de las delgas, desgaste acelerado de escobillas, **flameo** (arco circular entre escobillas de distinta polaridad, que puede destruir el colector en segundos) e interferencia electromagnética.
+#L **Caída de la fem** bajo carga: ε = Ev − Ec = K · N · (Φv − Φc). En el **generador** empeora la regulación de tensión.
+#L **En el motor:** menor cupla por amperio (porque T = k·Φ·Ia y Φ cayó) y **posible aumento de velocidad con la carga**, ya que ω = (Va − Ia·Ra)/(k·Φ): la característica puede volverse **ascendente e inestable**, con riesgo de embalamiento.
+#L **Mayor tensión entre delgas** en la zona de flujo reforzado, con riesgo de arco entre delgas.
+#H Soluciones
+#TH Solución | Cómo actúa | Observaciones
+#TR **Correr las escobillas** a la nueva neutra | Girar el anillo portaescobillas hasta la posición de mínimo chisporroteo | Solución **pobre**: sirve **para un solo valor de carga y un solo sentido**, y al correrlas se agrega una componente **directamente desmagnetizante** que empeora el debilitamiento.
+#TR **Polos auxiliares o de conmutación** | Polos angostos entre los principales, con bobinas **en serie con el inducido**, que crean un campo opuesto al de reacción **en la zona neutra**. Al estar en serie, su acción **crece con la corriente**: se autorregulan. | **La solución estándar**, en toda máquina de cierto tamaño. Corrigen la conmutación **pero no el debilitamiento del flujo**, porque actúan sólo en la zona interpolar.
+#TR **Devanado de compensación** | Bobinas en ranuras de las **expansiones polares**, también en serie con el inducido y con corriente **opuesta** a la de los conductores del rotor enfrentados | **Anula la reacción bajo todo el polo**, no sólo en la neutra, y **evita el debilitamiento del flujo**. Caro y complejo: se reserva para máquinas grandes o de carga muy variable, **junto con** los polos auxiliares.
+
+#Q 10.5 | ★ | Posición de las escobillas en carga, sin polos auxiliares | 25-11-20 | Apunte p. 40
+#E ¿Qué posición deben tomar las escobillas en carga, como generador y como motor, en una máquina sin polos auxiliares?
+Para conmutar **sin chispas**, las escobillas deben cortocircuitar las bobinas cuando su fem es nula, o sea **deben correrse hasta la nueva línea neutra magnética**.
+#L **Como generador:** la neutra se desplaza **en el sentido de giro**, así que las escobillas **se adelantan** un ángulo α.
+#L **Como motor:** para la misma polaridad y giro, **la corriente del inducido es opuesta**, el campo de reacción se invierte y la neutra se desplaza **en contra del sentido de giro**: las escobillas **se atrasan**.
+El ángulo **depende de la corriente de carga**, por lo que la posición ideal cambia con la carga: **sólo sirve para carga fija**. Por eso en la práctica se usan polos auxiliares.
+
+#Q 10.6 | ★★ | Modelo electromecánico, reversibilidad, rotor bloqueado y pérdidas | 12-11-25 p3 · 11-12-24 p3 | Apunte p. 40-41
+#E Explique el esquema mecánico-eléctrico de una máquina de corriente continua excitada por armadura, trabajando como motor. ¿Qué significa que sea reversible? ¿Qué ocurre con el rotor bloqueado? ¿Dónde se representan las pérdidas?
+#H El modelo, en tres bloques
+#L **Circuito de campo:** resistencia **Rf** e inductancia **Lf** alimentadas por Vf; la corriente de excitación **if** genera el flujo Φ.
+#L **Circuito de armadura:** la tensión **Va** alimenta **Ra** y **La** en serie con la fuerza contraelectromotriz **Eg**, proporcional a la velocidad.
+#L **Sistema mecánico:** el par desarrollado **Td** debe vencer la inercia **J**, la fricción viscosa **B** y el par de carga **Tl**.
+#F Va = Eg + Ra·Ia + La·dIa/dt
+#F Eg = K · Φ · ω          Td = K · Φ · Ia = J·dω/dt + B·ω + Tl
+#F ω = (Va − Ia·Ra) / (K·Φ)
+**En el acoplamiento electromecánico, la tensión se vincula con la velocidad y la corriente con el par**, y la potencia Eg·Ia que absorbe la fcem es exactamente la que se convierte en potencia mecánica Td·ω.
+#H Reversibilidad
+La **misma máquina, sin ningún cambio constructivo**, funciona como **motor** (Va > Eg: la corriente entra al inducido y la energía eléctrica se convierte en mecánica) o como **generador** (si una máquina motriz la impulsa y **Eg > Va**, la corriente **se invierte** y la energía mecánica se convierte en eléctrica). Lo único que cambia es **el sentido del flujo de energía**. En la práctica esto es el **frenado regenerativo** de tracción, ascensores y grúas.
+#H Rotor bloqueado
+Con ω = 0 la fcem se anula (**Eg = 0**) y la corriente queda limitada **sólo por la resistencia del inducido**, que es muy pequeña:
+#F Ia = (Va − Eg)/Ra = Va / Ra          (varias veces la nominal, 10 a 20·In)
+#L **Hay par máximo** (Td = K·Φ·Ia con Ia máxima) **pero no hay potencia mecánica**, porque P = Td·ω y ω = 0.
+#L Por lo tanto **toda la potencia absorbida se disipa en Ra** (Ia²·Ra) y en las escobillas: el inducido se sobrecalienta en segundos, pueden desprenderse las soldaduras de las delgas y hay riesgo de flameo. Y el ventilador, montado en el mismo eje, **tampoco gira**.
+#L Por eso el motor de CC **se arranca con tensión reducida o con resistencias en serie**, y lleva protección de sobrecorriente. Es también la razón por la que el ensayo de rotor bloqueado se hace a tensión muy reducida.
+#H Dónde se representan las pérdidas
+#TH Pérdida | ¿Figura en el circuito? | Dónde
+#TR Joule en el cobre de **armadura** | **Sí** | en Ra: Ia²·Ra
+#TR Joule en el cobre de **excitación** | **Sí** | en Rf: if²·Rf
+#TR Caída en las **escobillas** | Sí, como caída de tensión adicional | ≈ 2 V por par: 2·ΔV·Ia
+#TR **Mecánicas** (roce y ventilación) | **No** como elemento eléctrico | representadas por la **fricción viscosa B** del modelo mecánico
+#TR En el **hierro** | **No** | se reparten en la parte giratoria y se descuentan de la potencia electromagnética
+#F η = P2 / P1 = P2 / (P2 + Pm + PFe + PCu + Pesc + Pexc)
+
+#Q 10.7 | ○ | Tipos de conexionado | No tomada | Apunte p. 41-42
+#E Explique los tipos de conexionado de la máquina de corriente continua y cómo influyen en sus características.
+Las características dependen de **cómo se conecta el inductor respecto del inducido**. Bornes normalizados: **A1-A2** inducido, **D1-D2** serie, **E1-E2** shunt, **F1-F2** independiente.
+#TH Conexión | Disposición | Comportamiento como motor
+#TR **Excitación independiente** | El campo se alimenta de una fuente separada | Control por armadura a flujo constante: característica lineal y de caída suave. Es la base del accionamiento con chopper o rectificador controlado.
+#TR **Serie** | Campo **en serie** con el inducido (Ie = Ii = I) | El par crece con el **cuadrado** de la corriente: **altísimo par de arranque**, ideal para tracción. Pero la velocidad **cae mucho con la carga y tiende a infinito en vacío**: no debe funcionar sin carga.
+#TR **Shunt o derivación** | Campo **en paralelo** con el inducido (I = Ii + Ie) | **Velocidad muy estable** con la carga. Par proporcional a la corriente.
+#TR **Compuesta (compound)** | Bobinas serie y paralelo sobre los mismos polos, en derivación larga o corta. **Aditiva** si los campos se suman, **diferencial** si se restan | **Aditiva:** intermedia, más par que el shunt y **no se embala en vacío**. **Diferencial:** poco par y la velocidad puede **aumentar** con la carga (inestable).
+Como generadores se dividen en **autoexcitados** (shunt, serie y compound) y de **excitación separada**.
+
+#Q 10.8 | ○ | Características externas como generador | No tomada | Apunte p. 42
+#E Compare las características externas (tensión-corriente) de los distintos generadores de CC.
+#L **Compound diferencial:** la tensión **cae fuertemente** con la carga.
+#L **Shunt (derivación):** cae **más que la independiente** y la curva se dobla hacia atrás hasta la corriente de cortocircuito.
+#L **Excitación independiente:** cae **levemente**, sólo por la caída interna Ri y la reacción de armadura.
+#L **Compound aditivo:** se mantiene **casi constante** — es el que se usa cuando se quiere tensión estable.
+#L **Serie:** la tensión **crece con la corriente** desde cero.
+
+#Q 10.9 | ○ | Balance de potencias y características como motor | No tomada | Apunte p. 42-43
+#E Plantee el balance de potencias de la máquina de CC y compare las características par-velocidad de los distintos motores.
+Como **generador**, a la potencia mecánica absorbida P1 se le restan las pérdidas mecánicas, en el hierro, en el cobre del inducido, en las escobillas y —si es autoexcitado— la de excitación, para obtener la potencia eléctrica útil P2. **Como motor el flujo se invierte.**
+#F η = P2 / P1 = P2 / (P2 + ΣPérdidas)
+#TH Motor | Par | Velocidad
+#TR **Shunt** | proporcional a la corriente | casi constante con la carga
+#TR **Serie** | crece con el **cuadrado** de la corriente: altísimo par de arranque | cae mucho con la carga; **tiende a infinito en vacío**
+#TR **Compound aditivo** | intermedio, más que el shunt | no se embala en vacío
+#TR **Compound diferencial** | poco par | **puede aumentar con la carga**: inestable
+
+#Q 10.10 | ○ | Control de velocidad y debilitamiento de campo | No tomada | Apunte p. 44
+#E Explique cómo se controla la velocidad y el sentido de giro de un motor de CC.
+#L **Inversión de marcha:** con un **puente H**, cerrando S1-S4 o S2-S3 se invierte la tensión del inducido y el sentido de giro. En máquinas de campo bobinado se invierte **sólo uno** de los dos devanados (inducido **o** campo): si se invierten los dos, el giro no cambia.
+#L **Velocidad por PWM:** se conmuta la alimentación a alta frecuencia; el **ancho de los pulsos** fija la tensión media aplicada, **sin las pérdidas de una resistencia serie**.
+#L **Debilitamiento de campo:** por **debajo de la velocidad base** se controla con la tensión de armadura a flujo constante → **zona de par constante**. Para **superar la velocidad base** se **reduce la corriente de campo** → **zona de potencia constante**, en la que el par disponible cae.
+
+#Q 10.11 | ○ | Frenado eléctrico de la máquina de CC | No tomada | Apunte p. 45
+#E Explique los métodos de frenado eléctrico del motor de corriente continua.
+#L **Contramarcha:** se **invierte la tensión del inducido** mientras gira (o la carga lo arrastra en sentido contrario, como un aparejo que baja). El par de frenado es **muy violento**.
+#L **Dinámico:** se **desconecta la fuente** y el inducido se cierra sobre una **resistencia Rf**: la máquina funciona como generador y **disipa la energía cinética en calor** en esa resistencia.
+#L **Regenerativo:** igual que el dinámico, pero **la energía se devuelve a la red o a la batería** en lugar de disiparse.
+
+#Q 10.12 | ○ | Comparación motor de CC contra motor de inducción | No tomada | Apunte p. 45-46
+#E Compare el motor de corriente continua con el motor de inducción.
+#TH Característica | Motor de CC | Motor de inducción
+#TR Conmutación | A través de **escobillas** (mecánica) | No requiere conmutación
+#TR Mantenimiento | Periódico (escobillas y colector) | Mucho menor
+#TR Control de velocidad | Simple y económico | Requiere variador (VFD)
+#TR Característica par-velocidad | Moderadamente plana; a alta velocidad la fricción de escobillas reduce el par | No lineal
+#TR Eficiencia | Moderada | **Alta**: no hay caída de tensión en escobillas
+#TR Ruido eléctrico | **Sí**: el arco en escobillas genera interferencia | Menor
+#TR Disipación de calor | Moderada/baja: **se calienta el rotor**, que es difícil de refrigerar | **Alta**: el calor se genera en el estator, pegado a la carcasa
+#TR Inercia del rotor | **Alta**: limita las características dinámicas | **Baja**: barras cortocircuitadas, mejor respuesta dinámica
+
+#Q 10.13 | ○ | Motor brushless | No tomada | Apunte p. 46-48
+#E Explique el motor brushless: construcción, principio de funcionamiento y conmutación.
+Reemplaza el colector y las escobillas por **conmutación electrónica**. Para eso **se invierte la construcción**: los **imanes permanentes van en el rotor** y los **devanados trifásicos (U, V, W) en el estator**, alimentados por un driver que usa **sensores de efecto Hall** para conocer la posición del rotor. Puede ser de rotor interior o exterior.
+#H Conmutación de seis pasos
+Los sensores Hall (Ha, Hb, Hc) están a **120°** entre sí y detectan el polo norte del rotor. El driver es un **puente trifásico de 6 transistores**; se energizan **dos fases por vez** y, combinando las tres señales Hall, se obtienen **6 estados por vuelta eléctrica, uno cada 60°**. El campo del estator va **siempre adelante del rotor y lo arrastra**; para invertir el giro se recorre la secuencia al revés.
+#H Control
+Con **PWM** se regula la tensión media y con ella la velocidad y el par. Puede trabajar a lazo cerrado con tacómetro o encoder. Drivers integrados típicos: L6234, TB9080FG, MP6632.
+#L **Ventajas:** mayor eficiencia (sin fricción ni caída en escobillas), mayor vida útil, casi sin mantenimiento, menos ruido y vibración.
+#L **Desventajas:** mayor costo y complejidad, porque **siempre necesita un controlador electrónico**.
+
+#Q 10.14 | ○ | Servomotores | No tomada | Apunte p. 48-51
+#E Explique qué es un servomotor, sus partes, sus modos de control y su característica velocidad-par.
+Un servomotor es un **motor de CC (con o sin escobillas) con un controlador y, generalmente, un reductor, que trabaja a lazo cerrado**: recibe como consigna una posición, velocidad o par, y un **sensor (potenciómetro o encoder)** realimenta el valor real para corregir el error. Partes: motor, encoder o potenciómetro, engranajes, control electrónico y carcasa. Un sistema servo completo lo forman el PC (perfil de movimiento), el controlador de movimiento, el servo drive, el motor, la carga y la realimentación.
+#H Modos de control · tres lazos en cascada
+El driver tiene **posición (exterior), velocidad e intermedio, y corriente o par (interior)**:
+#L **Posición por pulsos:** el **número de pulsos** fija la posición y su **frecuencia** la velocidad. Actúan los tres lazos.
+#L **Velocidad por tensión analógica:** actúan los lazos de velocidad y de corriente.
+#L **Par por tensión analógica:** la tensión es directamente la orden de corriente. Sólo actúa el lazo de corriente.
+#H Característica velocidad-par
+Trabaja en forma **continua por debajo del par nominal** (región de servicio continuo) y usa la **región de servicio limitado**, hasta el par máximo instantáneo, **sólo durante aceleraciones y frenados cortos**, para reducir el tiempo de posicionamiento.
+#H Función de transferencia
+En el motor de CC, la tensión Ea menos la fcem Em produce la corriente Ia (bloque 1/(sL+R)), Kt la transforma en par T, y la parte mecánica 1/(Js²+Bs) da la posición Θ; la realimentación **Em = Km·s·Θ** es la **realimentación natural** del motor. El servo agrega el comparador, el amplificador (puente H), el reductor y la realimentación de posición.

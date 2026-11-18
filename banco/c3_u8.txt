@@ -1,0 +1,134 @@
+#U Unidad VIII · Motor Monofásico de Inducción
+
+#Q 8.1 | ★★★ | Principio de funcionamiento: doble campo giratorio y ausencia de par de arranque | 10-12-25 p4 · 11-12-24 p4 · 13-12-23 p4 · 06-03-24 p3 | Apunte p. 21-22
+#E Explique el funcionamiento del motor monofásico de inducción. ¿Por qué no tiene par de arranque?
+
+#N **La segunda pregunta más repetida: salió en 4 de los 7 modelos, siempre junto con las variantes de arranque y la inversión de giro.**
+
+#H El campo pulsante
+Alimentado con una sola fase, el estator crea un **campo pulsante**: **fijo en el espacio**, que sólo cambia de magnitud y de polaridad en el tiempo. No gira.
+
+#H Teoría del doble campo giratorio
+Por la **identidad de Euler** (cos ωt = (e^jωt + e^−jωt)/2), ese campo alterno estacionario **equivale a dos campos giratorios de amplitud mitad que giran a la velocidad de sincronismo en sentidos opuestos**: uno produce una cupla directa (Cd) y el otro una cupla inversa (Ci). Es como tener dos motores trifásicos acoplados en contra sobre el mismo eje.
+#L **Rotor detenido:** el resbalamiento respecto de los dos campos es el mismo (s = 1), las dos cuplas son **iguales y opuestas** y la resultante es **nula**. Es una situación de equilibrio: **el motor monofásico no tiene par de arranque**.
+#L **Rotor en marcha:** si se lo impulsa en un sentido, el resbalamiento respecto del campo que gira a favor disminuye (s) y respecto del otro aumenta (2 − s). Se rompe el equilibrio, **predomina la cupla en el sentido del giro** y el motor acelera solo hasta cerca del sincronismo. El campo resultante en el entrehierro pasa a ser **elíptico**.
+
+#H Consecuencias del campo inverso remanente
+El campo inverso nunca desaparece del todo: produce **cuplas pulsantes al doble de la frecuencia (100 Hz)**, ruido y vibración, y hace que el rendimiento y el factor de potencia sean **peores que los de un trifásico equivalente**.
+
+#H Partes constitutivas
+#L **Estator** con **dos devanados desplazados 90° en el espacio**: el **principal** o de trabajo (conductor grueso, muchas espiras, baja resistencia y alta reactancia) y el **auxiliar** o de arranque (conductor fino, pocas espiras, más resistivo).
+#L **Rotor de jaula de ardilla**, idéntico al del trifásico. No tiene conexión eléctrica con el exterior.
+#L **Capacitor e interruptor centrífugo** en serie con el auxiliar, más carcasa, eje, ventilador y caja de bornes.
+
+#H Comparación con el trifásico
+El trifásico tiene **campo giratorio natural y par de arranque propio**; el monofásico tiene campo pulsante, **par de arranque nulo** y necesita elementos adicionales (devanado auxiliar, capacitor, interruptor centrífugo) **que se desgastan**.
+
+#Q 8.2 | ★★★ | Métodos de arranque del motor monofásico | 10-12-25 p4 · 11-12-24 p4 · 13-12-23 p4 · 06-03-24 p3 | Apunte p. 23-26
+#E Explique las variantes de arranque del motor monofásico de inducción.
+El objetivo de todo artificio de arranque es crear un **segundo campo desfasado en el tiempo y en el espacio** para formar un campo giratorio (elíptico) que dé par a rotor parado. Para eso se agrega un devanado auxiliar a 90° en el espacio, con una corriente desfasada en el tiempo.
+#TH Tipo | Cómo logra el desfasaje | Par de arranque | Aplicación
+#TR **Fase partida por resistencia** (RSIR) | El auxiliar es **más resistivo**, lo que desfasa su corriente unos **30°** respecto de la principal. Sin capacitor. | ≈ **150 %** del nominal | Menos de 0,5 CV: ventiladores, bombas livianas, electrodomésticos
+#TR **Fase partida por capacitor** (CSIR) | Un **capacitor electrolítico** en serie con el auxiliar **adelanta** su corriente (≈ 42°) mientras la principal **atrasa** (≈ 40°): el desfase se acerca a **90°** y el campo es casi circular. | ≈ **300 %**, el más alto | Arranque con carga: compresores de heladera, bombas de pozo, elevadores
+#TR **Capacitor permanente** (PSC) | El capacitor queda **siempre conectado**, sin interruptor centrífugo. Su valor es un compromiso. | moderado (cargas livianas) | Arranque en vacío con exigencia de silencio: ventiladores de techo, extractores, aire acondicionado
+#TR **Doble capacitor** (CSCR) | Dos capacitores en paralelo: uno **de arranque** (gran capacidad, electrolítico) y otro **de marcha**. El centrífugo desconecta sólo el de arranque. | muy alto | Lo mejor de ambos: alto par y buen rendimiento y cos φ en marcha
+#TR **Polos sombreados** (espira de sombra) | **Sin devanado auxiliar:** una **espira en cortocircuito** rodea parte de cada polo; el flujo principal induce en ella una corriente que crea un flujo opuesto y **retrasa el flujo en esa zona**, de modo que el campo se desplaza hacia la espira. | muy chico | Muy baratos, rendimiento pobre. Ventiladores chicos, bombas de desagote. **No se puede invertir el giro eléctricamente.**
+
+#Q 8.3 | ★★ | Motor de arranque por capacitor e interruptor centrífugo: partes y curvas de cupla | 11-12-24 p4 (pide las curvas) · 13-12-23 p4 | Apunte p. 23-25
+#E Esquematice un motor de inducción monofásico de arranque por capacitor. Partes constitutivas, curvas de cupla y conexionado.
+Durante el arranque trabajan los **dos devanados**: el capacitor desfasa la corriente auxiliar casi 90° respecto de la principal, lo que da un **campo casi circular** y un par de arranque muy alto. Al llegar al **75–80 % de la velocidad**, el **interruptor centrífugo abre** y desconecta el auxiliar y el capacitor. El motor sigue sólo con el principal (doble campo giratorio) hasta el punto de operación, donde la curva de par corta la de carga.
+#H Las dos curvas y el salto
+#L Curva **con ambos devanados**: nace alta (≈ 300 % del par nominal) y es la que se recorre durante el arranque.
+#L Curva **sólo con el devanado principal**: **nace en cero para n = 0** —la demostración gráfica de que no arranca solo— y sube hasta su máximo cerca del 75 % de la velocidad.
+#L En el punto de conmutación del centrífugo la curva real **salta** de la primera a la segunda. La característica efectiva es la **envolvente superior** de ambas.
+
+#Q 8.4 | ★ | El interruptor centrífugo y sus dos modos de falla | 10-12-25 p4 (preguntado como "qué pasa si queda conectado el bobinado de arranque") | Apunte p. 25
+#E ¿Qué función cumple el interruptor centrífugo? ¿Qué ocurre si falla?
+Contactos **normalmente cerrados en reposo**, montados sobre el eje con masas y un resorte. Al alcanzar el **75–80 % de la velocidad de sincronismo**, la fuerza centrífuga vence el resorte y **abre** el circuito del auxiliar y del capacitor de arranque. Al detenerse el motor, el resorte los vuelve a cerrar.
+#H Por qué es imprescindible
+El **capacitor electrolítico de arranque** es de **servicio intermitente** y se destruiría en servicio continuo; y el **devanado auxiliar**, de alambre fino, está pensado para trabajar **unos pocos segundos**.
+#H Falla 1 · contactos clavados (quedan cerrados)
+#L **Térmicas:** el auxiliar se sobrecalienta y **se quema**; el capacitor de arranque se calienta y puede **inflarse o explotar**.
+#L **Operativas:** aumenta la corriente absorbida, el motor se calienta, hace **ruido y vibra** (el campo deja de ser el previsto), baja el rendimiento y **suelen dispararse las protecciones térmicas**.
+#H Falla 2 · contactos que no cierran
+El motor **no arranca**: no tiene par de arranque, **sólo zumba**, y el devanado principal se calienta con la corriente de rotor bloqueado. Es la causa más común del motor monofásico que "zumba y no arranca".
+
+#Q 8.5 | ★★ | Inversión de giro del motor monofásico | 10-12-25 p4 · 11-12-24 p4 | Apunte p. 27
+#E Explique cómo se produce la inversión de giro en un motor monofásico.
+El sentido de rotación lo determina **el orden del desfasaje entre el campo del devanado principal y el del auxiliar**. Se invierte **permutando los dos terminales de uno de los dos devanados** —por convención el auxiliar— **respecto del otro**. Así se invierte el desfasaje de las corrientes y con él el sentido del campo giratorio de arranque.
+#N **Lo que NO funciona:** invertir las dos fases de la **línea** (L y N). Eso invierte *los dos* campos a la vez, el desfasaje relativo no cambia y el motor sigue girando igual. Tampoco sirve permutar los dos devanados simultáneamente.
+#L Sólo es posible si los **cuatro extremos** están accesibles en la caja de bornes. Muchos motores de electrodoméstico traen el auxiliar interconectado internamente y **no son reversibles**.
+#L Debe hacerse **con el motor detenido**: en marcha el auxiliar ya está desconectado por el centrífugo, así que cambiar sus conexiones no tiene efecto.
+#L Para inversión remota se usan **dos contactores con enclavamiento mutuo** (-KM2 y -KM3) que conmutan los extremos del auxiliar, con relé térmico, pulsadores de marcha a derecha e izquierda y parada.
+#L En los **PSC** con los dos devanados idénticos se puede invertir conmutando a cuál de los dos se le pone el capacitor en serie: es el caso de los ventiladores de techo reversibles.
+
+#Q 8.6 | ○ | Por qué el monofásico puede arrancar en cualquier sentido | No tomada (aparece como variante en los modelos) | Apunte p. 25
+#E ¿Por qué un motor monofásico puede arrancar en cualquier sentido si se le da un impulso?
+Porque **los dos campos giratorios son idénticos** y la característica es **simétrica**: con el rotor detenido la cupla resultante es nula, pero con pendiente hacia los dos lados. Cualquier impulso inicial, hacia un lado o hacia el otro, rompe el equilibrio a favor del campo que gira en ese sentido y el motor acelera hacia allí. **El sentido no lo define la máquina sino el impulso**; el devanado auxiliar existe justamente para fijarlo.
+
+#Q 8.7 | ○ | Control de velocidad del motor monofásico | No tomada | Apunte p. 27
+#E ¿Cómo se regula la velocidad de un motor monofásico de inducción?
+Se regula **bajando la tensión de alimentación** (por ejemplo a 3/4 o 1/2 de la nominal). Como el par se reduce con el **cuadrado** de la tensión, la curva de par baja y su intersección con la curva de carga se corre a **velocidades menores**, dando nuevos puntos de equilibrio.
+#L Sólo funciona bien con **cargas de par creciente con la velocidad** (ventiladores), donde las curvas se cortan en puntos claramente separados.
+#L Con carga de par constante el rango útil es muy chico y el motor se **cala** enseguida.
+#L A tensión reducida el resbalamiento crece, de modo que **aumentan las pérdidas en el rotor** y el motor se calienta.
+
+#U Unidad IX · Motor Paso a Paso
+
+#N Esta unidad **no aparece en ninguno de los modelos de parcial**, pero está en el programa. Dado que el parcial del 12-11-25 incorporó Calidad de Energía, que tampoco tenía antecedente, conviene tenerla preparada.
+
+#Q 9.1 | ○ | Definición, características y tipos constructivos | No tomada | Apunte p. 29
+#E Explique qué es un motor paso a paso, sus características y sus tipos constructivos.
+#H Definición de la cátedra
+Es un **actuador, o transductor electromagnético incremental, que convierte pulsos eléctricos digitales en desplazamientos angulares de un eje**. Se alimenta con corriente continua a través de un circuito lógico, el **driver**.
+#H Las tres características
+#L Control **exacto de velocidad, distancia y sentido** de movimiento: la posición la fija el **número de pulsos** y la velocidad su **frecuencia**.
+#L Movimiento **preciso, constante y repetible**.
+#L El error **no se acumula**: es independiente del ángulo total girado y de cuántas veces se repita la posición final.
+Esto permite posicionar **en lazo abierto**, sin encoder, que es su gran ventaja económica y a la vez su riesgo: si pierde pasos, nadie se entera.
+#TH Tipo | Rotor | Comportamiento
+#TR **Imán permanente (PM)** | Número par de polos de aleación de alta retentividad magnética (**Alnico**), con magnetización radial o axial | Tiene **par de detención** con el motor desenergizado. Ángulos de paso grandes (7,5° a 30°). Barato.
+#TR **Reluctancia variable (VR)** | Hierro dulce dentado, **sin imanes**; gira para alinearse en la posición de **mínima reluctancia** | **Sin par de detención**: desenergizado gira libre. Por su menor inercia **admite razones de paso mucho más altas** que un PM del mismo ángulo de paso. Poco par. Puede ser de estator simple o múltiple.
+#TR **Híbrido** | Combina los dos: estator dentado y rotor de imán con **magnetización axial entre dos coronas dentadas desfasadas** | **El más usado.** Mayor par y pasos pequeños: **1,8° o 0,9°** (200 o 400 pasos por vuelta).
+
+#Q 9.2 | ○ | Principio de funcionamiento, secuencias y ángulo de paso | No tomada | Apunte p. 30
+#E Desarrolle el principio de funcionamiento y la diferencia entre la secuencia de paso completo y la de medio paso. ¿Cómo se calcula el ángulo de paso?
+El circuito de control activa los transistores en orden y energiza las bobinas del estator. **Cada bobina excitada se convierte en un electroimán y el rotor gira hasta alinearse con ella**; al pasar a la siguiente, el rotor avanza un paso. La velocidad la define la frecuencia de los pulsos.
+#F α = 360° / (Ne · p)        Ne = número de fases · p = pares de polos del rotor
+#L **Paso completo:** se excita **una fase por vez** (A, B, C, D…). Con Ne = 4 y p = 3 resulta α = 30°, o sea 12 pasos por vuelta.
+#L **Medio paso:** se **alterna una fase sola con dos fases a la vez** (A, A+B, B, B+C…). El paso se reduce a la mitad (15° en el ejemplo) y **aumenta la precisión**, a costa de que el par no sea igual en todos los pasos.
+#L **Micropasos:** el driver divide el paso en fracciones (1/2 a 1/16, o más) alimentando con corrientes casi senoidales. Da mayor resolución y suavidad, y es la mejor defensa contra la resonancia.
+#F n [rpm] = razón [pasos/s] · α [°] / 6
+
+#Q 9.3 | ○ | Pares característicos y accionamiento unipolar / bipolar | No tomada | Apunte p. 32
+#E Defina el par de retención y el par de detención. Compare el accionamiento unipolar y el bipolar.
+#H Los dos pares, como los define la cátedra
+#L **Par de retención** (*holding*): el **máximo par que se le puede aplicar al eje, con el motor energizado, sin que pierda su posición** y salga de una posición estable.
+#L **Par de detención** (*detent*): aun con **todos los devanados desenergizados**, subsiste una atracción entre los polos del imán del rotor y los del estator con los que se alinearon; el par necesario para vencerla es el de detención. **Sólo existe en los PM y los híbridos.**
+#H Unipolar y bipolar
+#L **Unipolar:** bobinas **con toma central**; la corriente circula siempre en el mismo sentido por cada mitad de bobina. Control simple (**un transistor por media bobina**), pero usa **medio devanado por vez** y da **menos par**.
+#L **Bipolar:** bobinas **sin toma central**; hay que invertir el sentido de la corriente en todo el devanado con un **puente H** (transistores y diodos). Control más complejo, pero **aprovecha todo el cobre** y da **más par**, sobre todo a baja velocidad.
+
+#Q 9.4 | ○ | Curva cupla-velocidad, pull-in, pull-out y sobreoscilación | No tomada | Apunte p. 31 y 33-34
+#E Explique la curva cupla-velocidad del motor paso a paso, sus zonas y sus puntos característicos. ¿Qué limita la velocidad máxima y cómo se evita perder pasos?
+#H Las dos zonas
+#L **Zona de arranque:** la posición de la carga **sigue fielmente los impulsos** del sistema de control sin perder pasos, y el motor **puede arrancar, parar o invertir** el giro a esa frecuencia. Está limitada por la curva **pull-in**.
+#L **Zona de alta velocidad o "zona muerta"** (campo de giro), entre pull-in y pull-out: la carga sigue el ritmo de las pulsaciones sin perder saltos, **pero no puede arrancar, parar ni invertir** el sentido de giro.
+#H Los cuatro puntos
+#L **Velocidad pull-in:** la máxima a la que una carga friccional **puede empezar a moverse** sin perder pasos.
+#L **Velocidad pull-out:** la máxima a la que el motor con carga friccional **puede seguir girando** sin perder pasos.
+#L **Par pull-in:** el máximo aplicable cuando *empieza* a girar a la velocidad pull-in (entrada en sincronismo).
+#L **Par pull-out:** el máximo aplicable cuando ya *gira* a la velocidad pull-out (salida de sincronismo).
+#H Ramping
+Para pasar de la zona bidireccional a la unidireccional —o para frenar— **sin perder pasos** hay que hacer una **rampa** con un número mínimo de pasos, **más suave cuanto mayor es la carga**.
+#H Sobreoscilación y caída del par
+#L **Sobreoscilación:** trabajando a paso simple, por la inercia **el rotor oscila sobre su posición final** antes de detenerse. Se reduce con un **amortiguador viscoso** en el eje, con control a lazo cerrado mediante encoder, o con **micropasos**.
+#L **Caída del par con la frecuencia:** la velocidad de crecimiento de la corriente en los devanados depende de la **constante de tiempo L/R**, así que a frecuencia alta la corriente no alcanza su valor nominal dentro del paso.
+
+#Q 9.5 | ○ | Drivers | No tomada | Apunte p. 34
+#E ¿Qué funciones cumple el driver de un motor paso a paso?
+Es la **interfaz de potencia** entre el microcontrolador (señales lógicas de 3,3 a 5 V y pocos mA) y el motor (12 a 24 V y varios A). Sus tres funciones:
+#L **Secuenciador:** convierte cada pulso en la secuencia de fases correcta.
+#L **Control de corriente (chopper):** limita la corriente por PWM, **lo que permite alimentar con tensiones mucho mayores que la nominal del motor para ganar velocidad** (forzando el di/dt al principio de cada paso).
+#L **Micropasos:** divide el paso en fracciones para mayor resolución y suavidad.
+En módulos como el **A4988** o el **DRV8825** se usan los pines **STEP** (cada pulso es un paso y su frecuencia fija la velocidad), **DIR** (sentido), **ENABLE** (habilita la etapa de potencia) y **MS1–MS3** (selección de micropasos).

@@ -1,0 +1,153 @@
+#Q 7.8 | ★★★ | Potencias, balance y cupla | 12-11-25 p1 · 13-11-24 | Apunte p. 7-8 y 18
+#E Identifique las potencias en toda la máquina y la que se transfiere al eje del motor.
+
+#TH Potencia | Expresión | Dónde está en el circuito
+#TR Absorbida de la red | P1 = m1 · V1 · I1 · cos φ1 | bornes de entrada
+#TR Pérdidas en el hierro | PFe = m1 · V1² · G0 | en la rama G0
+#TR Pérdidas en el cobre del estator | PCu1 = m1 · I'2² · R1 | en R1
+#TR **Potencia del entrehierro** (electromagnética o del campo sincrónico) | **Pc = m1 · I'2² · R'2 / s** | toda la rama rotórica
+#TR Pérdidas en el cobre del rotor | PCu2 = m1 · I'2² · R'2 = **s · Pc** | en R'2
+#TR **Potencia mecánica interna** | **Pm = (1 − s) · Pc** | en R'2(1−s)/s
+#TR Pérdidas mecánicas (roce y ventilación) | Pmec | no figura en el circuito
+#TR **Potencia útil en el eje** | **Pu = Pm − Pmec** | —
+
+#F P1 = PFe + PCu1 + Pc          Pc = PCu2 + Pm
+#F PCu2 : Pm : Pc  =  s : (1 − s) : 1
+La última relación es la más útil: **el resbalamiento es, literalmente, la fracción de la potencia del entrehierro que se quema en el rotor**. Por eso un motor que trabaja con resbalamiento alto se calienta en el rotor, que es donde más cuesta refrigerar.
+
+#H Cupla
+#F C = Pm / Ω = Pc / Ωs          con  Ω = 2π·n/60  [rad/s]
+Igual que la potencia, **la cupla es proporcional al cuadrado de la tensión** de alimentación, por lo que una caída de tensión reduce mucho el par.
+#N **El error conceptual que más se cobra:** par y potencia no son lo mismo. Con el rotor bloqueado hay par **máximo** y potencia **nula**, porque P = C · Ω y Ω = 0. Toda la energía que entra se convierte en calor, y encima el ventilador —montado en el mismo eje— no gira.
+
+#Q 7.9 | ★★ | Diagrama circular | 13-12-22 p3 · 13-11-24 | Apunte p. 9
+#E Esquematice un diagrama circular referido a un motor trifásico. Identifique la zona de arranque, la potencia nominal y la corriente de arranque.
+Es el **lugar geométrico del extremo del fasor de la corriente** al variar el resbalamiento. Con tensión y frecuencia constantes, una reactancia fija en serie con una resistencia variable (R'2/s) hace que el extremo de I'2 describa una **circunferencia**; sumándole I0, constante, se obtiene el lugar de I1.
+
+#H Construcción: hacen falta dos ensayos y una escala de corrientes
+#L El **ensayo de vacío** da el punto **A** (s = 0). Por su horizontal pasa el centro de la circunferencia.
+#L El **ensayo de rotor bloqueado** da el punto **S** (s = 1), extrapolado a tensión nominal.
+
+#H Puntos, rectas y lectura
+#L **Punto A, sincronismo:** sólo circula I0 = OA, muy atrasada respecto de V1 (cos φ0 bajo).
+#L **Punto S, arranque:** el segmento **OS es la corriente de arranque**; su magnitud se lee en la escala de corrientes y su desfasaje es el ángulo φcc entre OS y V1.
+#L **Recta de potencia: A-S.** **Recta de cupla: A-E.**
+#L **Punto de trabajo C:** trazando la vertical por C se leen **CD** = potencia absorbida, **CF** = potencia mecánica, **CE** = cupla, **FE** = pérdidas en el cobre del rotor, **EG** = pérdidas en el cobre del estator y **GD** = pérdidas de vacío.
+#F s = FE / CE          η = CF / CD          Esc.P = m1 · V1 · Esc.I
+#L **Zona de arranque:** el arco desde S hasta el punto de cupla máxima, que es la zona inestable que el motor recorre al acelerar.
+#L **Punto nominal:** aquel en que **CF coincide con la potencia de placa**; OC es entonces la corriente nominal.
+#L **Valores máximos:** la potencia máxima y la cupla máxima se hallan con las tangentes a la circunferencia paralelas a la recta de potencia y a la de cupla; el factor de potencia máximo, con la tangente que pasa por el origen.
+
+#Q 7.10 | ○ | Inversión de marcha del motor trifásico | No tomada | Apunte p. 9
+#E Explique cómo se invierte el sentido de giro de un motor asincrónico trifásico.
+Se **invierte la secuencia de fases intercambiando dos de las tres fases** de alimentación: el campo giratorio cambia de sentido y el rotor lo sigue. En la práctica se usa una llave inversora manual que al pasar de la posición 1 a la 2 cruza dos líneas, o dos contactores con **enclavamiento eléctrico y mecánico** (si cerraran juntos habría cortocircuito entre fases). Conviene parar el motor antes de invertir: hacerlo en marcha es un frenado por contramarcha, con corrientes mayores que las de arranque.
+
+#Q 7.11 | ★★ | Arranque estrella-triángulo: potencia, mando y justificación | 12-11-25 p4 · 25-11-20 | Apunte p. 14-15
+#E Dibuje un esquema eléctrico típico de un arranque estrella-triángulo, dando el circuito de mando y el de potencia. ¿Qué valores toman la corriente y la cupla respecto del arranque directo?
+
+#H Condición indispensable
+El motor debe estar previsto para trabajar **en triángulo a la tensión de la red** (por ejemplo 380/660 V en red de 380 V) y tener los **6 bornes accesibles**, con los puentes de la placa retirados.
+
+#H Demostración de la reducción a 1/3
+#F En triángulo:  I_fase = U / Z          I_línea(Δ) = √3 · U / Z
+#F En estrella:   I_línea(Y) = I_fase = U / (√3 · Z)
+#F I_línea(Y) / I_línea(Δ) = [U/(√3·Z)] / [√3·U/Z] = 1/3
+#F Cupla ∝ U_bobina²  →  C(Y)/C(Δ) = (1/√3)² = 1/3
+**La corriente de línea y la cupla de arranque se reducen las dos a la tercera parte.** Es el único método en que ambas caen en la misma proporción sin necesidad de un autotransformador.
+
+#H Circuito de potencia
+#L **Q1:** seccionador con fusibles (protección contra cortocircuito).
+#L **KM1, contactor de línea:** alimenta U1-V1-W1. Permanece cerrado todo el arranque y la marcha.
+#L **F1, relé térmico o guardamotor:** protección de sobrecarga. Si se monta dentro del triángulo se ajusta a ≈ 0,58·In.
+#L **KM3, contactor de estrella:** cortocircuita U2-V2-W2 formando el punto neutro. Es el que menos corriente lleva (≈ 0,33·In).
+#L **KM2, contactor de triángulo:** une **U1-W2, V1-U2 y W1-V2**.
+
+#H Circuito de mando y secuencia
+#L Pulsador de parada **S0** (NC) en serie con el contacto NC del térmico.
+#L Pulsador de marcha **S1** (NA) con contacto de **autorretención** de KM1 en paralelo.
+#L Al pulsar S1 entran **KM1 + KM3** (estrella) y arranca el temporizador **KT**. El motor acelera hasta el 75–80 % de la velocidad.
+#L Al vencer el tiempo, **KT abre KM3 y cierra KM2**: el motor pasa a triángulo, a tensión plena.
+#L **Enclavamiento:** contacto auxiliar NC de KM2 en la bobina de KM3 y NC de KM3 en la de KM2, más enclavamiento mecánico. Si cerraran juntos habría **cortocircuito franco entre fases**.
+#L Lámparas de señalización de marcha y de falla por térmico.
+
+#H Desventajas
+Con sólo 1/3 del par **puede no arrancar con carga pesada**, y en la conmutación Y→Δ hay un **corte momentáneo** de alimentación con un pico transitorio de corriente.
+
+#Q 7.12 | ★ | Arranque por autotransformador | 10-12-25 p5 | Apunte p. 14
+#E Esquematice un arranque de un motor trifásico por técnica de autotransformador.
+Se alimenta el motor con tensión reducida desde un autotransformador trifásico con tomas (típicas del **55 %, 65 % y 80 %**), subiendo la tensión por etapas.
+#F Con k = U_motor / U_red:
+#F corriente en el motor = k · I_directa
+#F **corriente de línea = k² · I_directa**          **cupla = k² · C_directa**
+Corriente de línea y cupla **se reducen en la misma proporción (k²)**, que es su ventaja frente a las resistencias estatóricas. Con la toma del 65 %, k² ≈ 0,42. Valores típicos: corriente de 1,7 a 4·In y par de 0,4 a 0,85·Mn.
+
+#H Secuencia (Korndörfer) y por qué no hay corte
+Se cierra el centro de estrella del autotransformador y se conecta a la red; el motor arranca por las tomas. **En el paso siguiente se abre el centro de estrella**: las bobinas quedan como **reactancias en serie** con el motor, de modo que éste **nunca se desconecta**. Recién entonces se cierra el contactor de marcha directa y se deja el autotransformador fuera de servicio. Por eso la transición es **sin cortes de tensión**, a diferencia del Y-Δ.
+
+#H Cuándo se usa
+Máquinas de **gran potencia o mucha inercia**. Contras: voluminoso y caro, y dimensionado para **servicio intermitente** (no tolera arranques frecuentes).
+
+#Q 7.13 | ○ | Arranque por resistencias estatóricas | No tomada | Apunte p. 12
+#E Explique el arranque por resistencias estatóricas y compárelo con los demás métodos.
+Se intercalan resistencias en serie con el estator, que provocan una caída de tensión durante el arranque y luego se cortocircuitan por escalones. Con una impedancia Ze = Re + jXe agregada:
+#F IaZ = V1N / √[(Rcc + Re)² + (Xcc + Xe)²]
+#L La **corriente baja proporcionalmente a k**, pero el **par baja con k²**.
+#L Es el método **menos eficiente**: se pierde más par del que se gana en corriente, y además la energía se disipa en las resistencias.
+#L Ventaja: barato y la transición es progresiva y sin cortes.
+
+#Q 7.14 | ○ | Arranque por resistencias rotóricas (rotor bobinado) | No tomada | Apunte p. 13
+#E Explique el arranque por resistencias rotóricas y por qué da el mejor par de arranque.
+Se conectan resistencias exteriores al rotor a través de los anillos rozantes. Como el resbalamiento de cupla máxima es **s_Ck = R'2/Xcc**, eligiendo **R'2 ≈ Xcc** se consigue que la **cupla máxima caiga en el arranque mismo** (s = 1). Las resistencias se quitan por escalones a medida que el motor acelera, hasta cortocircuitar el rotor.
+#L **Da el mayor par de arranque de todos los métodos**, y con corriente limitada.
+#L Mejora además el **factor de potencia** durante el arranque.
+#L Contras: exige rotor bobinado (caro, con mantenimiento de anillos y escobillas) y está **en desuso**, desplazado por el variador de frecuencia.
+
+#Q 7.15 | ○ | Arranque por tiristores y arrancador suave | No tomada | Apunte p. 15-16
+#E Explique el arranque por tiristores y el arrancador suave. ¿Permite regular la velocidad?
+Dos **tiristores en antiparalelo por fase** recortan la onda de tensión con un ángulo de disparo que se va adelantando, de modo que la tensión eficaz sube **en forma de rampa**.
+#L Limita la corriente de arranque y **suaviza el par**, protegiendo la transmisión mecánica.
+#L **No regula la velocidad**: la frecuencia sigue siendo la de la red (50 Hz). Sólo actúa durante el arranque y la parada.
+#L **Genera armónicos**, con el consiguiente ruido, calentamiento y pérdidas.
+#L El **arrancador suave** agrega un lazo de control de par: mide tensión y corriente, calcula el par y ajusta la tensión para que la aceleración (o la parada) sea lineal.
+
+#Q 7.16 | ○ | Variador de frecuencia (VFD) | No tomada | Apunte p. 17
+#E Explique el arranque y el control por variador de frecuencia. ¿Por qué dispone del par nominal desde velocidad cero?
+El variador **varía la tensión y la frecuencia simultáneamente**, manteniendo la relación **V/f constante**. Al mantener V/f, el flujo se mantiene constante y con él el par disponible: por eso **dispone del par nominal desde velocidad cero y sin picos de corriente**.
+Estructura: **rectificador CA/CC → bus de continua con capacitor → inversor CC/CA con IGBT → control**. Es el único método que, además de arrancar bien, **regula la velocidad** en forma permanente. Contras: costo y generación de armónicos.
+
+#Q 7.17 | ★ | Comparación de los métodos de arranque | modelos p2 | Apunte p. 10-17
+#E Enuncie las particularidades de cada método de arranque, con la relación cupla–corriente de línea.
+#TH Método | Corriente de línea | Cupla de arranque | Observaciones
+#TR Directo | máxima, 5 a 8 · In | máxima | Simple y barato; perturba la red. Sólo para potencias chicas o redes fuertes.
+#TR Estrella-triángulo | **1/3** | **1/3** | Barato. Sólo motores que trabajan en Δ; con carga pesada puede no arrancar; pico en la conmutación.
+#TR Autotransformador (toma k) | **k²** | **k²** | Reduce corriente y par en igual proporción; transición sin cortes; caro y voluminoso.
+#TR Resistencias estatóricas | **k** | **k²** | El peor compromiso: el par cae más que la corriente. Disipa energía.
+#TR Resistencias rotóricas | baja | **alta, hasta Ck** | El mejor par de arranque y mejor cos φ; exige rotor bobinado.
+#TR Arrancador suave | limitada y ajustable | reducida, en rampa | Protege la transmisión; genera armónicos; no regula velocidad.
+#TR Variador de frecuencia | ≈ In, sin picos | **par nominal desde n = 0** | El mejor arranque y además controla la velocidad; el más caro.
+#N **La conclusión que hay que saber decir:** todos los métodos de tensión reducida bajan la corriente **a costa del par**, que cae con el cuadrado de la tensión. **Sólo el rotor bobinado y el variador de frecuencia reducen la corriente sin perder par.**
+
+#Q 7.18 | ★ | Arranque en vacío contra arranque en plena carga | modelos p2 | Apunte p. 17
+#E Compare el arranque en vacío y en plena carga: pico inicial de corriente, tiempo de arranque y corriente permanente.
+#L **Pico inicial de corriente: igual en los dos casos.** En el instante inicial el rotor está detenido (s = 1), la resistencia ficticia R'2(1−s)/s vale cero y la corriente depende **sólo de la tensión y de la impedancia de cortocircuito**, no de la carga.
+#F Iarr ≈ V1 / √[(R1 + R'2)² + (X1 + X'2)²]
+#L **Tiempo de arranque: mayor en carga.** El par acelerador es Ca = Cm − Cr; en vacío Cr es casi nulo y el motor acelera rápido, mientras que en carga Ca es menor y el arranque dura más. Como durante todo ese tiempo circula la corriente alta, **el calentamiento de los devanados es mayor**.
+#L **Corriente permanente: menor en vacío.** En vacío el motor queda con s ≈ 0 (rama rotórica casi abierta) y toma sólo la corriente de vacío I0, mayormente magnetizante y con cos φ bajo (del orden del 25 a 40 % de In). En plena carga se estabiliza en In, con buen cos φ.
+
+#Q 7.19 | ★ | Métodos de frenado del motor asincrónico | modelos p2 | Apunte p. 18-19
+#E Explique las particularidades y el fundamento del frenado por contramarcha, por inyección de corriente continua y regenerativo.
+#TH Método | Fundamento | Características
+#TR **Contramarcha** (contracorriente) | Con el motor girando se **intercambian dos fases**: el campo invierte su sentido y el rotor queda girando contra el campo, con s entre 1 y 2. | Par de frenado **muy fuerte** y corriente **mayor que la de arranque**. La energía de la red más la cinética se disipan en el rotor. **Hay que cortar la alimentación justo antes de que se detenga**, o arranca al revés.
+#TR **Inyección de corriente continua** (frenado dinámico) | Se desconecta el estator de la red y se le **aplica CC a dos fases**: se forma un campo fijo (ns = 0). El rotor, que gira por inercia, lo corta y se inducen corrientes que lo frenan. | **No pasa potencia por el entrehierro (Pa = 0)**: toda la energía cinética se disipa como calor en el rotor. Es suave, no invierte el giro y el par se anula al detenerse.
+#TR **Regenerativo** (hipersincrónico) | La carga arrastra al rotor **por encima de ns** (una grúa que baja, un vehículo en pendiente): s se hace negativo y la máquina pasa a generador. | El par se vuelve resistente y **la energía se devuelve a la red**. **No detiene el motor**: sólo limita la velocidad cerca de ns. Con un variador se puede bajar la frecuencia y frenar hasta cero.
+
+#Q 7.20 | ○ | Generador asincrónico | No tomada | Apunte p. 20
+#E Explique el funcionamiento de la máquina asincrónica como generador. ¿De dónde obtiene la excitación?
+Si una máquina motriz (turbina eólica o hidráulica) impulsa el eje **por encima de la velocidad sincrónica**, el resbalamiento se hace negativo, el par pasa a ser resistente y la máquina **entrega potencia activa a la red**. El balance se invierte:
+#F Pm = Pu − Pmec          Pa = Pm − PCu2          P1 = Pa − PCu1 − PFe
+#H Excitación
+**No tiene circuito de campo propio**: necesita **absorber potencia reactiva** para magnetizarse.
+#L **Conectado a la red:** la toma de los generadores sincrónicos de la red, que además le fija la frecuencia.
+#L **Aislado:** necesita un **banco de capacitores**, y su tensión varía mucho con la carga.
+#H Ventajas y aplicaciones
+Rendimiento similar al sincrónico, construcción robusta y simple (sin excitatriz ni escobillas si es de jaula) y sin regulación de velocidad. Se usa en **pequeñas centrales hidráulicas, generación eólica y recuperación de energía**.
