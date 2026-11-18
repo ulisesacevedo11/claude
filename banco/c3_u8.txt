@@ -24,6 +24,9 @@ El campo inverso nunca desaparece del todo: produce **cuplas pulsantes al doble 
 #H Comparación con el trifásico
 El trifásico tiene **campo giratorio natural y par de arranque propio**; el monofásico tiene campo pulsante, **par de arranque nulo** y necesita elementos adicionales (devanado auxiliar, capacitor, interruptor centrífugo) **que se desgastan**.
 
+
+
+#G /home/user/claude/figuras/png/f08.png | Con el rotor detenido cada campo produce su propia cupla, pero son iguales y opuestas. Si se lo lleva a girar en un sentido cualquiera, el campo que gira en ese sentido ve resbalamiento pequeño (s) y el contrario uno grande (2−s): la cupla directa crece, la inversa cae, y la resultante es neta en el sentido en que se lo impulsó.
 #Q 8.2 | ★★★ | Métodos de arranque del motor monofásico | 10-12-25 p4 · 11-12-24 p4 · 13-12-23 p4 · 06-03-24 p3 | Apunte p. 23-26
 #E Explique las variantes de arranque del motor monofásico de inducción.
 El objetivo de todo artificio de arranque es crear un **segundo campo desfasado en el tiempo y en el espacio** para formar un campo giratorio (elíptico) que dé par a rotor parado. Para eso se agrega un devanado auxiliar a 90° en el espacio, con una corriente desfasada en el tiempo.
@@ -42,6 +45,9 @@ Durante el arranque trabajan los **dos devanados**: el capacitor desfasa la corr
 #L Curva **sólo con el devanado principal**: **nace en cero para n = 0** —la demostración gráfica de que no arranca solo— y sube hasta su máximo cerca del 75 % de la velocidad.
 #L En el punto de conmutación del centrífugo la curva real **salta** de la primera a la segunda. La característica efectiva es la **envolvente superior** de ambas.
 
+
+
+#G /home/user/claude/figuras/png/f09.png | La curva del principal solo nace en T = 0 para n = 0: la demostración gráfica de que el motor no arranca solo. Se arranca sobre la curva de alta cupla y en el punto de conmutación se salta a la del principal, que a esa velocidad ya está por encima de la cupla de la carga.
 #Q 8.4 | ★ | El interruptor centrífugo y sus dos modos de falla | 10-12-25 p4 (preguntado como "qué pasa si queda conectado el bobinado de arranque") | Apunte p. 25
 #E ¿Qué función cumple el interruptor centrífugo? ¿Qué ocurre si falla?
 Contactos **normalmente cerrados en reposo**, montados sobre el eje con masas y un resorte. Al alcanzar el **75–80 % de la velocidad de sincronismo**, la fuerza centrífuga vence el resorte y **abre** el circuito del auxiliar y del capacitor de arranque. Al detenerse el motor, el resorte los vuelve a cerrar.
@@ -62,6 +68,9 @@ El sentido de rotación lo determina **el orden del desfasaje entre el campo del
 #L Para inversión remota se usan **dos contactores con enclavamiento mutuo** (-KM2 y -KM3) que conmutan los extremos del auxiliar, con relé térmico, pulsadores de marcha a derecha e izquierda y parada.
 #L En los **PSC** con los dos devanados idénticos se puede invertir conmutando a cuál de los dos se le pone el capacitor en serie: es el caso de los ventiladores de techo reversibles.
 
+
+
+#G /home/user/claude/figuras/png/f10.png | Lo único que cambia entre los dos esquemas son los extremos del auxiliar, Z1 y Z2 permutados. El principal, el capacitor y la línea quedan igual.
 #Q 8.6 | ○ | Por qué el monofásico puede arrancar en cualquier sentido | No tomada (aparece como variante en los modelos) | Apunte p. 25
 #E ¿Por qué un motor monofásico puede arrancar en cualquier sentido si se le da un impulso?
 Porque **los dos campos giratorios son idénticos** y la característica es **simétrica**: con el rotor detenido la cupla resultante es nula, pero con pendiente hacia los dos lados. Cualquier impulso inicial, hacia un lado o hacia el otro, rompe el equilibrio a favor del campo que gira en ese sentido y el motor acelera hacia allí. **El sentido no lo define la máquina sino el impulso**; el devanado auxiliar existe justamente para fijarlo.
@@ -100,6 +109,10 @@ El circuito de control activa los transistores en orden y energiza las bobinas d
 #L **Micropasos:** el driver divide el paso en fracciones (1/2 a 1/16, o más) alimentando con corrientes casi senoidales. Da mayor resolución y suavidad, y es la mejor defensa contra la resonancia.
 #F n [rpm] = razón [pasos/s] · α [°] / 6
 
+
+
+#G /home/user/claude/figuras/png/f11.png | El rotor se alinea siempre con el campo resultante del estator. Con una sola fase energizada apunta a ese polo; con dos fases, a la bisectriz — y ahí está todo el truco del medio paso. La mitad en cobre de la aguja es el polo norte del rotor; los polos en cobre del estator son los energizados. Tomando sólo los pasos 1 y 3 la secuencia es de paso completo, de 90° en este esquema de cuatro polos; alternando una y dos fases, de medio paso, de 45°.
+#G /home/user/claude/figuras/png/f12.png | Los cuatro modos mueven el mismo motor: lo único que cambia es qué corriente manda el driver a cada fase. En medio paso se alternan los estados de una y de dos fases, lo que duplica la resolución; en micropasos las corrientes son dos senoides en cuadratura y el rotor sigue el campo de forma continua.
 #Q 9.3 | ○ | Pares característicos y accionamiento unipolar / bipolar | No tomada | Apunte p. 32
 #E Defina el par de retención y el par de detención. Compare el accionamiento unipolar y el bipolar.
 #H Los dos pares, como los define la cátedra
@@ -125,6 +138,9 @@ Para pasar de la zona bidireccional a la unidireccional —o para frenar— **si
 #L **Sobreoscilación:** trabajando a paso simple, por la inercia **el rotor oscila sobre su posición final** antes de detenerse. Se reduce con un **amortiguador viscoso** en el eje, con control a lazo cerrado mediante encoder, o con **micropasos**.
 #L **Caída del par con la frecuencia:** la velocidad de crecimiento de la corriente en los devanados depende de la **constante de tiempo L/R**, así que a frecuencia alta la corriente no alcanza su valor nominal dentro del paso.
 
+
+
+#G /home/user/claude/figuras/png/f13.png | Las dos curvas caen con la frecuencia porque la corriente no llega a establecerse: la velocidad de crecimiento de la corriente en los devanados depende de la constante de tiempo L/R. Para trabajar en el campo de giro hay que arrancar dentro de la zona de arranque y acelerar por rampa, y frenar por rampa antes de parar.
 #Q 9.5 | ○ | Drivers | No tomada | Apunte p. 34
 #E ¿Qué funciones cumple el driver de un motor paso a paso?
 Es la **interfaz de potencia** entre el microcontrolador (señales lógicas de 3,3 a 5 V y pocos mA) y el motor (12 a 24 V y varios A). Sus tres funciones:

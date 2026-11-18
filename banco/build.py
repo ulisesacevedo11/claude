@@ -17,8 +17,8 @@ para('BANCO DE PREGUNTAS', 11, CU, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, a
 para('2.º Parcial de Máquinas', 34, ACC, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, after=2)
 para('Unidades VII a XII', 20, INK, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, after=18)
 para('Máquinas e Instalaciones Eléctricas · UTN FRH', 11, MUT, align=WD_ALIGN_PARAGRAPH.CENTER, after=4)
-para('Todas las preguntas posibles del segundo cuatrimestre, con respuesta,', 11, MUT, italic=True, align=WD_ALIGN_PARAGRAPH.CENTER, after=0)
-para('ordenadas por probabilidad de que las tomen.', 11, MUT, italic=True, align=WD_ALIGN_PARAGRAPH.CENTER, after=70)
+para('Todas las preguntas posibles del segundo cuatrimestre, resueltas,', 11, MUT, italic=True, align=WD_ALIGN_PARAGRAPH.CENTER, after=0)
+para('con diagramas y ordenadas por probabilidad de que las tomen.', 11, MUT, italic=True, align=WD_ALIGN_PARAGRAPH.CENTER, after=70)
 
 # recuento automatico
 qs = []
@@ -31,8 +31,9 @@ tot = len(qs)
 n3 = sum(1 for q in qs if q[1]=='★★★'); n2 = sum(1 for q in qs if q[1]=='★★')
 n1 = sum(1 for q in qs if q[1]=='★');   n0 = sum(1 for q in qs if q[1]=='○')
 
-t = doc.add_table(rows=1, cols=4); t.style='Table Grid'
-for i,(num,lab) in enumerate([(str(tot),'preguntas'),(str(n3+n2+n1),'ya tomadas'),(str(n0),'todavía no'),('6','unidades')]):
+nfig = sum(1 for f in FILES for l in open(f, encoding='utf-8') if l.startswith('#G '))
+t = doc.add_table(rows=1, cols=5); t.style='Table Grid'
+for i,(num,lab) in enumerate([(str(tot),'preguntas'),(str(nfig),'diagramas'),(str(n3+n2+n1),'ya tomadas'),(str(n0),'todavía no'),('6','unidades')]):
     c = t.cell(0,i); R.shade(c,'EDF2F5')
     p1 = c.paragraphs[0]; p1.alignment=WD_ALIGN_PARAGRAPH.CENTER; p1.paragraph_format.space_after=Pt(0)
     r = p1.add_run(num); r.bold=True; r.font.size=Pt(22); r.font.color.rgb=ACC
@@ -42,7 +43,8 @@ doc.add_page_break()
 
 # ---------------- como usarlo ----------------
 doc.add_heading('Cómo usar este documento', level=1)
-R.body('Cada pregunta trae el **enunciado tipo** —redactado como lo redacta la cátedra—, la respuesta desarrollada, en qué exámenes apareció y la página del **Apunte del 2.º Cuatrimestre** donde está el tema con sus figuras.')
+R.body('Cada pregunta trae el **enunciado tipo** —redactado como lo redacta la cátedra—, la **respuesta desarrollada**, en qué exámenes apareció y la página del **Apunte del 2.º Cuatrimestre** donde está el tema.')
+R.body('Las preguntas que se contestan con un dibujo traen la **figura ya hecha**, numerada y con epígrafe. Son las que conviene reproducir en la hoja del parcial: varias consignas piden explícitamente «esquematice», «grafique» o «dibuje».')
 R.body('Las preguntas están **ordenadas por unidad**, no por prioridad. La prioridad la da la marca de estrellas, y el mapa de la página siguiente las ordena de más a menos probable.')
 doc.add_heading('Las marcas de prioridad', level=3)
 table([['Marca','Significado','Qué hacer'],
@@ -102,7 +104,8 @@ note('**Tres cosas que se cobran caro en la corrección.** Primero: **par y pote
 R.body('')
 para('Armado a partir del material de la carpeta «Máquinas e Instalaciones Eléctricas», Unidades VII a XII. Los resultados numéricos de la sección de ejercicios están verificados; las referencias de página corresponden al Apunte del 2.º Cuatrimestre V5.', 8.5, MUT, italic=True)
 
-out = '/home/user/claude/Banco de Preguntas - 2do Parcial Maquinas.docx'
+out = '/home/user/claude/2do Parcial Maquinas - Todo Resuelto con Diagramas.docx'
 doc.save(out)
 print('guardado:', out)
+print('figuras:', nfig)
 print('preguntas:', tot, '| ★★★:', n3, '★★:', n2, '★:', n1, '○:', n0)

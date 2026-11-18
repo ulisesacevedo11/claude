@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """Renderiza los archivos de contenido (.txt con marcas) a un .docx."""
 import glob, os, re
+from PIL import Image
 from docx import Document
 from docx.shared import Pt, Cm, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -114,6 +115,25 @@ def enunciado(text):
     rich(c.paragraphs[0], text, size=9.5)
     doc.add_paragraph().paragraph_format.space_after=Pt(2)
 
+FIGN = [0]
+
+def figura(path, caption):
+    """Inserta una imagen centrada con su epigrafe numerado."""
+    if not os.path.exists(path):
+        raise SystemExit('FALTA LA FIGURA: ' + path)
+    iw, ih = Image.open(path).size
+    ratio = float(ih) / iw
+    ancho = 15.8 if ratio < 0.58 else (14.8 if ratio < 1.0 else 11.0)
+    p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p.paragraph_format.space_before = Pt(8); p.paragraph_format.space_after = Pt(2)
+    p.add_run().add_picture(path, width=Cm(ancho))
+    FIGN[0] += 1
+    c = doc.add_paragraph(); c.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    c.paragraph_format.space_after = Pt(10)
+    r = c.add_run('Figura %d.  ' % FIGN[0]); r.bold=True; r.font.size=Pt(8.5); r.font.color.rgb=ACC
+    r = c.add_run(caption); r.italic=True; r.font.size=Pt(8.5); r.font.color.rgb=MUT
+    return p
+
 # ---------- parser ----------
 def render(path):
     buf_tbl = []
@@ -130,6 +150,9 @@ def render(path):
         elif line.startswith('#F '):  formula(line[3:])
         elif line.startswith('#L '):  bullet(line[3:])
         elif line.startswith('#N '):  note(line[3:])
+        elif line.startswith('#G '):
+            ruta, cap = [x.strip() for x in line[3:].split('|', 1)]
+            figura(ruta, cap)
         elif line.startswith('#TH '): buf_tbl.append([x.strip() for x in line[4:].split('|')])
         elif line.startswith('#TR '): buf_tbl.append([x.strip() for x in line[4:].split('|')])
         else: body(line)

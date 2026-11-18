@@ -41,6 +41,9 @@ El colector **invierte las conexiones de cada espira justo cuando su tensión ca
 #TR **Polos auxiliares o de conmutación** | Polos angostos entre los principales, con bobinas **en serie con el inducido**, que crean un campo opuesto al de reacción **en la zona neutra**. Al estar en serie, su acción **crece con la corriente**: se autorregulan. | **La solución estándar**, en toda máquina de cierto tamaño. Corrigen la conmutación **pero no el debilitamiento del flujo**, porque actúan sólo en la zona interpolar.
 #TR **Devanado de compensación** | Bobinas en ranuras de las **expansiones polares**, también en serie con el inducido y con corriente **opuesta** a la de los conductores del rotor enfrentados | **Anula la reacción bajo todo el polo**, no sólo en la neutra, y **evita el debilitamiento del flujo**. Caro y complejo: se reserva para máquinas grandes o de carga muy variable, **junto con** los polos auxiliares.
 
+
+
+#G /home/user/claude/figuras/png/f17.png | El trazo grueso bajo cada polo es la densidad de flujo a lo largo de la cara polar; la línea punteada azul del tercer panel es el nivel del primer panel. Si el hierro fuera lineal, lo que pierde un cuerno lo ganaría el otro y el flujo total no cambiaría — pero el cuerno reforzado entra en saturación y no gana todo lo que el otro pierde. De ahí la reducción neta de Φ.
 #Q 10.5 | ★ | Posición de las escobillas en carga, sin polos auxiliares | 25-11-20 | Apunte p. 40
 #E ¿Qué posición deben tomar las escobillas en carga, como generador y como motor, en una máquina sin polos auxiliares?
 Para conmutar **sin chispas**, las escobillas deben cortocircuitar las bobinas cuando su fem es nula, o sea **deben correrse hasta la nueva línea neutra magnética**.
@@ -75,6 +78,10 @@ Con ω = 0 la fcem se anula (**Eg = 0**) y la corriente queda limitada **sólo p
 #TR En el **hierro** | **No** | se reparten en la parte giratoria y se descuentan de la potencia electromagnética
 #F η = P2 / P1 = P2 / (P2 + Pm + PFe + PCu + Pesc + Pexc)
 
+
+
+#G /home/user/claude/figuras/png/f14.png | «Excitada por armadura» significa que la variable de control es V𝖺, a flujo constante: característica velocidad-cupla lineal y de caída suave, regulación proporcional a V𝖺 y cupla disponible constante. Es la base del accionamiento con chopper o rectificador controlado.
+#G /home/user/claude/figuras/png/f16.png | Lo que define el modo es la relación entre E y V𝖺, y basta con que la carga arrastre el eje, o con bajar V𝖺, para pasar de uno al otro: es el frenado regenerativo de la tracción eléctrica, los ascensores y las grúas.
 #Q 10.7 | ○ | Tipos de conexionado | No tomada | Apunte p. 41-42
 #E Explique los tipos de conexionado de la máquina de corriente continua y cómo influyen en sus características.
 Las características dependen de **cómo se conecta el inductor respecto del inducido**. Bornes normalizados: **A1-A2** inducido, **D1-D2** serie, **E1-E2** shunt, **F1-F2** independiente.
@@ -103,6 +110,9 @@ Como **generador**, a la potencia mecánica absorbida P1 se le restan las pérdi
 #TR **Compound aditivo** | intermedio, más que el shunt | no se embala en vacío
 #TR **Compound diferencial** | poco par | **puede aumentar con la carga**: inestable
 
+
+
+#G /home/user/claude/figuras/png/f15.png | Las tres derivaciones de trazo pleno son las que tienen un elemento en el circuito equivalente. Las tres de trazo punteado existen igual, pero sólo aparecen en el diagrama de Sankey, como la separación entre P𝖾𝗆 y P𝗎.
 #Q 10.10 | ○ | Control de velocidad y debilitamiento de campo | No tomada | Apunte p. 44
 #E Explique cómo se controla la velocidad y el sentido de giro de un motor de CC.
 #L **Inversión de marcha:** con un **puente H**, cerrando S1-S4 o S2-S3 se invierte la tensión del inducido y el sentido de giro. En máquinas de campo bobinado se invierte **sólo uno** de los dos devanados (inducido **o** campo): si se invierten los dos, el giro no cambia.

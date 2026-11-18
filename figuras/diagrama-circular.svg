@@ -11,7 +11,7 @@
 <!-- ejes -->
 <line x1="60" y1="470" x2="800" y2="470" stroke="#111a21" stroke-width="1.6"/>
 <polygon points="800,470 790,466 790,474" fill="#111a21"/>
-<text x="800" y="490" font-size="12" fill="#64748b">eje de abscisas (reactiva)</text>
+<text x="800" y="490" font-size="12" fill="#64748b" text-anchor="end">eje de abscisas (reactiva)</text>
 <line x1="120" y1="505" x2="120" y2="70" stroke="#111a21" stroke-width="1.6"/>
 <polygon points="120,70 116,80 124,80" fill="#111a21"/>
 <text x="128" y="80" font-size="14" font-weight="700" fill="#111a21">V₁</text>
@@ -71,7 +71,7 @@
 <!-- flecha de aceleracion sobre el arco -->
 <path d="M 520 190 A 242 242 0 0 0 232 360" stroke="#a9541c" stroke-width="2" fill="none" stroke-dasharray="6 5" marker-end="url(#fl)"/>
 <defs><marker id="fl" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><polygon points="0,0 9,4.5 0,9" fill="#a9541c"/></marker></defs>
-<text x="360" y="222" font-size="11.5" fill="#a9541c" text-anchor="middle">el motor recorre el arco al acelerar</text>
+
 
 <!-- zona de arranque etiqueta -->
 <text x="646" y="196" font-size="12.5" font-weight="700" fill="#a9541c">ZONA DE ARRANQUE</text>

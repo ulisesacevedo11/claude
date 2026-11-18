@@ -23,6 +23,9 @@ Un ciclo completo de la red hace que el campo dé una vuelta entera en una máqu
 #H Por qué nunca alcanza al campo
 Si el rotor llegara a la velocidad sincrónica, desde las barras el campo estaría quieto: no habría variación de flujo, no habría fem, ni corriente, ni fuerza, **ni par**. Alcanzar al campo eliminaría la causa misma del movimiento. Por eso el rotor gira siempre algo más lento y la máquina se llama **asincrónica** (o **de inducción**, por el primer eslabón).
 
+
+
+#G /home/user/claude/figuras/png/f26.png | Tres bobinas fijas desfasadas 120 grados en el espacio, recorridas por corrientes desfasadas 120 grados en el tiempo, dan una resultante de modulo constante que avanza 120 grados por cada 120 grados de la red: el campo gira a ns = 60 f1 / p.
 #Q 7.2 | ★★★ | Resbalamiento: definición, s = 1 y s = 0 | 10-12-25 p2 · 13-12-23 p3 · 07-12-22 p3 · 11-12-24 p2 · 06-03-24 p2 | Apunte p. 3
 #E Explique el concepto de resbalamiento. ¿Qué ocurre cuando el resbalamiento es 1 y cuando es 0?
 
@@ -45,6 +48,9 @@ De él dependen la frecuencia y la fem del rotor, que **no son las de la red**:
 
 #N **Ejemplo que conviene tener a mano.** Motor de 4 polos a 50 Hz: ns = 1500 rpm. Con s = 4 %, nr = 1440 rpm, y f2 = 0,04 · 50 = **2 Hz**. Por eso la chapa de un motor industrial dice 1440 o 1450 rpm y nunca un número redondo.
 
+
+
+#G /home/user/claude/figuras/png/f27.png | Los dos extremos son los dos ensayos del transformador. Con s = 1 la resistencia ficticia se anula y la rama rotorica queda en cortocircuito; con s = 0 tiende a infinito y queda abierta.
 #Q 7.3 | ★★★ | Tipos de rotor y su comportamiento electromecánico | 11-12-24 p2 · y en toda pregunta de jaula profunda | Apunte p. 1 y 5
 #E Describa los tipos de rotor del motor asincrónico y su comportamiento electromecánico.
 
@@ -54,6 +60,9 @@ De él dependen la frecuencia y la fem del rotor, que **no son las de la red**:
 #TR Ranura profunda | Una sola barra alta y angosta: la parte superior hace de jaula exterior y el fondo de jaula interior | Mismo efecto que la doble jaula, constructivamente más simple. Ver 7.4. | 4 a 4,8 · 1,2 a 1,5
 #TR Rotor bobinado (anillos rozantes) | Devanado trifásico en estrella con los extremos llevados afuera por tres anillos y escobillas | Permite **insertar resistencias externas**: lleva la cupla máxima al arranque mismo y mejora el cos φ. Caro, con mantenimiento de escobillas. | Baja · hasta el par máximo
 
+
+
+#G /home/user/claude/figuras/png/f28.png | La forma de la ranura decide el arranque. En la jaula, el efecto pelicular sube la resistencia aparente a 50 Hz y la baja en marcha, cuando f2 = s f1 cae a 1 o 2 Hz; en el rotor bobinado la resistencia se agrega desde afuera.
 #Q 7.4 | ★★★ | Rotor de jaula profunda y doble jaula | 10-12-25 p2 · 13-12-23 p3 · 07-12-22 p3 | Apunte p. 5
 #E Desarrolle el motor asincrónico con rotor de jaula profunda y sus características más importantes.
 
@@ -76,6 +85,9 @@ La jaula profunda se comporta como un **reóstato rotórico automático**, que s
 #H Limitaciones
 Mayor reactancia de dispersión total, de modo que el **factor de potencia es algo peor** y la cupla máxima algo menor que una jaula simple equivalente; y el rotor necesita más diámetro, lo que aumenta la inercia.
 
+
+
+#G /home/user/claude/figuras/png/f02.png | La jaula profunda se comporta como un reóstato rotórico automático, que se inserta solo en el arranque y se elimina solo al acelerar: logra buena parte del beneficio del rotor bobinado sin anillos, sin escobillas y sin mantenimiento. Es la razón por la que domina el mercado industrial (diseños NEMA B y C).
 #Q 7.5 | ★★ | Curva par-velocidad, puntos singulares y punto de trabajo | 06-03-24 p2 (con el gráfico pedido explícitamente) | Apunte p. 3-4
 #E Dibuje la curva par versus resbalamiento, identifique sus puntos singulares y la condición de equilibrio de funcionamiento con una carga.
 
@@ -100,6 +112,9 @@ El motor acelera mientras sobre par. A la diferencia se la llama **par acelerado
 #F Ca = Cm − Cr
 La condición de arranque es que **Cm supere a Cr en todo momento**, no sólo al inicio. El punto de trabajo F es donde Cm = Cr: ahí Ca = 0 y el motor deja de acelerar. Si en algún punto del camino Cr queda por encima, el motor se queda ahí; y si Cr supera Ck, se **desengancha** y se detiene.
 
+
+
+#G /home/user/claude/figuras/png/f03.png | El motor se estabiliza donde su curva corta la de la carga, pero sólo la rama entre s = 0 y s𝗆𝖺𝗑 es estable: ahí, si la carga aumenta, el motor baja de velocidad, sube el resbalamiento y sube la cupla hasta reencontrar el equilibrio.
 #Q 7.6 | ○ | Clasificación NEMA | No tomada | Apunte p. 6
 #E Explique la clasificación NEMA de los motores asincrónicos y qué define cada clase.
 Los motores de más de 1 HP se clasifican según el **diseño de su jaula**, que es lo que fija el par y la corriente de arranque.
@@ -131,3 +146,7 @@ En el circuito **aproximado** se desprecia la caída de la corriente de vacío e
 #L **s = 0 (sincronismo):** R'2(1−s)/s → ∞. La rama del rotor queda **a circuito abierto**: I'2 = 0, no hay par ni potencia mecánica y sólo circula I0. Es el **ensayo de vacío**.
 #L **s = 1 (rotor bloqueado):** R'2(1−s)/s = 0. La resistencia de carga queda **en cortocircuito**: Pm = 0, la corriente sólo está limitada por R1 + R'2 y X1 + X'2 (es máxima) y **toda la potencia del entrehierro se pierde en el cobre del rotor**. Es el **ensayo de rotor bloqueado**.
 #L **0 < s < 1 (motor):** resistencia finita y positiva. A mayor carga, mayor s, menor resistencia ficticia, y por lo tanto más corriente y más par.
+
+
+
+#G /home/user/claude/figuras/png/f00.png | La rama de magnetización se corre a bornes de entrada (de ahí «aproximado»), por lo que I₁ = I₀ + I′₂ con I₀ constante. Todo lo rotórico está referido al primario: R′₂ = a²R₂, X′₂ = a²X₂. Lo que se disipa en el bloque de cobre no es calor: es la potencia mecánica interna.

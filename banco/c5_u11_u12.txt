@@ -43,6 +43,9 @@ Son **barras de cobre alojadas en las zapatas polares y cortocircuitadas por ani
 #L **Mejora del comportamiento en cortocircuito**.
 #L **Arranque asíncrono** — es lo que permite que el motor sincrónico arranque solo.
 
+
+
+#G /home/user/claude/figuras/png/f18.png | El devanado amortiguador son barras de cobre o bronce alojadas en ranuras de las caras polares y cortocircuitadas en los extremos por anillos frontales: una jaula de ardilla metida dentro de una máquina sincrónica. El entrehierro del rotor liso es uniforme; el de polos salientes, no — de ahí la anisotropía y el par de reluctancia de E3.
 #Q 11.5 | ○ | Funcionamiento como motor y ángulo de carga | No tomada | Apunte p. 55-56
 #E ¿Por qué el motor sincrónico no tiene par de arranque? ¿Qué es el ángulo de carga y qué ocurre si la carga supera el par máximo?
 #H Por qué no arranca solo
@@ -54,6 +57,10 @@ Al aplicar carga mecánica, **el rotor no pierde velocidad** pero **se retrasa u
 #F M = Mk · sen δ          máximo en **δ = 90°**
 Si la carga supera ese par máximo, **se pierde el enganche magnético**: el motor **se desengancha** y se detiene bruscamente. Es la **pérdida de sincronismo**.
 
+
+
+#G /home/user/claude/figuras/png/f19.png | Los tres estados de la misma máquina. Si E₀ adelanta a V entrega potencia; si la atrasa, la consume; y con E₀ y V coincidentes está en paralelo con la red y en vacío, con I = 0, que es la condición de sincronización.
+#G /home/user/claude/figuras/png/f20.png | La zona estable es 0 < δ < 90°: ahí, si crece la potencia demandada, la máquina responde aumentando el ángulo de acoplamiento magnético. Pasado ese límite, un aumento de carga reduce la potencia que la máquina puede desarrollar: pierde el sincronismo y se detiene.
 #Q 11.6 | ○ | Métodos de arranque del motor sincrónico | No tomada | Apunte p. 57
 #E Explique los métodos de arranque del motor sincrónico.
 #L **Por motor auxiliar:** un **motor asincrónico de rotor bobinado** lleva al sincrónico cerca de la velocidad de sincronismo; entonces se lo excita (dínamo excitatriz) y se lo conecta a la red **sincronizado**. Exige dispositivos de sincronización y sirve sólo para arranques en vacío. Es el método histórico.
@@ -79,6 +86,9 @@ Son la **corriente del inducido en función de la excitación**, una curva por c
 #L Están acotadas por tres límites: el **límite de estabilidad** (con poca excitación, Ev es chica, el par máximo no alcanza y la máquina se **desengancha**), el **límite térmico de armadura** y el **límite térmico de campo**.
 #L Por la forma oval del conjunto se las llama también **curvas O**, pero **la parte superior del óvalo no tiene aplicación práctica** justamente por razones de estabilidad.
 
+
+
+#G /home/user/claude/figuras/png/f21.png | Se llaman curvas V por la forma de la parte inferior de los bucles — en conjunto, la forma oval les vale también el nombre de curvas O, aunque la parte superior del óvalo no tiene aplicación práctica por razones de estabilidad. Los cuatro bucles son, de abajo hacia arriba, la máquina en vacío —que es el compensador sincrónico—, a ⅓, a ⅔ y a potencia nominal; los puntos marcan el vértice de cada uno, donde cos φ = 1 y la corriente es mínima. A la derecha del límite de estabilidad la máquina funciona; a la izquierda no, porque al crecer la carga la corriente disminuye y se desengancha.
 #U Unidad XII · Calidad de la Energía Eléctrica
 
 #Q 12.1 | ★★ | Valor RMS contra valor promedio, factor de forma y factor de cresta | 12-11-25 p5 · 13-11-24 | Apunte p. 60
@@ -95,6 +105,9 @@ Un instrumento de **valor promedio** mide el valor medio y **lo multiplica por 1
 #H Factor de cresta
 Indica **cuán puntiaguda es la onda** y es un indicador directo de distorsión armónica. Si CF ≈ 1,41 la onda es prácticamente senoidal; **se considera alta distorsión cuando CF ≥ 1,8**, que es el caso de las corrientes de cargas no lineales, con pulsos angostos y altos. Un CF alto obliga a sobredimensionar conductores y protecciones, porque los picos no se "ven" en el valor eficaz pero sí los sufren los semiconductores y los contactos.
 
+
+
+#G /home/user/claude/figuras/png/f22.png | Las tres tienen exactamente el mismo valor eficaz —las líneas punteadas— y por lo tanto el mismo calentamiento por efecto Joule en una resistencia. Lo que cambia es el pico: el instrumento que mide valor medio y multiplica por 1,11 se equivoca en las tres.
 #Q 12.2 | ★★ | Corriente de neutro con cargas no lineales balanceadas | 12-11-25 p5 · 13-11-24 | Apunte p. 62-63
 #E Justifique la existencia de una corriente de neutro relativamente importante asumiendo que el sistema trifásico está cargado con cargas de tipo no lineales balanceadas.
 #H El punto de partida
@@ -114,6 +127,9 @@ Aunque las cargas estén **perfectamente balanceadas** y las fundamentales se an
 #L **Calentamiento de transformadores**: en conexión triángulo-estrella los homopolares quedan **circulando dentro del triángulo**.
 #L **Soluciones:** sobredimensionar el neutro (sección plena o mayor), filtros de tercer armónico, transformadores **triángulo-estrella o zig-zag** cerca de la carga, y equipos con corrección activa del factor de potencia.
 
+
+
+#G /home/user/claude/figuras/png/f23.png | Las tres fases son idénticas salvo el desfasaje: el sistema está perfectamente balanceado. Aun así la suma no es nula: es una onda de 150 Hz cuya amplitud es la suma aritmética de las tres terceras armónicas, y cuyo pico supera el de cualquiera de las fases.
 #Q 12.3 | ★ | Componentes armónicas en una red de 50 Hz y sus efectos | 13-12-22 p4 · modelos p2 | Apunte p. 61-64
 #E Realice un análisis de las componentes armónicas en una distribución de energía de 50 Hz. ¿Qué efecto general traen cada una de ellas?
 Un **armónico** es una componente de frecuencia **múltiplo entero de la fundamental** de 50 Hz: el 2° es de 100 Hz, el 3° de 150 Hz, el 5° de 250 Hz. La suma de la fundamental y sus armónicos da la onda distorsionada que ve la carga. Los generan las **cargas no lineales** —rectificadores, fuentes de PC, UPS, variadores, tubos fluorescentes— que **consumen corriente en pulsos**; las **cargas lineales** (motores, resistencias) no generan armónicos. En la práctica, **el 3° lo generan las cargas monofásicas y el 5° y el 7° las trifásicas** (rectificadores de 6 pulsos).
@@ -133,6 +149,9 @@ Un **armónico** es una componente de frecuencia **múltiplo entero de la fundam
 #L **Protecciones y medición:** **disparos intempestivos** de termomagnéticas y diferenciales, y errores en los instrumentos que no son TRMS.
 #L **Electrónica:** errores de datos, reinicios de equipos programables y mal funcionamiento de variadores.
 
+
+
+#G /home/user/claude/figuras/png/f24.png | El patrón típico: sólo armónicas impares, decrecientes con el orden, y con la 3.ª dominante en cargas monofásicas. Las de secuencia directa e inversa se cancelan en el neutro; las homopolares, no.
 #Q 12.4 | ○ | Definición de problema de calidad y origen de los problemas | No tomada | Apunte p. 60-61
 #E Defina qué es un problema de calidad de energía y clasifique el origen de los problemas.
 #H Definición

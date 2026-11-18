@@ -20,6 +20,9 @@ La última relación es la más útil: **el resbalamiento es, literalmente, la f
 Igual que la potencia, **la cupla es proporcional al cuadrado de la tensión** de alimentación, por lo que una caída de tensión reduce mucho el par.
 #N **El error conceptual que más se cobra:** par y potencia no son lo mismo. Con el rotor bloqueado hay par **máximo** y potencia **nula**, porque P = C · Ω y Ω = 0. Toda la energía que entra se convierte en calor, y encima el ventilador —montado en el mismo eje— no gira.
 
+
+
+#G /home/user/claude/figuras/png/f01.png | El ancho de la banda es la potencia. Las dos primeras derivaciones son del estator; la tercera es la que vale s·P𝖾𝗆 y por eso un motor que trabaja con resbalamiento alto se calienta en el rotor, donde es más difícil refrigerar.
 #Q 7.9 | ★★ | Diagrama circular | 13-12-22 p3 · 13-11-24 | Apunte p. 9
 #E Esquematice un diagrama circular referido a un motor trifásico. Identifique la zona de arranque, la potencia nominal y la corriente de arranque.
 Es el **lugar geométrico del extremo del fasor de la corriente** al variar el resbalamiento. Con tensión y frecuencia constantes, una reactancia fija en serie con una resistencia variable (R'2/s) hace que el extremo de I'2 describa una **circunferencia**; sumándole I0, constante, se obtiene el lugar de I1.
@@ -38,6 +41,9 @@ Es el **lugar geométrico del extremo del fasor de la corriente** al variar el r
 #L **Punto nominal:** aquel en que **CF coincide con la potencia de placa**; OC es entonces la corriente nominal.
 #L **Valores máximos:** la potencia máxima y la cupla máxima se hallan con las tangentes a la circunferencia paralelas a la recta de potencia y a la de cupla; el factor de potencia máximo, con la tangente que pasa por el origen.
 
+
+
+#G /home/user/claude/figuras/png/f25.png | Diagrama circular completo. Todo radio O-P es I1, la cuerda P0-P es I2 referida y el diametro vale V1/Xcc. Equivalencia con la nomenclatura del apunte: P0 = A (vacio), Pcc = S (arranque), P-infinito = E, Pn = C (punto de trabajo); la recta de la potencia mecanica es la A-S y la recta del par es la A-E.
 #Q 7.10 | ○ | Inversión de marcha del motor trifásico | No tomada | Apunte p. 9
 #E Explique cómo se invierte el sentido de giro de un motor asincrónico trifásico.
 Se **invierte la secuencia de fases intercambiando dos de las tres fases** de alimentación: el campo giratorio cambia de sentido y el rotor lo sigue. En la práctica se usa una llave inversora manual que al pasar de la posición 1 a la 2 cruza dos líneas, o dos contactores con **enclavamiento eléctrico y mecánico** (si cerraran juntos habría cortocircuito entre fases). Conviene parar el motor antes de invertir: hacerlo en marcha es un frenado por contramarcha, con corrientes mayores que las de arranque.
@@ -73,6 +79,10 @@ El motor debe estar previsto para trabajar **en triángulo a la tensión de la r
 #H Desventajas
 Con sólo 1/3 del par **puede no arrancar con carga pesada**, y en la conmutación Y→Δ hay un **corte momentáneo** de alimentación con un pico transitorio de corriente.
 
+
+
+#G /home/user/claude/figuras/png/f05.png | KM2 cierra U1-W2, V1-U2 y W1-V2: las tres conexiones cruzadas que forman el triángulo, dibujadas acá como los tres retornos rotulados de la derecha. Los arcos son cruces de conductores sin conexión; los puntos llenos son nodos. Calibres: KM1 y KM2 para ≈ 0,58·I𝗇; KM3 para ≈ 0,33·I𝗇, que es el que lleva menos corriente.
+#G /home/user/claude/figuras/png/f06.png | Los contactos con la barra perpendicular son normalmente cerrados; los demás, normalmente abiertos. El enclavamiento son los dos contactos NC cruzados (KM2 aux en la rama de KM3 y KM3 aux en la de KM2), más el enclavamiento mecánico entre los dos contactores. Si KM2 y KM3 cerraran juntos habría cortocircuito franco entre fases.
 #Q 7.12 | ★ | Arranque por autotransformador | 10-12-25 p5 | Apunte p. 14
 #E Esquematice un arranque de un motor trifásico por técnica de autotransformador.
 Se alimenta el motor con tensión reducida desde un autotransformador trifásico con tomas (típicas del **55 %, 65 % y 80 %**), subiendo la tensión por etapas.
@@ -87,6 +97,9 @@ Se cierra el centro de estrella del autotransformador y se conecta a la red; el 
 #H Cuándo se usa
 Máquinas de **gran potencia o mucha inercia**. Contras: voluminoso y caro, y dimensionado para **servicio intermitente** (no tolera arranques frecuentes).
 
+
+
+#G /home/user/claude/figuras/png/f07.png | La transición sin corte es la ventaja del Korndörfer: al abrir KM0 se deshace la estrella del autotransformador y sus bobinas quedan como reactancias en serie, de modo que el motor sigue alimentado mientras se prepara la plena tensión.
 #Q 7.13 | ○ | Arranque por resistencias estatóricas | No tomada | Apunte p. 12
 #E Explique el arranque por resistencias estatóricas y compárelo con los demás métodos.
 Se intercalan resistencias en serie con el estator, que provocan una caída de tensión durante el arranque y luego se cortocircuitan por escalones. Con una impedancia Ze = Re + jXe agregada:
