@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 620" width="880" height="620" font-family="system-ui,Segoe UI,Helvetica,Arial,sans-serif">
-<rect x="0" y="0" width="880" height="620" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 700" width="880" height="700" font-family="system-ui,Segoe UI,Helvetica,Arial,sans-serif">
+<rect x="0" y="0" width="880" height="700" fill="#ffffff"/>
 <text x="440" y="34" text-anchor="middle" font-size="19" font-weight="700" fill="#111a21">Diagrama circular (Heyland–Ossanna) — motor asincrónico trifásico</text>
 
 <!-- zona de arranque sombreada -->
@@ -77,13 +77,17 @@
 <text x="646" y="196" font-size="12.5" font-weight="700" fill="#a9541c">ZONA DE ARRANQUE</text>
 <text x="646" y="212" font-size="11.5" fill="#a9541c">s ≈ 1 · I máxima · cos φ bajo</text>
 
-<text x="120" y="556" font-size="11.5" fill="#64748b">Diámetro P₀P∞ = V₁ / X_cc    ·    la ordenada de cada punto mide P₁    ·    escalas: corriente (A/mm), potencia (W/mm), par (N·m/mm)</text>
-<text x="120" y="574" font-size="11.5" fill="#64748b">El lugar geométrico del extremo de I₁ al variar s es una circunferencia: por eso un solo dibujo resuelve toda la máquina.</text>
+<text x="120" y="668" font-size="11.5" fill="#64748b">Diámetro P₀P∞ = V₁ / X_cc    ·    la ordenada de cada punto mide P₁    ·    escalas: corriente (A/mm), potencia (W/mm), par (N·m/mm)</text>
+<text x="120" y="686" font-size="11.5" fill="#64748b">El lugar geométrico del extremo de I₁ al variar s es una circunferencia: por eso un solo dibujo resuelve toda la máquina.</text>
 
 <!-- punto generico P: I1 -->
 <line x1="120" y1="470" x2="279" y2="229" stroke="#0d5c8a" stroke-width="2.8"/>
 <circle cx="279" cy="229" r="6" fill="#0d5c8a"/>
 <text x="286" y="220" font-size="12.5" font-weight="700" fill="#0d5c8a">P  (un s cualquiera)</text>
 <text x="196" y="266" font-size="15" font-weight="700" fill="#0d5c8a">I₁</text>
-<text x="120" y="592" font-size="11.5" fill="#0d5c8a">Todo radio vector O–P es I₁ : I₀ , I_n e I_arr son esa misma corriente evaluada en s = 0 , s = s_n y s = 1.</text>
+<text x="120" y="650" font-size="11.5" fill="#0d5c8a">Todo radio vector O–P es I₁ : I₀ , I_n e I_arr son esa misma corriente evaluada en s = 0 , s = s_n y s = 1.</text>
+
+<text x="390" y="330" text-anchor="middle" font-size="13" font-weight="700" fill="#0f7a52" opacity="0.75">MOTOR  (0 &lt; s &lt; 1)</text>
+<text x="690" y="268" font-size="13" font-weight="700" fill="#a9541c" opacity="0.8">FRENO  (s &gt; 1)</text>
+<text x="430" y="585" text-anchor="middle" font-size="13" font-weight="700" fill="#0d5c8a" opacity="0.8">GENERADOR  (s &lt; 0)</text>
 </svg>
