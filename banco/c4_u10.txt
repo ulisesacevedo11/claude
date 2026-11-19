@@ -43,6 +43,7 @@ El colector **invierte las conexiones de cada espira justo cuando su tensión ca
 
 
 
+
 #G /home/user/claude/figuras/png/f17.png | El trazo grueso bajo cada polo es la densidad de flujo a lo largo de la cara polar; la línea punteada azul del tercer panel es el nivel del primer panel. Si el hierro fuera lineal, lo que pierde un cuerno lo ganaría el otro y el flujo total no cambiaría — pero el cuerno reforzado entra en saturación y no gana todo lo que el otro pierde. De ahí la reducción neta de Φ.
 #Q 10.5 | ★ | Posición de las escobillas en carga, sin polos auxiliares | 25-11-20 | Apunte p. 40
 #E ¿Qué posición deben tomar las escobillas en carga, como generador y como motor, en una máquina sin polos auxiliares?
@@ -80,6 +81,7 @@ Con ω = 0 la fcem se anula (**Eg = 0**) y la corriente queda limitada **sólo p
 
 
 
+
 #G /home/user/claude/figuras/png/f14.png | «Excitada por armadura» significa que la variable de control es V𝖺, a flujo constante: característica velocidad-cupla lineal y de caída suave, regulación proporcional a V𝖺 y cupla disponible constante. Es la base del accionamiento con chopper o rectificador controlado.
 #G /home/user/claude/figuras/png/f16.png | Lo que define el modo es la relación entre E y V𝖺, y basta con que la carga arrastre el eje, o con bajar V𝖺, para pasar de uno al otro: es el frenado regenerativo de la tracción eléctrica, los ascensores y las grúas.
 #Q 10.7 | ○ | Tipos de conexionado | No tomada | Apunte p. 41-42
@@ -109,6 +111,7 @@ Como **generador**, a la potencia mecánica absorbida P1 se le restan las pérdi
 #TR **Serie** | crece con el **cuadrado** de la corriente: altísimo par de arranque | cae mucho con la carga; **tiende a infinito en vacío**
 #TR **Compound aditivo** | intermedio, más que el shunt | no se embala en vacío
 #TR **Compound diferencial** | poco par | **puede aumentar con la carga**: inestable
+
 
 
 

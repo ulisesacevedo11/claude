@@ -25,6 +25,7 @@ Si el rotor llegara a la velocidad sincrónica, desde las barras el campo estar�
 
 
 
+
 #G /home/user/claude/figuras/png/f26.png | Tres bobinas fijas desfasadas 120 grados en el espacio, recorridas por corrientes desfasadas 120 grados en el tiempo, dan una resultante de modulo constante que avanza 120 grados por cada 120 grados de la red: el campo gira a ns = 60 f1 / p.
 #Q 7.2 | ★★★ | Resbalamiento: definición, s = 1 y s = 0 | 10-12-25 p2 · 13-12-23 p3 · 07-12-22 p3 · 11-12-24 p2 · 06-03-24 p2 | Apunte p. 3
 #E Explique el concepto de resbalamiento. ¿Qué ocurre cuando el resbalamiento es 1 y cuando es 0?
@@ -50,6 +51,7 @@ De él dependen la frecuencia y la fem del rotor, que **no son las de la red**:
 
 
 
+
 #G /home/user/claude/figuras/png/f27.png | Los dos extremos son los dos ensayos del transformador. Con s = 1 la resistencia ficticia se anula y la rama rotorica queda en cortocircuito; con s = 0 tiende a infinito y queda abierta.
 #Q 7.3 | ★★★ | Tipos de rotor y su comportamiento electromecánico | 11-12-24 p2 · y en toda pregunta de jaula profunda | Apunte p. 1 y 5
 #E Describa los tipos de rotor del motor asincrónico y su comportamiento electromecánico.
@@ -59,6 +61,7 @@ De él dependen la frecuencia y la fem del rotor, que **no son las de la red**:
 #TR Doble jaula | Jaula exterior de arranque (poca sección, alta R, baja X) y jaula interior de trabajo (gran sección, baja R, alta X) | En el arranque la corriente va por la exterior (alto par, baja corriente) y en marcha por la interior (buen rendimiento). | 3,3 a 5,5 · 1 a 2
 #TR Ranura profunda | Una sola barra alta y angosta: la parte superior hace de jaula exterior y el fondo de jaula interior | Mismo efecto que la doble jaula, constructivamente más simple. Ver 7.4. | 4 a 4,8 · 1,2 a 1,5
 #TR Rotor bobinado (anillos rozantes) | Devanado trifásico en estrella con los extremos llevados afuera por tres anillos y escobillas | Permite **insertar resistencias externas**: lleva la cupla máxima al arranque mismo y mejora el cos φ. Caro, con mantenimiento de escobillas. | Baja · hasta el par máximo
+
 
 
 
@@ -87,6 +90,7 @@ Mayor reactancia de dispersión total, de modo que el **factor de potencia es al
 
 
 
+
 #G /home/user/claude/figuras/png/f02.png | La jaula profunda se comporta como un reóstato rotórico automático, que se inserta solo en el arranque y se elimina solo al acelerar: logra buena parte del beneficio del rotor bobinado sin anillos, sin escobillas y sin mantenimiento. Es la razón por la que domina el mercado industrial (diseños NEMA B y C).
 #Q 7.5 | ★★ | Curva par-velocidad, puntos singulares y punto de trabajo | 06-03-24 p2 (con el gráfico pedido explícitamente) | Apunte p. 3-4
 #E Dibuje la curva par versus resbalamiento, identifique sus puntos singulares y la condición de equilibrio de funcionamiento con una carga.
@@ -111,6 +115,7 @@ Al aumentar el resbalamiento compiten dos efectos opuestos: la tensión inducida
 El motor acelera mientras sobre par. A la diferencia se la llama **par acelerador**:
 #F Ca = Cm − Cr
 La condición de arranque es que **Cm supere a Cr en todo momento**, no sólo al inicio. El punto de trabajo F es donde Cm = Cr: ahí Ca = 0 y el motor deja de acelerar. Si en algún punto del camino Cr queda por encima, el motor se queda ahí; y si Cr supera Ck, se **desengancha** y se detiene.
+
 
 
 
@@ -146,6 +151,7 @@ En el circuito **aproximado** se desprecia la caída de la corriente de vacío e
 #L **s = 0 (sincronismo):** R'2(1−s)/s → ∞. La rama del rotor queda **a circuito abierto**: I'2 = 0, no hay par ni potencia mecánica y sólo circula I0. Es el **ensayo de vacío**.
 #L **s = 1 (rotor bloqueado):** R'2(1−s)/s = 0. La resistencia de carga queda **en cortocircuito**: Pm = 0, la corriente sólo está limitada por R1 + R'2 y X1 + X'2 (es máxima) y **toda la potencia del entrehierro se pierde en el cobre del rotor**. Es el **ensayo de rotor bloqueado**.
 #L **0 < s < 1 (motor):** resistencia finita y positiva. A mayor carga, mayor s, menor resistencia ficticia, y por lo tanto más corriente y más par.
+
 
 
 

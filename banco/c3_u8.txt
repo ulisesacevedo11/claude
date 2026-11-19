@@ -26,6 +26,7 @@ El trifásico tiene **campo giratorio natural y par de arranque propio**; el mon
 
 
 
+
 #G /home/user/claude/figuras/png/f08.png | Con el rotor detenido cada campo produce su propia cupla, pero son iguales y opuestas. Si se lo lleva a girar en un sentido cualquiera, el campo que gira en ese sentido ve resbalamiento pequeño (s) y el contrario uno grande (2−s): la cupla directa crece, la inversa cae, y la resultante es neta en el sentido en que se lo impulsó.
 #Q 8.2 | ★★★ | Métodos de arranque del motor monofásico | 10-12-25 p4 · 11-12-24 p4 · 13-12-23 p4 · 06-03-24 p3 | Apunte p. 23-26
 #E Explique las variantes de arranque del motor monofásico de inducción.
@@ -44,6 +45,7 @@ Durante el arranque trabajan los **dos devanados**: el capacitor desfasa la corr
 #L Curva **con ambos devanados**: nace alta (≈ 300 % del par nominal) y es la que se recorre durante el arranque.
 #L Curva **sólo con el devanado principal**: **nace en cero para n = 0** —la demostración gráfica de que no arranca solo— y sube hasta su máximo cerca del 75 % de la velocidad.
 #L En el punto de conmutación del centrífugo la curva real **salta** de la primera a la segunda. La característica efectiva es la **envolvente superior** de ambas.
+
 
 
 
@@ -67,6 +69,7 @@ El sentido de rotación lo determina **el orden del desfasaje entre el campo del
 #L Debe hacerse **con el motor detenido**: en marcha el auxiliar ya está desconectado por el centrífugo, así que cambiar sus conexiones no tiene efecto.
 #L Para inversión remota se usan **dos contactores con enclavamiento mutuo** (-KM2 y -KM3) que conmutan los extremos del auxiliar, con relé térmico, pulsadores de marcha a derecha e izquierda y parada.
 #L En los **PSC** con los dos devanados idénticos se puede invertir conmutando a cuál de los dos se le pone el capacitor en serie: es el caso de los ventiladores de techo reversibles.
+
 
 
 
@@ -111,6 +114,7 @@ El circuito de control activa los transistores en orden y energiza las bobinas d
 
 
 
+
 #G /home/user/claude/figuras/png/f11.png | El rotor se alinea siempre con el campo resultante del estator. Con una sola fase energizada apunta a ese polo; con dos fases, a la bisectriz — y ahí está todo el truco del medio paso. La mitad en cobre de la aguja es el polo norte del rotor; los polos en cobre del estator son los energizados. Tomando sólo los pasos 1 y 3 la secuencia es de paso completo, de 90° en este esquema de cuatro polos; alternando una y dos fases, de medio paso, de 45°.
 #G /home/user/claude/figuras/png/f12.png | Los cuatro modos mueven el mismo motor: lo único que cambia es qué corriente manda el driver a cada fase. En medio paso se alternan los estados de una y de dos fases, lo que duplica la resolución; en micropasos las corrientes son dos senoides en cuadratura y el rotor sigue el campo de forma continua.
 #Q 9.3 | ○ | Pares característicos y accionamiento unipolar / bipolar | No tomada | Apunte p. 32
@@ -137,6 +141,7 @@ Para pasar de la zona bidireccional a la unidireccional —o para frenar— **si
 #H Sobreoscilación y caída del par
 #L **Sobreoscilación:** trabajando a paso simple, por la inercia **el rotor oscila sobre su posición final** antes de detenerse. Se reduce con un **amortiguador viscoso** en el eje, con control a lazo cerrado mediante encoder, o con **micropasos**.
 #L **Caída del par con la frecuencia:** la velocidad de crecimiento de la corriente en los devanados depende de la **constante de tiempo L/R**, así que a frecuencia alta la corriente no alcanza su valor nominal dentro del paso.
+
 
 
 

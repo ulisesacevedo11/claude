@@ -14,7 +14,7 @@ PNG = os.path.join(RAIZ, 'figuras', 'png')
 MAPA = {
     'f26': '7.1',  'f27': '7.2',  'f28': '7.3',  'f02': '7.4',  'f03': '7.5',
     'f00': '7.7',  'f01': '7.8',  'f25': '7.9',  'f05': '7.11', 'f06': '7.11',
-    'f07': '7.12', 'f08': '8.1',  'f09': '8.3',  'f10': '8.5',
+    'f07': '7.12', 'f29': '7.11', 'f08': '8.1',  'f09': '8.3',  'f10': '8.5',
     'f11': '9.2',  'f12': '9.2',  'f13': '9.4',
     'f17': '10.4', 'f14': '10.6', 'f16': '10.6', 'f15': '10.9',
     'f18': '11.4', 'f19': '11.5', 'f20': '11.5', 'f21': '11.7',
@@ -27,6 +27,10 @@ PROPIOS = {
            'vale V1/Xcc. Equivalencia con la nomenclatura del apunte: P0 = A (vacio), Pcc = S (arranque), '
            'P-infinito = E, Pn = C (punto de trabajo); la recta de la potencia mecanica es la A-S y la recta '
            'del par es la A-E.',
+    'f29': 'Curva de arranque. En estrella cada bobinado recibe V/raiz(3), de modo que la corriente de linea '
+           'y el par caen los dos a 1/3. La conmutacion debe hacerse antes de que la curva en estrella corte '
+           'a la del par resistente: si no, el motor se cala. Al pasar a triangulo la corriente salta al valor '
+           'del arranque directo a esa velocidad (pico de conmutacion).',
     'f26': 'Tres bobinas fijas desfasadas 120 grados en el espacio, recorridas por corrientes desfasadas '
            '120 grados en el tiempo, dan una resultante de modulo constante que avanza 120 grados por cada '
            '120 grados de la red: el campo gira a ns = 60 f1 / p.',

@@ -22,6 +22,7 @@ Igual que la potencia, **la cupla es proporcional al cuadrado de la tensión** d
 
 
 
+
 #G /home/user/claude/figuras/png/f01.png | El ancho de la banda es la potencia. Las dos primeras derivaciones son del estator; la tercera es la que vale s·P𝖾𝗆 y por eso un motor que trabaja con resbalamiento alto se calienta en el rotor, donde es más difícil refrigerar.
 #Q 7.9 | ★★ | Diagrama circular | 13-12-22 p3 · 13-11-24 | Apunte p. 9
 #E Esquematice un diagrama circular referido a un motor trifásico. Identifique la zona de arranque, la potencia nominal y la corriente de arranque.
@@ -40,6 +41,7 @@ Es el **lugar geométrico del extremo del fasor de la corriente** al variar el r
 #L **Zona de arranque:** el arco desde S hasta el punto de cupla máxima, que es la zona inestable que el motor recorre al acelerar.
 #L **Punto nominal:** aquel en que **CF coincide con la potencia de placa**; OC es entonces la corriente nominal.
 #L **Valores máximos:** la potencia máxima y la cupla máxima se hallan con las tangentes a la circunferencia paralelas a la recta de potencia y a la de cupla; el factor de potencia máximo, con la tangente que pasa por el origen.
+
 
 
 
@@ -81,8 +83,10 @@ Con sólo 1/3 del par **puede no arrancar con carga pesada**, y en la conmutaci�
 
 
 
+
 #G /home/user/claude/figuras/png/f05.png | KM2 cierra U1-W2, V1-U2 y W1-V2: las tres conexiones cruzadas que forman el triángulo, dibujadas acá como los tres retornos rotulados de la derecha. Los arcos son cruces de conductores sin conexión; los puntos llenos son nodos. Calibres: KM1 y KM2 para ≈ 0,58·I𝗇; KM3 para ≈ 0,33·I𝗇, que es el que lleva menos corriente.
 #G /home/user/claude/figuras/png/f06.png | Los contactos con la barra perpendicular son normalmente cerrados; los demás, normalmente abiertos. El enclavamiento son los dos contactos NC cruzados (KM2 aux en la rama de KM3 y KM3 aux en la de KM2), más el enclavamiento mecánico entre los dos contactores. Si KM2 y KM3 cerraran juntos habría cortocircuito franco entre fases.
+#G /home/user/claude/figuras/png/f29.png | Curva de arranque. En estrella cada bobinado recibe V/raiz(3), de modo que la corriente de linea y el par caen los dos a 1/3. La conmutacion debe hacerse antes de que la curva en estrella corte a la del par resistente: si no, el motor se cala. Al pasar a triangulo la corriente salta al valor del arranque directo a esa velocidad (pico de conmutacion).
 #Q 7.12 | ★ | Arranque por autotransformador | 10-12-25 p5 | Apunte p. 14
 #E Esquematice un arranque de un motor trifásico por técnica de autotransformador.
 Se alimenta el motor con tensión reducida desde un autotransformador trifásico con tomas (típicas del **55 %, 65 % y 80 %**), subiendo la tensión por etapas.
@@ -96,6 +100,7 @@ Se cierra el centro de estrella del autotransformador y se conecta a la red; el 
 
 #H Cuándo se usa
 Máquinas de **gran potencia o mucha inercia**. Contras: voluminoso y caro, y dimensionado para **servicio intermitente** (no tolera arranques frecuentes).
+
 
 
 
