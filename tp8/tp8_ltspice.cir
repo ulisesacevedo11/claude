@@ -1,0 +1,10 @@
+* TP8 - control de potencia por angulo de fase
+.param V=230.2 f=50 Rc=1319 alfa=90
+.param Ampl=V*1.4142 Delay=alfa/(360*f) ton=(1/(2*f)-Delay) tper=0.5/f
+V1 N001 0 SINE(0 {Ampl} {f})
+V2 N002 0 PULSE(0 1 {Delay} 1p 1p {ton} {tper})
+S1 N001 N003 N002 0 LLAVE
+RL N003 0 {Rc}
+.model LLAVE SW(Ron=.001 Roff=100Meg Vt=0.5 Vh=.01)
+.tran 100m
+.end
